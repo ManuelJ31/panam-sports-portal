@@ -1,4 +1,4 @@
-# Panam Sports Monitoring Portal
+# Panam Sports Executive Monitoring Platform
 
 A clean, elegant portal for Panam Sports and Olympic organization executives to
 review weekly Methodologist reports — one page per National Olympic Committee

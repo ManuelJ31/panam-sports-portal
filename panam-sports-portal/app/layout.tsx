@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Panam Sports Monitoring Portal",
+  title: "Panam Sports Executive Monitoring Platform",
   description:
     "A weekly review of Methodologist reports for Panam Sports and Olympic organizations.",
 };

@@ -2,7 +2,7 @@
   "name": "panam-sports-monitoring-portal",
   "version": "1.0.0",
   "private": true,
-  "description": "Panam Sports Monitoring Portal — weekly Methodologist report review for Panam Sports and Olympic organizations executives.",
+  "description": "Panam Sports Executive Monitoring Platform — weekly Methodologist report review for Panam Sports and Olympic organizations executives.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

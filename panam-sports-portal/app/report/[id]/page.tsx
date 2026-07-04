@@ -27,7 +27,7 @@ export async function generateMetadata({
   if (!report || !noc) return { title: "Report not found" };
 
   return {
-    title: `${noc.name} — ${report.week} ${report.year} · Panam Sports Monitoring Portal`,
+    title: `${noc.name} — ${report.week} ${report.year} · Panam Sports Executive Monitoring Platform`,
     description: report.executiveSummary,
   };
 }
