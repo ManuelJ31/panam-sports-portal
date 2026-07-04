@@ -63,12 +63,14 @@ export default function DashboardImage({
             >
               &times;
             </button>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={src}
               alt={alt}
+              width={1600}
+              height={1000}
+              quality={90}
               onClick={(e) => e.stopPropagation()}
-              className="max-h-[90vh] max-w-[90vw] cursor-zoom-out rounded-lg object-contain shadow-2xl"
+              className="h-auto max-h-[90vh] w-auto max-w-[90vw] cursor-zoom-out rounded-lg object-contain shadow-2xl"
             />
           </div>,
           document.body,
