@@ -5,9 +5,9 @@ export default function HomePage() {
   const summaries = getNocSummaries();
 
   return (
-    <main className="mx-auto min-h-screen max-w-canvas px-6 pb-24 pt-16 sm:px-10 sm:pt-24">
+    <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-16 sm:px-10 sm:pt-24">
       <header className="mb-14 max-w-2xl animate-fadeUp sm:mb-20">
-        <p className="eyebrow">Panam Sports &middot; Athlete Monitoring</p>
+        <p className="eyebrow">Panam Sports &middot; Methodologist Program</p>
         <h1 className="mt-3 font-display text-4xl font-semibold leading-[1.1] text-navy sm:text-5xl">
           Executive Monitoring Platform
         </h1>

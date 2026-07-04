@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "flag-icons/css/flag-icons.min.css";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,8 +22,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} bg-paper-off font-sans text-navy antialiased`}>
+      <body
+        className={`${montserrat.variable} flex min-h-screen flex-col bg-paper-off font-sans text-navy antialiased`}
+      >
         {children}
+        <Footer />
       </body>
     </html>
   );

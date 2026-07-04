@@ -46,7 +46,7 @@ export default async function ReportPage({
   const { previous, next } = getAdjacentReports(report.id);
 
   return (
-    <main className="mx-auto min-h-screen max-w-canvas px-6 pb-24 pt-10 sm:px-10 sm:pt-14">
+    <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-10 sm:px-10 sm:pt-14">
       <Link
         href="/"
         className="eyebrow inline-flex items-center gap-1.5 text-navy-faint transition-colors hover:text-blue-dim"
