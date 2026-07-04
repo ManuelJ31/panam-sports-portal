@@ -8,7 +8,7 @@ export default function ReportSection({
   return (
     <section className="border-t border-paper-line py-8 first:border-t-0 first:pt-0">
       <h2 className="eyebrow">{label}</h2>
-      <p className="mt-3 max-w-prose text-[17px] leading-[1.7] text-navy-soft">
+      <p className="mt-3 max-w-prose whitespace-pre-line text-[17px] leading-[1.7] text-navy-soft">
         {children}
       </p>
     </section>
