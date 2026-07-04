@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -11,6 +10,7 @@ import {
 import DossierHeader from "@/components/DossierHeader";
 import ReportSection from "@/components/ReportSection";
 import ReportNav from "@/components/ReportNav";
+import DashboardImage from "@/components/DashboardImage";
 
 export function generateStaticParams() {
   return getAllReports().map((report) => ({ id: report.id }));
@@ -59,13 +59,9 @@ export default async function ReportPage({
       </div>
 
       <figure className="mt-12 animate-fadeUp overflow-hidden rounded-2xl border border-paper-line bg-paper-off shadow-card">
-        <Image
+        <DashboardImage
           src={report.dashboardImage}
           alt={`Weekly monitoring dashboard for ${noc.name}, ${report.week} ${report.year}`}
-          width={1600}
-          height={1000}
-          className="h-auto w-full"
-          priority
         />
       </figure>
 
