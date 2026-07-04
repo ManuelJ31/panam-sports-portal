@@ -1,0 +1,28 @@
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import "./globals.css";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Panam Sports Monitoring Portal",
+  description:
+    "A weekly review of Methodologist reports for Panam Sports and Olympic organizations.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en">
+      <body className={`${montserrat.variable} bg-paper-off font-sans text-navy antialiased`}>
+        {children}
+      </body>
+    </html>
+  );
+}
