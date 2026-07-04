@@ -7,8 +7,8 @@ export interface Noc {
   name: string;
   /** Region grouping, e.g. "Caribbean" */
   region: string;
-  /** Unicode flag emoji, used as a lightweight, dependency-free flag render */
-  flag: string;
+  /** ISO 3166-1 alpha-2 code (lowercase), used as the flag-icons class suffix, e.g. "bz" */
+  flagCode: string;
 }
 
 export interface MethodologistReport {

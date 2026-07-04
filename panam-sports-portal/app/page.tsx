@@ -9,11 +9,10 @@ export default function HomePage() {
       <header className="mb-14 max-w-2xl animate-fadeUp sm:mb-20">
         <p className="eyebrow">Panam Sports &middot; Athlete Monitoring</p>
         <h1 className="mt-3 font-display text-4xl font-semibold leading-[1.1] text-navy sm:text-5xl">
-          Monitoring Portal
+          Executive Monitoring Platform
         </h1>
         <p className="mt-5 text-balance text-base leading-relaxed text-navy-soft sm:text-lg">
-          A weekly view of Methodologist reports across every National Olympic
-          Committee — built for a clear, unhurried read.
+          Weekly Methodologist Reports
         </p>
       </header>
 

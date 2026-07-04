@@ -21,9 +21,10 @@ export default function DossierHeader({
   return (
     <header className="animate-fadeUp">
       <div className="flex items-center gap-4">
-        <span className="text-5xl leading-none" aria-hidden>
-          {noc.flag}
-        </span>
+        <span
+          className={`fi fi-${noc.flagCode} rounded text-5xl leading-none shadow-sm`}
+          aria-hidden
+        />
         <div>
           <p className="eyebrow">{noc.region}</p>
           <h1 className="mt-1 font-display text-4xl font-semibold leading-tight text-navy sm:text-5xl">

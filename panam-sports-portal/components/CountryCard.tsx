@@ -15,9 +15,10 @@ export default function CountryCard({
     <div className="group relative flex flex-col rounded-2xl border border-paper-line bg-paper p-6 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-cardHover">
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3.5">
-          <span className="text-4xl leading-none" aria-hidden>
-            {noc.flag}
-          </span>
+          <span
+            className={`fi fi-${noc.flagCode} rounded text-4xl leading-none shadow-sm`}
+            aria-hidden
+          />
           <div>
             <h3 className="font-display text-xl leading-tight text-navy">
               {noc.name}

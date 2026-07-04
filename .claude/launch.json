@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "panam-sports-portal",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "panam-sports-portal", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}
