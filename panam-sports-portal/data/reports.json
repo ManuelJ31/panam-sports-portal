@@ -300,6 +300,21 @@
       "nextWeekFocus": "Priorities include post-conference follow-ups to drive athlete and coach registrations into the central database, conducting a strategic review with SLOC leadership to institutionalize the program, and initiating planning for the proposed regional training camps."
     },
     {
+      "id": "PS-LCA-2026-W10",
+      "nocCode": "LCA",
+      "year": 2026,
+      "week": "W10",
+      "weekNumber": 10,
+      "methodologist": "Richard Britton",
+      "submissionDate": "2026-07-06",
+      "status": "Reviewed",
+      "dashboardImage": "/dashboards/PS-LCA-2026-W10.png",
+      "dashboardPdf": "/dashboards/PS-LCA-2026-W10.pdf",
+      "executiveSummary": "This week's focus was divided between active field monitoring and strategic transition planning. I conducted technical visits for Boxing and Table Tennis regarding their CAC and Commonwealth Games preparation. Additionally, the project's influence expanded, as the St. Lucian Sports Academy requested continuous consultation to strengthen their programs. Operationally, a key challenge remains securing a meeting with the SLOC President to formalize our remote support protocols. Establishing these digital frameworks is the primary priority to ensure uninterrupted service delivery following my scheduled departure from St. Lucia on July 13th.",
+      "supportNeeded": "As the SLOC budget for this year is closed, new initiatives currently lack local funding. We request Panam Sports' assistance in identifying external programs or funding avenues. This support is critical to maintaining the national federations' active interest and commitment to the project.",
+      "nextWeekFocus": "The sole focus is finalizing all remote support protocols and establishing digital communication pipelines with national coaches. Securing the final executive meeting with the SLOC President to officially endorse this remote continuation plan prior to my July 13th departure is critical."
+    },
+    {
       "id": "PS-SKN-2026-W06",
       "nocCode": "SKN",
       "year": 2026,
@@ -433,6 +448,21 @@
       "executiveSummary": "As identified in December 2025 and reenforced in May/June 2026, the TT athlete funding model is TT is broken and needs to be fixed. This solely rests in the hands of the Ministry of Sport and Sport TT.\n\nDespite this challenge, three main projects have been identified to address both a 1. tactical (LA28) and 2. strategic (2036) approach and to take advantage of a once in a lifetime opportunity to capitalize on the Summer Olympic Games in North America in LA28. With the addition of a 3. local methodologist, the entire structure of Olympic sport in TT can be reshaped to unleash to their true potential.",
       "supportNeeded": "If the meeting on July 1 with the Ministry of Sport & SportTT is not successful, TTOC is going to need to support from PANAM Sports and the IOC.",
       "nextWeekFocus": "Sign the TTOC & PANAM Sports contract and start to address the three main projects."
+    },
+    {
+      "id": "PS-TTO-2026-W10",
+      "nocCode": "TTO",
+      "year": 2026,
+      "week": "W10",
+      "weekNumber": 10,
+      "methodologist": "Scott Novack",
+      "submissionDate": "2026-07-06",
+      "status": "Reviewed",
+      "dashboardImage": "/dashboards/PS-TTO-2026-W10.png",
+      "dashboardPdf": "/dashboards/PS-TTO-2026-W10.pdf",
+      "executiveSummary": "Action Items\n1. Provide the Performance Gap Analysis of the targeted athletes from the three sports and para sports with supporting athlete plans.\n2. Need to develop NGB plans for LA28.\n3. Provide supporting budgets of the NGB & athlete LA28 plans.\n4. Need to develop a Memorandum of Understanding between TTOC, SporTT & MSYA.\n- This agreement plans out a funding model for the targeted LA28 athletes and NGB plans.\n- This agreement creates the checks and balances of direct athlete & NGB funding.\n- This agreement creates an athlete and NGB funding delivery timeline and accountabilities.\n- This agreement grants special privileges to athletes and NGB's targeted for LA28",
+      "supportNeeded": "Continued communication with TTOC senior leadership.",
+      "nextWeekFocus": "Send drafts of the NGB letter and performance gap to TTOC leadership for review and distribution to NGBs to set up meetings."
     }
   ]
 }
