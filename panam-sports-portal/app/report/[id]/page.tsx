@@ -4,13 +4,14 @@ import type { Metadata } from "next";
 import {
   getAdjacentReports,
   getAllReports,
+  getInitiativeTrend,
   getNoc,
   getReport,
 } from "@/lib/reports";
 import DossierHeader from "@/components/DossierHeader";
 import ReportSection from "@/components/ReportSection";
 import ReportNav from "@/components/ReportNav";
-import DashboardImage from "@/components/DashboardImage";
+import WeeklyDashboard from "@/components/WeeklyDashboard";
 import ReportObjectives from "@/components/ReportObjectives";
 import InitiativesProgress from "@/components/InitiativesProgress";
 import ReportChallenges from "@/components/ReportChallenges";
@@ -47,6 +48,7 @@ export default async function ReportPage({
   if (!report || !noc) notFound();
 
   const { previous, next } = getAdjacentReports(report.id);
+  const trend = getInitiativeTrend(report.nocCode, report.id);
 
   return (
     <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-10 sm:px-10 sm:pt-14">
@@ -61,12 +63,9 @@ export default async function ReportPage({
         <DossierHeader noc={noc} report={report} />
       </div>
 
-      <figure className="mt-12 animate-fadeUp overflow-hidden rounded-2xl border border-paper-line bg-paper-off shadow-card">
-        <DashboardImage
-          src={report.dashboardImage}
-          alt={`Weekly monitoring dashboard for ${noc.name}, ${report.week} ${report.year}`}
-        />
-      </figure>
+      <div className="mt-12">
+        <WeeklyDashboard report={report} trend={trend} />
+      </div>
 
       <div className="mt-4 flex justify-end">
         <a

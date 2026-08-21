@@ -71,3 +71,29 @@ export function getAdjacentReports(id: string): {
     next: index >= 0 && index < timeline.length - 1 ? timeline[index + 1] : undefined,
   };
 }
+
+/**
+ * Week-by-week average initiative progress (0-10) for a NOC, up to and
+ * including the given report. Weeks with no initiatives tracked are
+ * skipped rather than plotted as zero.
+ */
+export function getInitiativeTrend(
+  nocCode: string,
+  uptoReportId: string
+): { week: string; avgProgress: number }[] {
+  const timeline = getReportsForNoc(nocCode);
+  const uptoIndex = timeline.findIndex((r) => r.id === uptoReportId);
+  const relevant = uptoIndex >= 0 ? timeline.slice(0, uptoIndex + 1) : timeline;
+
+  return relevant
+    .filter((r) => r.initiatives.length > 0)
+    .map((r) => ({
+      week: r.week,
+      avgProgress:
+        Math.round(
+          (r.initiatives.reduce((sum, i) => sum + i.weeklyProgress, 0) /
+            r.initiatives.length) *
+            10
+        ) / 10,
+    }));
+}
