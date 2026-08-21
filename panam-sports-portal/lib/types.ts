@@ -54,6 +54,16 @@ export interface ReportActivity {
   status: string;
 }
 
+/** One stakeholder engaged that week. */
+export interface ReportStakeholderEngagement {
+  /** Stakeholder type, e.g. "Panam Sports", "Athlete", "National Federation". */
+  type: string;
+  /** Organizational level the type belongs to, e.g. "Executive", "Institutional", "Field". */
+  level: string;
+  name: string;
+  role: string;
+}
+
 export interface MethodologistReport {
   /** Canonical report id, matches asset file names: PS-<NOC>-<YEAR>-W<WEEK> */
   id: string;
@@ -80,6 +90,7 @@ export interface MethodologistReport {
   initiatives: ReportInitiative[];
   challenges: ReportChallenge[];
   activities: ReportActivity[];
+  stakeholderEngagements: ReportStakeholderEngagement[];
 }
 
 export interface ReportsData {

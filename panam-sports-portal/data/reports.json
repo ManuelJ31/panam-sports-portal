@@ -135,6 +135,32 @@
           "resultProgress": "Initial review of available information and technical documentation was conducted to support the understanding of athlete eligibility and participation opportunities relevant to Belize.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Allan Sharp",
+          "role": "President, Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Eduardo Villanueva",
+          "role": "General Manager, Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Tony Mesa",
+          "role": "Technical Director, Santo Domingo 2026 Central American and Caribbean Games."
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Emilio Posadas",
+          "role": "Education and Capacity Building Manager."
+        }
       ]
     },
     {
@@ -236,6 +262,32 @@
           "resultProgress": "Travel arrangements were finalized, confirming the transition from the preparation stage to the implementation stage of the project.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Eduardo Villanueva",
+          "role": "General Manager, Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Tony Mesa",
+          "role": "Technical Director, Santo Domingo 2026 Central American and Caribbean Games"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Michel Serralta",
+          "role": "International Technical Delegate for Athletics, Santo Domingo 2026 Central American and Caribbean Game"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Emilio Posadas",
+          "role": "Education and Capacity Building Manager, Panam Sports"
+        }
       ]
     },
     {
@@ -336,6 +388,32 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "Initial documentation related to Olympic Solidarity programmes, coach support initiatives and Federation budget information was received and reviewed, providing operational context to support the implementation of future technical activities.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Eduardo Villanueva",
+          "role": "General Manager, Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Giovanni Alamilla",
+          "role": "Secretary General, Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Allan Sharp",
+          "role": "President, Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "National Sports Council of Belize",
+          "role": "National Sport Authority"
         }
       ]
     },
@@ -445,6 +523,32 @@
           "resultProgress": "Participation in the Annual General Meeting allowed the official introduction to BOCGA National Federations and strengthened institutional relationships. Initial contacts were established with Cycling and Basketball representatives interested in future communication. Olympic Day participation provided further integration with BOCGA leadership, staff and the sporting community, while improving understanding of the Committee’s interaction with federations and promotion of Olympic values.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Giovanni Alamilla",
+          "role": "Secretary General, Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Allan Sharp",
+          "role": "President, Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "Athlete",
+          "level": "Field",
+          "name": "Brandon Adolphus",
+          "role": "Olympic Scholarship Athlete – Athletics"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Saul Barrera / Susan Bedran",
+          "role": "President of Golf Federation / President of Gymnastics Federation"
+        }
       ]
     },
     {
@@ -552,6 +656,32 @@
           "stakeholder": "Federation",
           "resultProgress": "Visited the Marion Jones Stadium to assess athletics facilities and observe a sprint training session. Later attended a Belize Professional Basketball League match, monitored national team athletes preparing for the Central American and Caribbean Games and coordinated a future visit to the national team training programme with the Basketball Federation.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Giovanni Alamilla",
+          "role": "President, Belize Aquatics Federation"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Tony Mesa / Daniela Alvarado",
+          "role": "Director of Sports, Santo Domingo 2026 Central American and Caribbean Games / NOC Services Coordinator, Santo Domingo 2026 Organising Committee."
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Raul Rosado",
+          "role": "Secretary General, Belize Basketball Federation"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Eduardo Villanueva",
+          "role": "General Manager, Belize Olympic and Commonwealth Games Association"
         }
       ]
     },
@@ -661,6 +791,32 @@
           "resultProgress": "Participated in the Team Belize delegation meeting, contributing to discussions on safeguarding, logistics, accreditation, athlete services, team expectations and operational readiness for the Central American and Caribbean Games. The meeting also strengthened coordination among the organizations supporting the delegation.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Anthony Mahler",
+          "role": "Minister of Tourism, Youth, Sports & Diaspora Relations"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Devin H. Daly",
+          "role": "Minister of State for Youth and Sports."
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Marella Richardson",
+          "role": "General Secretary, Belize Aquatics Federation"
+        },
+        {
+          "type": "Athlete",
+          "level": "Field",
+          "name": "Davia Richardson",
+          "role": "National Team Athlete"
+        }
       ]
     },
     {
@@ -761,6 +917,32 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "Defined the observation priorities for Belize's participation at the Games and initiated the accreditation process to maximize technical support and performance evaluation opportunities during the competition period.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Alvin Tillett",
+          "role": "President, Belize Athletics Association"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Bernard Tarr",
+          "role": "Head Coach, Belize Men's National Basketball Team"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Arturo Velásquez",
+          "role": "President, Belize Table Tennis Federation."
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Allan Sharp",
+          "role": "President, Belize Olympic & Commonwealth Games Association"
         }
       ]
     },
@@ -870,6 +1052,32 @@
           "resultProgress": "Direct competition observation identified practical support needs, particularly in cycling, where no dedicated mechanical assistance was available. Contacts with other delegations were explored as a contingency, providing concrete evidence for future delegation-support planning.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Sharon Hardwick",
+          "role": "Chef de Mission – Belize Delegation, Central American and Caribbean Games 2026"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa",
+          "role": "Coordinator, Panam Sports Methodologists Program / Technical Director, Central American and Caribbean Games 2026"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Eduardo Villanueva",
+          "role": "General Manager – Belize Olympic and Commonwealth Games Association"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Ronald E. Harrigan",
+          "role": "Sports Methodologist – Virgin Islands"
+        }
       ]
     },
     {
@@ -970,6 +1178,26 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "The Sports Summit was identified as a relevant institutional milestone to consider when planning the next field period. Additional information on the event's scope, participants and agenda is expected from BOCGA.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Eduardo Villanueva",
+          "role": "General Manager – Belize Olympic and Commonwealth Games Association."
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Sharon Hardwick",
+          "role": "Chef de Mission – Belize Delegation, Central American and Caribbean Games 2026"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Ronald E. Harrigan",
+          "role": "Sports Methodologist – U.S. Virgin Islands"
         }
       ]
     },
@@ -1109,6 +1337,32 @@
           "resultProgress": "Coaches received practical guidance on athlete development, annual planning, and periodization principles while advancing federation High Performance Plans, Athlete Development Pathways, and Annual Training Plans. Coaches were provided dedicated working time to develop ideas for federation pathway documents to share with their leadership. Several coaches voluntarily remained after the session to discuss ways they could contribute more actively to National Federation development and activities.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "IOC",
+          "level": "Executive",
+          "name": "Sinead Dowling",
+          "role": "Programme Coordinator Olympic Solidarity – Olympic Values Unit"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Honourable Oscar Grange and Honourable Octavia Alfred",
+          "role": "Minister of Sport, Minister of Education"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Emilio Posadas",
+          "role": "Head of Education and Capacity Building"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Billy Doctrove, Tania Burnett, Executive Members",
+          "role": "President, Capacity Officer, Executive Members"
+        }
       ]
     },
     {
@@ -1232,6 +1486,32 @@
           "stakeholder": "Athletes",
           "resultProgress": "The sport psychologist expressed willingness to adapt the proposed services and agreed to develop alternative, more cost-effective pilot project options for consideration by the Dominica Olympic Committee. Revised proposals are expected to support assessment of service suitability and athlete needs ahead of the CAC Games.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Brendan Williams, Woodraw Lawrence, Ronald Charles, Albert Lowblack, Donnie Robinson",
+          "role": "National Federation Prsidents"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Billy Doctrove, Tania Burnett",
+          "role": "President and Capacity Officer"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Honourable Octavia Alfred",
+          "role": "Minister of Education"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Silvia Dalotto",
+          "role": "OVEP Master Traininer"
         }
       ]
     },
@@ -1363,6 +1643,32 @@
           "stakeholder": "Federation",
           "resultProgress": "Working sessions were completed with Aquatics and Cycling, with progress made on pathway document development. Follow-up working sessions were scheduled  with Athletics, Volleyball, and Basketball to continue federation-specific planning.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Mr. Shillingford",
+          "role": "Sports Coordintor"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Billy Doctrove, Tania Burnett, Dexter Ducreay, Hazel Bruno, Vernon Joseph,",
+          "role": "DOC President, DOC Capacity Officer, DOC Treasurer, DOC Staff"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Emilio Posadas",
+          "role": "Education and Capacity Building Manager"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Ronald Charles, Levi Baron, Desmond Prosper, Woodrow Lawrence, Jason Robin, Donnie Robinson, Brendan Willliams,  Job Joseph",
+          "role": "NOC Presidents, General Secretaries, Coaches, Executive Members"
         }
       ]
     },
@@ -1502,6 +1808,32 @@
           "resultProgress": "Olympic Day celebrations were supported and observed, bringing together National Federations, schools and community stakeholders to promote the Olympic values of friendship, respect and excellence. The event strengthened DOC visibility, supported public engagement, and helped launch a DOC mailing list. The National Olympic Academy also met and identified ways to build on OVEP, Olympic Day and future educational partnerships.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "58 elementary school principals",
+          "role": "School Leaders"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Mr. Whyte, Mr. Brendan Weilliams ( athletics) Mr. Loblack and Ms. Monique Jeffrey (volleyball), Mr. Charles and Mr. Levi Baron (cycling), Kohafth Baron (athlete), Woodrow Lawrence, Malak Hesham (swimming)",
+          "role": "National Federation Executives and Coaches"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa, Emilio Posadas, Jimena Saldaña, Vale Reyes, Silvia Dalotto",
+          "role": "Panam Sport Team and OVEP Master Trainer"
+        },
+        {
+          "type": "Ministry",
+          "level": "Executive",
+          "name": "Fenella Wenham Sheppard",
+          "role": "Parliamentary Secretary in the Ministry of Education, Human Resource Planning, Vocational Training, and National Excellence."
+        }
       ]
     },
     {
@@ -1639,6 +1971,32 @@
           "stakeholder": "Government",
           "resultProgress": "A written urgent request was shared to raise the issue at the appropriate level and encourage a coordinated solution. The communication helped document the problem clearly and positioned the matter as a shared-services and federation-support priority. Further follow-up is still needed to clarify booking authority, access procedures, costs, availability, and possible shared-use arrangements.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "IOC",
+          "level": "Executive",
+          "name": "Silvia Dalotto",
+          "role": "OVEP Master Facilitator"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Mr. Whyte, Mr. Brendan Williams (Athletics), Mr. Lawrence (Swimming), , Mr. Charles and Mr. Levi Baron (Cycling), Mr. Glen Etienne, Mr. Bardouille, Mr. Alvin Abraham, Chris Dehring, Clement Marcelin ( Cricket West INdies and Cricket Dominica) and more",
+          "role": "Athletics President and General Secretary, Aquatics President, Cycling President, Football Executive,  Cricket West Indies CEO, Cricket Dominica President"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa, Emilio Posadas",
+          "role": "Methodologist Project Leaders"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Eleonora, Xenia Kourgouzova, Roxanne ARthingal, Elena Busa, Alejandro Goycoolea, Nia Simione Satterfiled, Sarycarmen Diaz Gonzalez",
+          "role": "Olympic Solidarity, Panam Sports MarketingmTeam, Olympic Values Education Program"
         }
       ]
     },
@@ -1778,6 +2136,32 @@
           "resultProgress": "Check-ins were completed with relevant federations to confirm progress and identify any outstanding preparation needs. The follow-up helped support coordination and ensure that athlete preparation for CAC Games training remained a priority.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Nia Satterfield, Emilio Posadas, Tony Mesa, Alejandro Goyco",
+          "role": "Panam Sports Team"
+        },
+        {
+          "type": "IOC",
+          "level": "Executive",
+          "name": "Silvia Dalotto",
+          "role": "OVEP Master Facilitator"
+        },
+        {
+          "type": "Ministry",
+          "level": "Executive",
+          "name": "Ms. Nadia Ferrol",
+          "role": "Ministry of Education Chief Education Officer"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr. Doctrove, Tania Burnett,",
+          "role": "President, Capacity Officer"
+        }
       ]
     },
     {
@@ -1902,6 +2286,32 @@
           "resultProgress": "Presented progress and next steps across Projects A–F: high performance and institutional capacity; technical expertise and coach pathways; shared facilities and visibility; government–DOC cooperation; sport investment; and strategic planning and income diversification. The presentation highlighted foundations established, early successes, upcoming priorities, areas still under discussion or implementation, and the need for sustained coordination, federation support, and follow-up.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Billy Doctrove",
+          "role": "President"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Chris Dehring",
+          "role": "CEO West Indies Cricket"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Dr. Kimone Joseph",
+          "role": "Head of University of West Indies"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Mr. Guiste, Honourable Oscar George",
+          "role": "Permanent Secretary of the Ministry of Education; Minister of Sport"
+        }
       ]
     },
     {
@@ -2025,6 +2435,32 @@
           "stakeholder": "Technical Staff",
           "resultProgress": "The Capacity Officer shared reasons for delays in the Ministry of Sport’s responses. Volleyball’s General Secretary was asked to review coaching goals and complete coach and referee databases and update local sport methodlogy officer. Sghe advised national team training has resumed. The Cycling President was briefed on pending items requiring his review with local sport methodlogy officer. Marketing discussions explored storytelling by a local blogger & athlete attending the Commonwealth Games.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Athlete",
+          "level": "Field",
+          "name": "Jeriah Lewis, Mariah Toussaint, Malk Elshekh, Seif Elfshekh, Ali Shillingford, Darnell Cassel",
+          "role": "Athletes at CAC Games"
+        },
+        {
+          "type": "Athlete",
+          "level": "Field",
+          "name": "Treneese Hamilton",
+          "role": "Panam Games Qualified Athlete"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Ronald Charles",
+          "role": "Cycling Association President"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Egbert Charles, Chester Letang",
+          "role": "Chef de Mission"
         }
       ]
     },
@@ -2164,6 +2600,32 @@
           "resultProgress": "Review confirmed strong consultation and context analysis in the 2023–2026 Plan, but gaps in monitoring. A six-week close-out evaluation was recommended to assess evidence, expenditure, stakeholder experience and each commitment. Proposed next steps include a 2032 North Star, a 2027–2030/34 strategy, annual plans and quarterly reviews. Projects A–B are active; C–D await executive or government action, projects E and F will likely carry over into 2027. Presidential direction remains pending.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Athlete",
+          "level": "Field",
+          "name": "Darnell Cassel, Ali Shillingford, Malk Elshekh, Seif Elshekh, Jeriah Louis, Mariah Toussaint,  Thea Lafond, Jasmine Schoefiled, Dennick Luke, Kohath Baron, Ross Sempter, Stephan Carbon",
+          "role": "Athletes attending Central American and Caribbean Games and Commonwealth Games (boxing, swimming, athletics) as well as cyclign athltes"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa, Emilio Posadas, Ariana Becemberg",
+          "role": "Education and Capacity Building Manager and Assistant"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Donnie Robinson, Ronald Charles, Albert Loblack, Levi Baron, Jason Robin, Jarles Joseph,  Egbert Charles, Chester Letang",
+          "role": "Presidents of Basektball, Cycling, Volleyball; Coaches of Swimming, Cycling, Athletics,"
+        },
+        {
+          "type": "Ministry",
+          "level": "Executive",
+          "name": "Honourable Oscar George, Mr. Guiste",
+          "role": "Minister of Sport, Permanent Secreatry of Ministry of Education"
+        }
       ]
     },
     {
@@ -2295,6 +2757,32 @@
           "resultProgress": "Reviewed the Local Sport Methodology Officer’s ongoing responsibilities and the timelines for collecting, verifying and consolidating National Federation information. Gave local sport methodology officer assignment to try and redesign her own workflow for the following week and we will discuss it in greater detail on Monday.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Charles Joseph,",
+          "role": "Athletics CAC Games Coach"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa, Emilio Posadas, Ariana Becemberg",
+          "role": "Sport Methodologist Project Manager, Education and Capacity Building Manager and Assistant"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Donnie Robinson, Woody Lawrence",
+          "role": "Presidents of Basketball, and Swimming associations"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Tania Barnett, Staci Hill",
+          "role": "Capacity Officer, Local Sport Methodology Officer"
+        }
       ]
     },
     {
@@ -2419,6 +2907,32 @@
           "resultProgress": "Progress was reviewed and Staci’s priorities for August 17–21 were confirmed. Follow-up includes obtaining the CAC swimming report; preparing the Athletics pathway sections and Lima 2027/LA 2028 athlete gap analysis; supporting Charles Joseph’s CAC report; advancing the NOA survey, webinar and museum roadmap; updating Volleyball and Cycling pathways, athlete databases, federation records, calendars and selection criteria; securing signed communication agreements; and checking in with coach Levi.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Billy Doctrove, Tania Burnett",
+          "role": "DOC President, Capacithy Officer"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa, Emilio Posadas, Ariana Becemberg",
+          "role": "Sport Methodologist Project Manager, Education and Capacity Building Manager and Assistant"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Woody Lawrence, Job Joseph",
+          "role": "Aquatics Association President, Boxing Association President"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Staci Hill",
+          "role": "Local Sport Methodology Officer"
+        }
       ]
     },
     {
@@ -2487,6 +3001,20 @@
           "stakeholder": "Technical Staff",
           "resultProgress": "Preparing the training for the associations and coaches",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Veda Bruno Victors",
+          "role": "General Secretary"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Conrads Francis",
+          "role": "Athletic Association President"
         }
       ]
     },
@@ -2580,6 +3108,32 @@
           "stakeholder": "Federation",
           "resultProgress": "Table tennis was completed.\nBodybuilding is in progress to define their internal analysis and to define their internal structure",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "James Hey",
+          "role": "Coach Tachana Dalger Track Cycling"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Thobarihc de la Mota Albuez",
+          "role": "National Coach of the Monte Plata Badminton Association – Dominican Republic."
+        },
+        {
+          "type": "Athlete",
+          "level": "Field",
+          "name": "D’Angelo Huisden",
+          "role": "Athlete with an Olympic scholarship"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mike Nahar",
+          "role": "Local methodologist from Suriname"
         }
       ]
     },
@@ -2681,6 +3235,26 @@
           "resultProgress": "They Attended to late the meeting, but the content of the training could develope on time",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Veda Bruno Victors",
+          "role": "General Secretary"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Conrad’s Francis",
+          "role": "Technical Assistance"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Shivon James",
+          "role": "Administrative"
+        }
       ]
     },
     {
@@ -2764,6 +3338,26 @@
           "stakeholder": "Federation",
           "resultProgress": "Two of the associations request another session for make an evaluation of their association, this approach i am looking with each on them but only two show the interest",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Tisagh Chase",
+          "role": "President Karate Association"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "James Benoit",
+          "role": "President Sailing Association"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Cricket Association",
+          "role": "President, Vice President, General Secretary"
         }
       ]
     },
@@ -2850,6 +3444,14 @@
           "resultProgress": "Exchange technical aspects, sharing the project direction and expectations, as well as the second objective is listen them and make them feel supported and heard",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Veda Bruno Victor",
+          "role": "General Secretary CON"
+        }
       ]
     },
     {
@@ -2929,7 +3531,8 @@
           "resultProgress": "Work structure, team organization, observe the training session",
           "status": "Completed"
         }
-      ]
+      ],
+      "stakeholderEngagements": []
     },
     {
       "id": "PS-GRN-2026-W12",
@@ -3001,6 +3604,20 @@
           "stakeholder": "Technical Staff",
           "resultProgress": "Observe the programs and have some interaction with the athletes and Tehcnical staff",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Veda Bruno",
+          "role": "General Secretary CON GRN"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Conrad Francis",
+          "role": "Technical"
         }
       ]
     },
@@ -3081,7 +3698,8 @@
           "resultProgress": "Integrate all the guidelines reviewed on the session",
           "status": "Completed"
         }
-      ]
+      ],
+      "stakeholderEngagements": []
     },
     {
       "id": "PS-GRN-2026-W14",
@@ -3145,6 +3763,14 @@
           "stakeholder": "Coaches",
           "resultProgress": "Productive meeting discussing technical points abut the situation and the lines actions that should implement in the next month",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Richard ST. John runs junior program",
+          "role": "Coach"
         }
       ]
     },
@@ -3216,6 +3842,20 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "Veda, Conrad and I have some discussion about technical aspects that should present the status of the sport in Grenada,  with this information we can implement the strategy that was developed on April, analyze, and implement it.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Veda Bruno",
+          "role": "General Secretary CON GRN"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Conrad Francis",
+          "role": "Technical"
         }
       ]
     },
@@ -3297,6 +3937,26 @@
           "stakeholder": "Other",
           "resultProgress": "GRN apply successfully the program on the week",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Veda Bruno Victors",
+          "role": "General Secretary"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Conrad Francis",
+          "role": "Technical Assistance"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Karla Lecona",
+          "role": "Olympic Solidarity"
         }
       ]
     },
@@ -3413,6 +4073,32 @@
           "resultProgress": "Over the two-day National Age Group Championship, I monitored grassroots development pipelines and analyzed youth talent identification metrics. I also provided direct operational support by assisting the technical director with overall event logistics and officiating various competitions where necessary to ensure smooth execution.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Dora Henry",
+          "role": "President"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Selva Wilson",
+          "role": "Head coach of weightlifting federation"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Roberto Antonio",
+          "role": "Methodologist"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "St Lucia Athletes Association, Swimming Association, Sailing Association, Table Tennis Association",
+          "role": "Executive."
+        }
       ]
     },
     {
@@ -3519,6 +4205,32 @@
           "stakeholder": "Technical Staff",
           "resultProgress": "Established a joint operational schedule for coaches' visits; unified approach to St. Lucia sports improvement.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Conrad Francis",
+          "role": "President Track&Field"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Kester Elock, Ran , Rondell Johnson Basketball",
+          "role": "President, Vice president and General Secretary"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Anthony Benjamin",
+          "role": "President Table Tennis"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Cecil Mitchell",
+          "role": "Bodybuilding president"
         }
       ]
     },
@@ -3627,6 +4339,32 @@
           "resultProgress": "Successfully reaffirmed the federation's commitment to the program, securing formal pledges to support the methodology initiatives and provide necessary cooperation.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Jackie Trim",
+          "role": "President  Weight lifting"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Christopher Wells",
+          "role": "National Coach Table Tennis"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Alfred Emmanuel",
+          "role": "President of SLOC"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Makeba  Alcide",
+          "role": "National Track and field coach and SLOC Executive member"
+        }
       ]
     },
     {
@@ -3718,6 +4456,20 @@
           "stakeholder": "Coaches",
           "resultProgress": "Conducted post-event outreach to capture detailed feedback from head coaches. Leveraging the conference's momentum, I will transition these conversations into actionable next steps. Specifically, we initiated direct consultations outlining the onboarding protocols, guiding coaches through the requirements to officially register their athletes in the national monitoring database. This ensures they are positioned to receive structured technical support moving forward.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Alfred Emmanuel.",
+          "role": "President of SLOC"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Selva  Wilson",
+          "role": "Vice President and Coach of Weight Training."
         }
       ]
     },
@@ -3812,6 +4564,20 @@
           "resultProgress": "Began mapping digital touchpoints and online consultation schedules for coaches to guarantee that technical support and database integration continue seamlessly after July 13th.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Victor Comibert",
+          "role": "Director of the St Lucia Sports Academy"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Chris Wells",
+          "role": "National Table Tennis Coach."
+        }
       ]
     },
     {
@@ -3904,6 +4670,32 @@
           "stakeholder": "Coaches",
           "resultProgress": "Guided coaches on administering physical and psychological tests, shifting their evaluation methods from subjective observation to empirical, real-data progress tracking. Additionally, I initiated strategic discussions to formally submit the implementation plan for Phase 1 of the medical and recuperative support system, laying the groundwork for holistic athlete care",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr. Alfred Emmanuel",
+          "role": "President of the NOC"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Workshop with netball team heading to Santo Domingo",
+          "role": "National Netball team"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Chris Wells",
+          "role": "head coach of the St Lucia Table Tennis Association."
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Roosevelt Romain",
+          "role": "Swimming coach"
         }
       ]
     },
@@ -4013,6 +4805,14 @@
           "resultProgress": "Confirmed that Swimming will execute their physical and psychological testing protocols on Monday, July 20th, ensuring real-data integration for YOG prospects.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Alfred Emmanuel",
+          "role": "President of SLOC"
+        }
       ]
     },
     {
@@ -4106,7 +4906,8 @@
           "resultProgress": "Acknowledged the SLOC President's request to delay the implementation of the medical project to allow for further discussion regarding logistics and establishing a new launch date.",
           "status": "In Progress"
         }
-      ]
+      ],
+      "stakeholderEngagements": []
     },
     {
       "id": "PS-LCA-2026-W14",
@@ -4198,6 +4999,20 @@
           "stakeholder": "Federation",
           "resultProgress": "Maintained communication with traveling administrators and coaches to ensure preparation data is preserved as teams enter the competition phase.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Roberto Antonio De Oro",
+          "role": "Local Methodologist"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Dermont Monrose",
+          "role": "SLSA Head coach"
         }
       ]
     },
@@ -4292,6 +5107,26 @@
           "resultProgress": "St. Lucia improved its overall performance. Sailor Luc upgraded his 2023 bronze to a silver, and Netball defeated Barbados for a historic bronze—the first-ever multi-sport medal for a St. Lucian team sport.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Chris Wells",
+          "role": "Table Tennis head coach."
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Selva Wilson",
+          "role": "Weightlifting head coach and Vice president"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "David Shakes Christopher",
+          "role": "SLOC member and president of the boxing association."
+        }
       ]
     },
     {
@@ -4385,6 +5220,20 @@
           "resultProgress": "Maintained seamless local monitoring with a successful visit to Aquatics. The methodologist is currently scheduling follow-up technical visits to Boxing and Table Tennis for next week.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Selv Wilson",
+          "role": "Weightlifting coach"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Antonio Roberto",
+          "role": "Local methodologist"
+        }
       ]
     },
     {
@@ -4462,6 +5311,32 @@
           "resultProgress": "We've already held an introductory meeting, requested specific data from the federations, and are now awaiting a response.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr Dennis Knight",
+          "role": "president of SKNOC"
+        },
+        {
+          "type": "Ministry",
+          "level": "Executive",
+          "name": "Ms Valencia Syder",
+          "role": "Permanent secretariat os Ministry of Sports"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Mr. Garth Wilkin",
+          "role": "General Attorney SKN"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Mr Lonzo Wilkinson",
+          "role": "sports director SKN"
+        }
       ]
     },
     {
@@ -4527,6 +5402,20 @@
           "resultProgress": "This deadline places us at a critical juncture, as the outcome could affect the scheduling for the entire annual plan, forcing us to switch to a \"Plan B\" or even cancel certain phases.",
           "status": "Pending"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Mrs Valencia Syder",
+          "role": "Permanent secretariat of ministry of sports SKN"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr Dennis Knight and Mr Lonzo Wilkinson",
+          "role": "President of NOC and Director of sports"
+        }
       ]
     },
     {
@@ -4582,6 +5471,20 @@
           "resultProgress": "We have decided to wait for the scheduled timeframe and work to mitigate the issues this causes for the initial planning of the entire program.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "MR Dennis Knight",
+          "role": "Presidente SKNOC"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr Lonzo Wilkinson",
+          "role": "Director of sports"
+        }
       ]
     },
     {
@@ -4630,6 +5533,20 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "We have determined that we must organize a \"Plan B,\" recognizing that the proposed plan has been compromised; we must now try to adjust our actions to find a way forward for the remainder of the year and for the institutions involved.",
           "status": "Pending"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "mr dennis knight",
+          "role": "president SKNOC"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr lonzo wilkinson",
+          "role": "director of sports"
         }
       ]
     },
@@ -4688,6 +5605,20 @@
           "resultProgress": "We have developed a new agenda for the related events and plan to organize them starting upon my return to SKN in September.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr Dennis Knight",
+          "role": "president SKNOC"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr Lonzo Wilkinson",
+          "role": "Director of sports"
+        }
       ]
     },
     {
@@ -4743,7 +5674,8 @@
           "resultProgress": "We tried through every channel. The committee chair thought it best to use the feedback from the methodologist to seek another meeting with the Prime Minister and try to break the deadlock.",
           "status": "Pending"
         }
-      ]
+      ],
+      "stakeholderEngagements": []
     },
     {
       "id": "PS-SKN-2026-W15",
@@ -4798,7 +5730,8 @@
           "resultProgress": "Flights booked and accommodation rental confirmed.",
           "status": "Completed"
         }
-      ]
+      ],
+      "stakeholderEngagements": []
     },
     {
       "id": "PS-SKN-2026-W16",
@@ -4854,6 +5787,20 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "Online meeting scheduled for next Wednesday.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr deniis Knight",
+          "role": "president of SKNOC"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "mr Lonzo wilkinson",
+          "role": "director of sports"
         }
       ]
     },
@@ -4972,7 +5919,8 @@
           "resultProgress": "Identify areas for improvement and support the training process. In addition to getting to know the athletes during training sessions.",
           "status": "In Progress"
         }
-      ]
+      ],
+      "stakeholderEngagements": []
     },
     {
       "id": "PS-SUR-2026-W07",
@@ -5088,6 +6036,20 @@
           "stakeholder": "Athletes",
           "resultProgress": "Video de seguimiento de entrenamiento",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Jacqueline Trim",
+          "role": "President of weight lifting association"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Selva Wilson",
+          "role": "Weight lifting Coach"
         }
       ]
     },
@@ -5205,6 +6167,26 @@
           "stakeholder": "Government",
           "resultProgress": "Please pay the fee for the Suriname entry visa and complete the immigration form for your second visit, from June 26 to August 9, respectively. I also have an apartment for my stay.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Mr. Dennis MAC Donald",
+          "role": "General Secretary Suriname Olympic Committee"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Andres Santi",
+          "role": "Senior Manager- ANOC Events & Projects"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa",
+          "role": "Head of Methodology, Panam Sports."
         }
       ]
     },
@@ -5330,6 +6312,32 @@
           "resultProgress": "James plantea la posibilidad de acompañar a Tachana en Trinidad y Tobago por un período de 10-14 días. Lo estaremos discutiendo con el SOC la próxima semana.",
           "status": "Pending"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Mike Nahar",
+          "role": "Methodologist SOC"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa",
+          "role": "Head Methodologist Panam Sports"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Emilio Pasadas",
+          "role": "Head of the Olympic Academy Panam Sports"
+        },
+        {
+          "type": "Private Sector",
+          "level": "Institutional",
+          "name": "Ireno Fargas",
+          "role": "Head of CAR La Loma en México."
+        }
       ]
     },
     {
@@ -5447,6 +6455,32 @@
           "resultProgress": "Intense training at facilities well-suited for playing badminton, with plenty of equipment and supplies. I helped film videos of the players' techniques so the coach could provide feedback.\nThis week I was able to visit two sports teams during their training sessions—one individual sport and one team sport—both of which are preparing for Santo Domingo. In Rivano’s case, we were able to arrange a training camp for him in Santo Domingo.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Enrique Ralim",
+          "role": "National Sports Director"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Tony Mesa",
+          "role": "Head of Methodology at Panam Sports."
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr. Dennis MAC Donald",
+          "role": "Secretary-General of the SOC."
+        },
+        {
+          "type": "Athlete",
+          "level": "Field",
+          "name": "D’Angelo Huisden, Ismael Holtuin, Rivano Bisphan, Yade Bongsomenggolo, Tachana Dalger, Xavi, Wadilie",
+          "role": "SOC Active athletes with OS scholarship"
+        }
       ]
     },
     {
@@ -5563,6 +6597,32 @@
           "stakeholder": "Federation",
           "resultProgress": "To ensure that safe sports practices and useful planning tools are incorporated into the agendas of national sports federations and associations, and to learn from one another, as some federations have already made progress in developing their strategic plans.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Athletics, wrestling, badminton, taekwondo, tennis, triathlon, volleyball, shooting, and cycling federations.",
+          "role": "Board members"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Mr, Jason Menso",
+          "role": "Deputy Director of Sports for the Government."
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Dennis Mac Donald, Manodj Hindori, Kirtie Algoe",
+          "role": "Secretary General, Director of the Executive Committee, and Director of the Olympic Academy; Executive Director and head of the Women's Commission, the Athletes' Commission, and the Safe Sport Commission."
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Enrique Ralim",
+          "role": "Government Sports Director."
         }
       ]
     },
@@ -5688,6 +6748,32 @@
           "resultProgress": "Over the course of 60 minutes, we carried out four activities designed to meet the objective set by the coaching staff, which was managing competition and the team’s attitude in the face of adversity—key factors for the tournament’s challenging moments.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Dennis Mac Donald",
+          "role": "Secretary General of the SOC."
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Enrique Ralim",
+          "role": "General Sport Coordinator"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Carlos Orta",
+          "role": "Head Coach Male Volleybal National Team"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Gregory Markiet",
+          "role": "President of  Taekwondo Federation"
+        }
       ]
     },
     {
@@ -5812,6 +6898,32 @@
           "resultProgress": "We are making progress on the review of activities, the coaches’ workshop, and the report for the SOC—a document that will serve as input for the decision to continue the project through December 2026.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr. Dennis Mac Dona",
+          "role": "Secretary-General of the SOC Executive Committee."
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Gregory Markiet",
+          "role": "President of Taekwondo"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Presidents of 16 national federations and associations, reminding them of the coaching course offered by Panam Sports and the workshop for coaches scheduled at the SOC.",
+          "role": "Presidents of national federations and associations"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Mike Nahar",
+          "role": "Local Methodologist SOC."
+        }
       ]
     },
     {
@@ -5929,6 +7041,32 @@
           "resultProgress": "We have set aside two different days to hold the workshop with the coaches; ultimately, we hope that all 41 registered coaches will attend. Upon completion, they will receive relevant information on how to perform their roles as coaches, regardless of the sport they teach.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Emilio Posadas, Ariana Becemberg, Andrés Duque, Léo Cursino, Richard Britton, Valentyna Zolotarova, Sofia",
+          "role": "Panam Sports Olympic Academy, Project Methodologists."
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Earl Van Wilgen",
+          "role": "President of Cycling Union Federation"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Mike Nahar",
+          "role": "Suriname Local Methodologist"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Workshop List",
+          "role": "Coaches for Judo, Shooting, Wrestling, and Tennis."
+        }
       ]
     },
     {
@@ -6045,6 +7183,26 @@
           "stakeholder": "Federation",
           "resultProgress": "During the meeting, we worked on the document together. There were many questions, but the information itself was very clear; we just needed help organizing and prioritizing it. This was possible because the shared document’s format is very user-friendly.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Hillary Zuidveen",
+          "role": "Secretary of the Karate-do Board of Directors"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Ariana Becemberg y colegas metodólogos",
+          "role": "Panam Sports Academy y Methodologist advisors"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "39 coaches of the workshop",
+          "role": "Coaches from various sports"
         }
       ]
     },
@@ -6170,6 +7328,32 @@
           "resultProgress": "To gain firsthand insight into the entire process that athletes go through.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Emilio Posadas, Ariana Becemberg,methodologists working on projects in Caribbean countries.",
+          "role": "The Pan-American Academy and methodologists from the project in the Caribbean countries."
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Mike Nahar",
+          "role": "Methodologist SOC"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Andrés Duque.",
+          "role": "Methodologist Advisor"
+        },
+        {
+          "type": "Athlete",
+          "level": "Field",
+          "name": "D’Angelo Huisden, Rivano Bisphan, Tachana Dalger, Yade Bongsomenggolo, Xavi Wadilie, Ismael Holtuin",
+          "role": "Athletes with an Olympic scholarship"
+        }
       ]
     },
     {
@@ -6261,6 +7445,20 @@
           "resultProgress": "The result will be redesigning the Ministry of Sport presentation to reflect the elite athlete funding issues, the targeted top 40 TT athletes and solutions to address the next 800 days before the LA28 Olympic Games.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Diane Henderson",
+          "role": "TTOC President"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Sonja Johnson",
+          "role": "TTOC VP"
+        }
       ]
     },
     {
@@ -6332,6 +7530,14 @@
           "resultProgress": "The MSYA/TTOC meeting and LA28 Athlete Plan Summaries were all sent to TTOC for review and feedback.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Sonja Johnson",
+          "role": "Vice President - TTOC"
+        }
       ]
     },
     {
@@ -6388,6 +7594,14 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "The meetings were successful with TTOC. The biggest challenge is getting any traction or even scheduling a meeting with the Ministry of Sport, SportTT and alignment with TTOC, NGB's and the funding model. The government, Ministry of Sport controls all the direct athlete funding, NGB funding and access to facilities and they have cancelled meetings since May 13, 2026.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Sonja Johnson",
+          "role": "Vice President, TTOC"
         }
       ]
     },
@@ -6446,6 +7660,26 @@
           "resultProgress": "After the MSYA/TTOC presentation, action steps were developed as follow up to meet the September 1, 2026 deadline.  The following are the action items.\n1. Provide an Executive Summary of the presentation to TTOC.\n2. Send a draft letter to NGB's and list of 45 athletes with the performance gaps to TTOC for review.\n3. Once the letter is approved. Send each NGB (Athletics, Cycling, Swimming & Parasport) the MSYA/TTOC update to NGB's to set a date and time for a follow up LA28 planning session.",
           "status": "In Progress"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Diane Henderson, Annette Knott, Sonja Johnson",
+          "role": "TTOC President, TTOC Vice President, TTOC Vice President"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Phillip Watts",
+          "role": "Minister of Sport & Youth Activities for the Trinidad & Tobago government."
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Colin Border",
+          "role": "Assistant to the Minister"
+        }
       ]
     },
     {
@@ -6500,6 +7734,14 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "2026 Commonwealth Games has concluded and results tabulated. Having the results verified. Once the 2026 CAC Games conclude on August 8, the same process of tabulation will be completed.",
           "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Sonja Johnson",
+          "role": "VP TTOC"
         }
       ]
     },
@@ -6578,6 +7820,20 @@
           "resultProgress": "Finalize the results of the Top 40-45 athletes. Prepare spreadsheets for distribution to TTOC leadership.",
           "status": "Completed"
         }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Sonja Johnson",
+          "role": "Vice President, TTOC"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Ariana",
+          "role": "Project Coordinator"
+        }
       ]
     },
     {
@@ -6634,6 +7890,14 @@
           "stakeholder": "NOC Leadership",
           "resultProgress": "Meeting lasted one hour and was successful.",
           "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Diane Henerson, Annette Knott, Sonja Johnson",
+          "role": "President, Secretary General, VP"
         }
       ]
     }

@@ -2,6 +2,7 @@ import type { MethodologistReport } from "@/lib/types";
 import KpiTile from "@/components/KpiTile";
 import InitiativesTable from "@/components/InitiativesTable";
 import KeyActivitiesTable from "@/components/KeyActivitiesTable";
+import StakeholderOverview from "@/components/StakeholderOverview";
 import WeeklyTrendChart from "@/components/WeeklyTrendChart";
 
 export default function WeeklyDashboard({
@@ -16,7 +17,7 @@ export default function WeeklyDashboard({
 
   return (
     <div className="animate-fadeUp rounded-2xl border border-paper-line bg-paper p-6 shadow-card sm:p-8">
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         <KpiTile
           label="Activities Completed"
           value={completedActivities}
@@ -26,6 +27,11 @@ export default function WeeklyDashboard({
           label="Strategic Initiatives"
           value={report.initiatives.length}
           caption="Tracked this week"
+        />
+        <KpiTile
+          label="Stakeholder Engagements"
+          value={report.stakeholderEngagements.length}
+          caption="This week"
         />
         <KpiTile label="Support Needs" value={openChallenges} caption="Open items" />
       </div>
@@ -44,6 +50,15 @@ export default function WeeklyDashboard({
           <h2 className="eyebrow">Key Activities This Week</h2>
           <div className="mt-3">
             <KeyActivitiesTable activities={report.activities} />
+          </div>
+        </div>
+      )}
+
+      {report.stakeholderEngagements.length > 0 && (
+        <div className="mt-8">
+          <h2 className="eyebrow">Stakeholder Engagement Overview</h2>
+          <div className="mt-3">
+            <StakeholderOverview engagements={report.stakeholderEngagements} />
           </div>
         </div>
       )}
