@@ -1,5 +1,5 @@
 import type { MethodologistReport, Noc } from "@/lib/types";
-import { formatDate, formatWeekLabel } from "@/lib/format";
+import { formatDate, formatDateRange, formatWeekLabel } from "@/lib/format";
 import StatusBadge from "@/components/StatusBadge";
 
 function MetaField({ label, value }: { label: string; value: React.ReactNode }) {
@@ -41,7 +41,25 @@ export default function DossierHeader({
           <MetaField label="Week" value={formatWeekLabel(report.weekNumber, report.year)} />
         </div>
         <div className="pr-4 sm:px-6">
-          <MetaField label="Methodologist" value={report.methodologist} />
+          <MetaField
+            label="Methodologist"
+            value={
+              <>
+                {report.methodologist}
+                {(report.methodologistPrimarySpecialization ||
+                  report.methodologistSecondarySpecialization) && (
+                  <span className="mt-0.5 block font-meta text-xs font-normal text-navy-faint">
+                    {[
+                      report.methodologistPrimarySpecialization,
+                      report.methodologistSecondarySpecialization,
+                    ]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </span>
+                )}
+              </>
+            }
+          />
         </div>
         <div className="pl-4 sm:px-6">
           <MetaField label="Submitted" value={formatDate(report.submissionDate)} />
@@ -55,6 +73,15 @@ export default function DossierHeader({
           </div>
         </div>
       </dl>
+
+      {report.phaseName && (
+        <p className="mt-4 font-meta text-xs text-navy-faint">
+          {report.phaseName}
+          {report.phaseStartDate && report.phaseEndDate && (
+            <> &middot; {formatDateRange(report.phaseStartDate, report.phaseEndDate)}</>
+          )}
+        </p>
+      )}
     </header>
   );
 }

@@ -11,6 +11,38 @@ export interface Noc {
   flagCode: string;
 }
 
+/** One numbered objective the methodologist is working toward that week. */
+export interface ReportObjective {
+  priority: number;
+  objective: string;
+  expectedResult: string;
+  successIndicator: string;
+}
+
+/**
+ * Weekly progress checkpoint for a standing initiative (an initiative persists
+ * across many weeks/reports; each report row is that week's checkpoint).
+ * `weeklyProgress` is a 0-10 scale the methodologist sets each week.
+ */
+export interface ReportInitiative {
+  name: string;
+  category: string;
+  weeklyProgress: number;
+  /** weeklyProgress from this initiative's previous checkpoint, or null if this is its first week. */
+  previousWeeklyProgress: number | null;
+  status: string;
+  briefUpdate: string;
+}
+
+/** A challenge/support need raised that week, with category and priority for triage. */
+export interface ReportChallenge {
+  category: string;
+  description: string;
+  status: string;
+  actionNeeded: string;
+  priority: string;
+}
+
 export interface MethodologistReport {
   /** Canonical report id, matches asset file names: PS-<NOC>-<YEAR>-W<WEEK> */
   id: string;
@@ -21,13 +53,21 @@ export interface MethodologistReport {
   /** Numeric week for sorting/comparison, e.g. 6 */
   weekNumber: number;
   methodologist: string;
+  methodologistPrimarySpecialization: string | null;
+  methodologistSecondarySpecialization: string | null;
   submissionDate: string;
   status: ReportStatus;
   dashboardImage: string;
   dashboardPdf: string;
+  phaseName: string | null;
+  phaseStartDate: string | null;
+  phaseEndDate: string | null;
   executiveSummary: string;
   supportNeeded: string;
   nextWeekFocus: string;
+  objectives: ReportObjective[];
+  initiatives: ReportInitiative[];
+  challenges: ReportChallenge[];
 }
 
 export interface ReportsData {

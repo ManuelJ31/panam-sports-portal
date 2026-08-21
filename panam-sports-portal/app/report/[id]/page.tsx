@@ -11,6 +11,9 @@ import DossierHeader from "@/components/DossierHeader";
 import ReportSection from "@/components/ReportSection";
 import ReportNav from "@/components/ReportNav";
 import DashboardImage from "@/components/DashboardImage";
+import ReportObjectives from "@/components/ReportObjectives";
+import InitiativesProgress from "@/components/InitiativesProgress";
+import ReportChallenges from "@/components/ReportChallenges";
 
 export function generateStaticParams() {
   return getAllReports().map((report) => ({ id: report.id }));
@@ -77,12 +80,15 @@ export default async function ReportPage({
       </div>
 
       <div className="mt-6">
+        <ReportObjectives objectives={report.objectives} />
         <ReportSection label="Executive Summary">
           {report.executiveSummary}
         </ReportSection>
+        <InitiativesProgress initiatives={report.initiatives} />
         <ReportSection label="Panam Sports Support Needed">
           {report.supportNeeded}
         </ReportSection>
+        <ReportChallenges challenges={report.challenges} />
         <ReportSection label="Next Week Focus">
           {report.nextWeekFocus}
         </ReportSection>
