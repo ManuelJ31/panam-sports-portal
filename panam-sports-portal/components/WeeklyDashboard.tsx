@@ -14,7 +14,7 @@ export default function WeeklyDashboard({
   initiativeHistories,
 }: {
   report: MethodologistReport;
-  trend: { week: string; avgProgress: number }[];
+  trend: { week: string; avgProgress: number; period: string | null }[];
   initiativeHistories: Record<string, { week: string; progress: number }[]>;
 }) {
   const [expandedInitiativeId, setExpandedInitiativeId] = useState<string | null>(null);

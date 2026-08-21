@@ -13,7 +13,7 @@ import {
 export default function WeeklyTrendChart({
   data,
 }: {
-  data: { week: string; avgProgress: number }[];
+  data: { week: string; avgProgress: number; period: string | null }[];
 }) {
   if (data.length < 2) return null;
 
@@ -43,6 +43,10 @@ export default function WeeklyTrendChart({
               fontFamily: "var(--font-montserrat), sans-serif",
             }}
             labelStyle={{ color: "#1E3058", fontWeight: 600 }}
+            labelFormatter={(label, payload) => {
+              const period = payload?.[0]?.payload?.period as string | null | undefined;
+              return period ? `${label} · ${period}` : label;
+            }}
             formatter={(value) => [`${value}/10`, "Avg. progress"]}
           />
           <Line

@@ -75,6 +75,10 @@ export interface MethodologistReport {
   week: string;
   /** Numeric week for sorting/comparison, e.g. 6 */
   weekNumber: number;
+  /** ISO date the reporting week starts, e.g. "2026-06-22" */
+  weekStartDate: string | null;
+  /** ISO date the reporting week ends, e.g. "2026-06-28" */
+  weekEndDate: string | null;
   methodologist: string;
   methodologistPrimarySpecialization: string | null;
   methodologistSecondarySpecialization: string | null;

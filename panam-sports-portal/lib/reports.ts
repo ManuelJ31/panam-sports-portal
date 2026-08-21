@@ -1,5 +1,6 @@
 import reportsData from "@/data/reports.json";
 import type { MethodologistReport, Noc, ReportsData } from "@/lib/types";
+import { formatWeekPeriod } from "@/lib/format";
 
 const data = reportsData as ReportsData;
 
@@ -80,7 +81,7 @@ export function getAdjacentReports(id: string): {
 export function getInitiativeTrend(
   nocCode: string,
   uptoReportId: string
-): { week: string; avgProgress: number }[] {
+): { week: string; avgProgress: number; period: string | null }[] {
   const timeline = getReportsForNoc(nocCode);
   const uptoIndex = timeline.findIndex((r) => r.id === uptoReportId);
   const relevant = uptoIndex >= 0 ? timeline.slice(0, uptoIndex + 1) : timeline;
@@ -95,6 +96,10 @@ export function getInitiativeTrend(
             r.initiatives.length) *
             10
         ) / 10,
+      period:
+        r.weekStartDate && r.weekEndDate
+          ? formatWeekPeriod(r.weekStartDate, r.weekEndDate)
+          : null,
     }));
 }
 
