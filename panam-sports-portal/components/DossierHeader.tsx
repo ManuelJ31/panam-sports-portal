@@ -26,7 +26,7 @@ export default function DossierHeader({
           aria-hidden
         />
         <div>
-          <p className="eyebrow">{noc.region}</p>
+          <p className="eyebrow">{noc.nocGroup}</p>
           <h1 className="mt-1 font-display text-4xl font-semibold leading-tight text-navy sm:text-5xl">
             {noc.name}
           </h1>

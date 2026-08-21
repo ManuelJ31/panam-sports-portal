@@ -23,7 +23,7 @@ export default function CountryCard({
             <h3 className="font-display text-xl leading-tight text-navy">
               {noc.name}
             </h3>
-            <p className="eyebrow mt-1">{noc.region}</p>
+            <p className="eyebrow mt-1">{noc.nocGroup}</p>
           </div>
         </div>
         {latestReport && <WeekRing weekNumber={latestReport.weekNumber} />}

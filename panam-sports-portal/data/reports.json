@@ -3,44 +3,44 @@
     {
       "code": "BIZ",
       "name": "Belize",
-      "region": "Caribbean",
-      "flagCode": "bz"
+      "flagCode": "bz",
+      "nocGroup": "Group1"
     },
     {
       "code": "DMA",
       "name": "Dominica",
-      "region": "Caribbean",
-      "flagCode": "dm"
+      "flagCode": "dm",
+      "nocGroup": "Group2"
     },
     {
       "code": "GRN",
       "name": "Grenada",
-      "region": "Caribbean",
-      "flagCode": "gd"
+      "flagCode": "gd",
+      "nocGroup": "Group2"
     },
     {
       "code": "LCA",
       "name": "St. Lucia",
-      "region": "Caribbean",
-      "flagCode": "lc"
+      "flagCode": "lc",
+      "nocGroup": "Group2"
     },
     {
       "code": "SKN",
       "name": "St. Kitts & Nevis",
-      "region": "Caribbean",
-      "flagCode": "kn"
+      "flagCode": "kn",
+      "nocGroup": "Group2"
     },
     {
       "code": "SUR",
       "name": "Suriname",
-      "region": "Caribbean",
-      "flagCode": "sr"
+      "flagCode": "sr",
+      "nocGroup": "Group3"
     },
     {
       "code": "TTO",
       "name": "Trinidad & Tobago",
-      "region": "Caribbean",
-      "flagCode": "tt"
+      "flagCode": "tt",
+      "nocGroup": "Group3"
     }
   ],
   "reports": [

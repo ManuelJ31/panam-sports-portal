@@ -5,8 +5,8 @@ export interface Noc {
   code: string;
   /** Official country name, e.g. "Dominica" */
   name: string;
-  /** Region grouping, e.g. "Caribbean" */
-  region: string;
+  /** NOC group from the source workbook's dimNOCGroup, e.g. "Group1" */
+  nocGroup: string;
   /** ISO 3166-1 alpha-2 code (lowercase), used as the flag-icons class suffix, e.g. "bz" */
   flagCode: string;
 }
