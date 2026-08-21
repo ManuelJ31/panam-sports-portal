@@ -25,6 +25,8 @@ export interface ReportObjective {
  * `weeklyProgress` is a 0-10 scale the methodologist sets each week.
  */
 export interface ReportInitiative {
+  /** Stable initiative id from the source workbook, e.g. "INI001" — same id recurs every week this initiative is tracked. */
+  id: string;
   name: string;
   category: string;
   weeklyProgress: number;

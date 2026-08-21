@@ -97,3 +97,24 @@ export function getInitiativeTrend(
         ) / 10,
     }));
 }
+
+/**
+ * Week-by-week checkpoints for a single standing initiative, up to and
+ * including the given report.
+ */
+export function getInitiativeHistory(
+  nocCode: string,
+  initiativeId: string,
+  uptoReportId: string
+): { week: string; progress: number }[] {
+  const timeline = getReportsForNoc(nocCode);
+  const uptoIndex = timeline.findIndex((r) => r.id === uptoReportId);
+  const relevant = uptoIndex >= 0 ? timeline.slice(0, uptoIndex + 1) : timeline;
+
+  const history: { week: string; progress: number }[] = [];
+  for (const r of relevant) {
+    const match = r.initiatives.find((i) => i.id === initiativeId);
+    if (match) history.push({ week: r.week, progress: match.weeklyProgress });
+  }
+  return history;
+}

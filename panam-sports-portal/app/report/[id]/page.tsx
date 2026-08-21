@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import {
   getAdjacentReports,
   getAllReports,
+  getInitiativeHistory,
   getInitiativeTrend,
   getNoc,
   getReport,
@@ -49,6 +50,12 @@ export default async function ReportPage({
 
   const { previous, next } = getAdjacentReports(report.id);
   const trend = getInitiativeTrend(report.nocCode, report.id);
+  const initiativeHistories = Object.fromEntries(
+    report.initiatives.map((ini) => [
+      ini.id,
+      getInitiativeHistory(report.nocCode, ini.id, report.id),
+    ])
+  );
 
   return (
     <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-10 sm:px-10 sm:pt-14">
@@ -64,7 +71,11 @@ export default async function ReportPage({
       </div>
 
       <div className="mt-12">
-        <WeeklyDashboard report={report} trend={trend} />
+        <WeeklyDashboard
+          report={report}
+          trend={trend}
+          initiativeHistories={initiativeHistories}
+        />
       </div>
 
       <div className="mt-4 flex justify-end">

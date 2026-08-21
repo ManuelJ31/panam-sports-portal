@@ -9,7 +9,13 @@ const STATUS_TONE: Record<string, Tone> = {
   Cancelled: "gray",
 };
 
-export default function KeyActivitiesTable({ activities }: { activities: ReportActivity[] }) {
+export default function KeyActivitiesTable({
+  activities,
+  highlightCompleted,
+}: {
+  activities: ReportActivity[];
+  highlightCompleted: boolean;
+}) {
   if (activities.length === 0) return null;
 
   return (
@@ -23,17 +29,27 @@ export default function KeyActivitiesTable({ activities }: { activities: ReportA
           </tr>
         </thead>
         <tbody>
-          {activities.map((a, i) => (
-            <tr key={i} className="border-b border-paper-line/60 align-top last:border-0">
-              <td className="whitespace-nowrap py-2.5 pr-3 font-meta text-xs text-navy-faint">
-                {a.date && formatShortDate(a.date)}
-              </td>
-              <td className="max-w-prose py-2.5 pr-3 text-navy-soft">{a.description}</td>
-              <td className="py-2.5 pl-3">
-                <Tag label={a.status} tone={STATUS_TONE[a.status] ?? "gray"} />
-              </td>
-            </tr>
-          ))}
+          {activities.map((a, i) => {
+            const isCompleted = a.status === "Completed";
+            const dim = highlightCompleted && !isCompleted;
+            const pop = highlightCompleted && isCompleted;
+            return (
+              <tr
+                key={i}
+                className={`border-b border-paper-line/60 align-top transition-opacity last:border-0 ${
+                  pop ? "bg-status-approvedBg/40" : ""
+                } ${dim ? "opacity-40" : ""}`}
+              >
+                <td className="whitespace-nowrap py-2.5 pr-3 font-meta text-xs text-navy-faint">
+                  {a.date && formatShortDate(a.date)}
+                </td>
+                <td className="max-w-prose py-2.5 pr-3 text-navy-soft">{a.description}</td>
+                <td className="py-2.5 pl-3">
+                  <Tag label={a.status} tone={STATUS_TONE[a.status] ?? "gray"} />
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
