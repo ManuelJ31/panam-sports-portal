@@ -43,6 +43,17 @@ export interface ReportChallenge {
   priority: string;
 }
 
+/** One logged activity for the week. */
+export interface ReportActivity {
+  date: string | null;
+  description: string;
+  category: string;
+  stakeholder: string;
+  /** Narrative outcome/result of the activity — richer detail than `description`. */
+  resultProgress: string;
+  status: string;
+}
+
 export interface MethodologistReport {
   /** Canonical report id, matches asset file names: PS-<NOC>-<YEAR>-W<WEEK> */
   id: string;
@@ -68,6 +79,7 @@ export interface MethodologistReport {
   objectives: ReportObjective[];
   initiatives: ReportInitiative[];
   challenges: ReportChallenge[];
+  activities: ReportActivity[];
 }
 
 export interface ReportsData {

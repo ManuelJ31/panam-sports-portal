@@ -11,6 +11,11 @@ export function formatDate(isoDate: string): string {
   }).format(date);
 }
 
+export function formatShortDate(isoDate: string): string {
+  const date = new Date(`${isoDate}T00:00:00`);
+  return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric" }).format(date);
+}
+
 export function formatDateRange(startIso: string, endIso: string): string {
   const start = new Date(`${startIso}T00:00:00`);
   const end = new Date(`${endIso}T00:00:00`);
