@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
 
         <p className="eyebrow text-navy-faint/70">
-          Version 1.0.0 &middot; &copy; 2026 SportinXL
+          Version 2.0.0 &middot; &copy; 2026 SportinXL
         </p>
       </div>
     </footer>
