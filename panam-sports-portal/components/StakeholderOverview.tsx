@@ -61,7 +61,7 @@ export default function StakeholderOverview({
                       <td className="py-1.5 pr-3 text-navy-soft">
                         <span
                           aria-hidden
-                          className={`mr-1.5 inline-block text-navy-faint transition-transform ${isOpen ? "rotate-90" : ""}`}
+                          className={`mr-1.5 inline-block text-navy-faint transition-transform print:hidden ${isOpen ? "rotate-90" : ""}`}
                         >
                           &rsaquo;
                         </span>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { CheckCircle2, LineChart, ListChecks, Target, Users, LifeBuoy } from "lucide-react";
 import type { MethodologistReport } from "@/lib/types";
 import KpiTile from "@/components/KpiTile";
 import InitiativesTable from "@/components/InitiativesTable";
@@ -32,6 +33,7 @@ export default function WeeklyDashboard({
           label="Activities Completed"
           value={completedActivities}
           caption={`of ${report.activities.length} logged this week`}
+          icon={CheckCircle2}
           active={highlightCompleted}
           onClick={
             report.activities.length > 0
@@ -49,19 +51,31 @@ export default function WeeklyDashboard({
           label="Strategic Initiatives"
           value={report.initiatives.length}
           caption="Tracked this week"
+          icon={Target}
         />
         <KpiTile
           label="Stakeholder Engagements"
           value={report.stakeholderEngagements.length}
           caption="This week"
+          icon={Users}
         />
-        <KpiTile label="Support Needs" value={openChallenges} caption="Open items" />
+        <KpiTile
+          label="Support Needs"
+          value={openChallenges}
+          caption="Open items"
+          icon={LifeBuoy}
+        />
       </div>
 
       {report.initiatives.length > 0 && (
         <div className="mt-8">
-          <h2 className="eyebrow">Initiative Progress &amp; Trend</h2>
-          <p className="mt-1 text-xs text-navy-faint">Click a row for its full update and history.</p>
+          <h2 className="eyebrow flex items-center gap-1.5">
+            <Target className="h-3.5 w-3.5 text-navy-faint" strokeWidth={2} aria-hidden />
+            Initiative Progress &amp; Trend
+          </h2>
+          <p className="mt-1 text-xs text-navy-faint print:hidden">
+            Click a row for its full update and history.
+          </p>
           <div className="mt-3">
             <InitiativesTable
               initiatives={report.initiatives}
@@ -77,7 +91,10 @@ export default function WeeklyDashboard({
 
       {report.activities.length > 0 && (
         <div ref={activitiesRef} className="mt-8 scroll-mt-6">
-          <h2 className="eyebrow">Key Activities This Week</h2>
+          <h2 className="eyebrow flex items-center gap-1.5">
+            <ListChecks className="h-3.5 w-3.5 text-navy-faint" strokeWidth={2} aria-hidden />
+            Key Activities This Week
+          </h2>
           <div className="mt-3">
             <KeyActivitiesTable
               activities={report.activities}
@@ -89,8 +106,13 @@ export default function WeeklyDashboard({
 
       {report.stakeholderEngagements.length > 0 && (
         <div className="mt-8">
-          <h2 className="eyebrow">Stakeholder Engagement Overview</h2>
-          <p className="mt-1 text-xs text-navy-faint">Click a type for who was engaged.</p>
+          <h2 className="eyebrow flex items-center gap-1.5">
+            <Users className="h-3.5 w-3.5 text-navy-faint" strokeWidth={2} aria-hidden />
+            Stakeholder Engagement Overview
+          </h2>
+          <p className="mt-1 text-xs text-navy-faint print:hidden">
+            Click a type for who was engaged.
+          </p>
           <div className="mt-3">
             <StakeholderOverview
               engagements={report.stakeholderEngagements}
@@ -105,7 +127,10 @@ export default function WeeklyDashboard({
 
       {trend.length >= 2 && (
         <div className="mt-8">
-          <h2 className="eyebrow">Weekly Progress Trend (All Initiatives)</h2>
+          <h2 className="eyebrow flex items-center gap-1.5">
+            <LineChart className="h-3.5 w-3.5 text-navy-faint" strokeWidth={2} aria-hidden />
+            Weekly Progress Trend (All Initiatives)
+          </h2>
           <div className="mt-3">
             <WeeklyTrendChart data={trend} />
           </div>

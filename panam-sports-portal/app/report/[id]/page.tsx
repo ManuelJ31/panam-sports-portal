@@ -58,10 +58,10 @@ export default async function ReportPage({
   );
 
   return (
-    <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-10 sm:px-10 sm:pt-14">
+    <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-10 print:pb-4 print:pt-0 sm:px-10 sm:pt-14">
       <Link
         href="/"
-        className="eyebrow inline-flex items-center gap-1.5 text-navy-faint transition-colors hover:text-blue-dim"
+        className="eyebrow inline-flex items-center gap-1.5 text-navy-faint transition-colors hover:text-blue-dim print:hidden"
       >
         <span aria-hidden>&larr;</span> All Committees
       </Link>
@@ -78,7 +78,7 @@ export default async function ReportPage({
         />
       </div>
 
-      <div className="mt-4 flex justify-end">
+      <div className="mt-4 flex justify-end print:hidden">
         <a
           href={report.dashboardPdf}
           download
@@ -104,7 +104,9 @@ export default async function ReportPage({
         </ReportSection>
       </div>
 
-      <ReportNav previous={previous} next={next} />
+      <div className="print:hidden">
+        <ReportNav previous={previous} next={next} />
+      </div>
     </main>
   );
 }

@@ -49,3 +49,11 @@
     scroll-behavior: auto !important;
   }
 }
+
+@media print {
+  .animate-fadeUp {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

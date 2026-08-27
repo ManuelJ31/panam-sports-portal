@@ -5,8 +5,10 @@ import StatusBadge from "@/components/StatusBadge";
 function MetaField({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-1.5 py-4 sm:py-0">
-      <dt className="eyebrow">{label}</dt>
-      <dd className="font-meta text-sm text-navy">{value}</dd>
+      <dt className="font-meta text-[11px] font-medium uppercase tracking-widest2 text-white/60">
+        {label}
+      </dt>
+      <dd className="font-meta text-sm text-white">{value}</dd>
     </div>
   );
 }
@@ -33,7 +35,7 @@ export default function DossierHeader({
         </div>
       </div>
 
-      <dl className="mt-10 grid grid-cols-2 divide-y divide-paper-line border-y border-paper-line sm:grid-cols-5 sm:divide-x sm:divide-y-0">
+      <dl className="mt-10 grid grid-cols-2 divide-y divide-white/10 rounded-xl bg-navy px-5 sm:grid-cols-5 sm:divide-x sm:divide-y-0 sm:px-6 sm:py-1">
         <div className="pr-4 sm:pr-6">
           <MetaField label="Country" value={noc.name} />
         </div>
@@ -48,7 +50,7 @@ export default function DossierHeader({
                 {report.methodologist}
                 {(report.methodologistPrimarySpecialization ||
                   report.methodologistSecondarySpecialization) && (
-                  <span className="mt-0.5 block font-meta text-xs font-normal text-navy-faint">
+                  <span className="mt-0.5 block font-meta text-xs font-normal text-white/50">
                     {[
                       report.methodologistPrimarySpecialization,
                       report.methodologistSecondarySpecialization,
@@ -64,9 +66,11 @@ export default function DossierHeader({
         <div className="pl-4 sm:px-6">
           <MetaField label="Submitted" value={formatDate(report.submissionDate)} />
         </div>
-        <div className="col-span-2 pt-4 sm:col-span-1 sm:pl-6 sm:pt-0">
+        <div className="col-span-2 py-4 sm:col-span-1 sm:py-0 sm:pl-6">
           <div className="flex flex-col gap-1.5">
-            <dt className="eyebrow">Status</dt>
+            <dt className="font-meta text-[11px] font-medium uppercase tracking-widest2 text-white/60">
+              Status
+            </dt>
             <dd>
               <StatusBadge status={report.status} />
             </dd>
