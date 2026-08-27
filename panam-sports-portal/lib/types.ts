@@ -84,7 +84,6 @@ export interface MethodologistReport {
   methodologistSecondarySpecialization: string | null;
   submissionDate: string;
   status: ReportStatus;
-  dashboardImage: string;
   dashboardPdf: string;
   phaseName: string | null;
   phaseStartDate: string | null;

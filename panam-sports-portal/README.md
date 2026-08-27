@@ -45,7 +45,12 @@ lib/
 data/
   reports.json              Source of truth: NOC list + weekly reports
 
-public/dashboards/          Dashboard PNGs and PDFs referenced by reports.json
+public/dashboards/          Per-report PDFs, generated with
+                             scripts/generate-pdfs.mjs (see below)
+
+scripts/
+  generate-pdfs.mjs         Renders each report page headlessly and prints
+                             it to public/dashboards/<id>.pdf
 ```
 
 ## Data model — `data/reports.json`
@@ -65,7 +70,6 @@ public/dashboards/          Dashboard PNGs and PDFs referenced by reports.json
       "methodologist": "Valentyna Zolotarova",
       "submissionDate": "2026-02-08",
       "status": "Approved",   // "Draft" | "Submitted" | "Reviewed" | "Approved" | "Returned"
-      "dashboardImage": "/dashboards/PS-DMA-2026-W06.png",
       "dashboardPdf": "/dashboards/PS-DMA-2026-W06.pdf",
       "executiveSummary": "...",
       "supportNeeded": "...",
@@ -81,19 +85,27 @@ public/dashboards/          Dashboard PNGs and PDFs referenced by reports.json
 - The report page's Previous/Next Week buttons walk the chronological list of
   reports for that NOC (`lib/reports.ts#getAdjacentReports`).
 
-This repo ships with 21 sample reports across the 7 Caribbean NOCs currently
-assigned (Belize, Dominica, Grenada, St. Lucia, St. Kitts & Nevis, Suriname,
-Trinidad & Tobago), each paired with its assigned methodologist, plus
-placeholder dashboard images/PDFs so the app is fully explorable out of the
-box. Replace them with real data at any time — no code changes required.
+This repo ships with sample reports across the Caribbean NOCs currently
+assigned, each paired with its assigned methodologist. Replace them with real
+data at any time — no code changes required.
 
 ## Adding a new week of reports
 
-1. Drop `PS-<NOC>-<YEAR>-W<WEEK>.png` and the matching `.pdf` into
-   `public/dashboards/`.
-2. Add a matching entry to the `reports` array in `data/reports.json`.
-3. If it's a new NOC, add it to the `nocs` array too (code, name, region, and
-   a flag — a Unicode flag emoji is used by default, no image asset needed).
+1. Add a matching entry to the `reports` array in `data/reports.json` (and to
+   `nocs` too, if it's a new NOC — code, name, NOC group, and a flag).
+2. Generate that report's PDF:
+   ```bash
+   npm run generate:pdfs -- PS-<NOC>-<YEAR>-W<WEEK>
+   ```
+   This runs a production build, boots it locally, opens
+   `/report/<id>` in a headless browser, and prints it to
+   `public/dashboards/<id>.pdf` — the same file the page's "Download PDF"
+   button links to. Omit the id to regenerate every report's PDF at once
+   (useful after a layout/style change to the report page).
+
+   One-time setup for this script: `npx playwright install chromium`
+   (`playwright` itself is already a devDependency, installed by
+   `npm install`).
 
 No other changes are required — the home page, report page, and Previous/Next
 navigation all pick it up automatically.

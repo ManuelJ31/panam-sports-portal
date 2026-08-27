@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:pdfs": "next build && node scripts/generate-pdfs.mjs"
   },
   "dependencies": {
     "flag-icons": "^7.5.0",
@@ -25,6 +26,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
     "eslint-config-next": "15.5.19",
+    "playwright": "^1.62.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"
