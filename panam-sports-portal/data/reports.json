@@ -4297,6 +4297,146 @@
       ]
     },
     {
+      "id": "PS-DMA-2026-W21",
+      "nocCode": "DMA",
+      "year": 2026,
+      "week": "W21",
+      "weekNumber": 21,
+      "weekStartDate": "2026-09-14",
+      "weekEndDate": "2026-09-20",
+      "methodologist": "Valentyna Zolotarova",
+      "methodologistPrimarySpecialization": null,
+      "methodologistSecondarySpecialization": "Deportes de Combate (Karate)",
+      "submissionDate": "2026-09-20",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-DMA-2026-W21.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "This week focused on the review the draft DOC Safeguarding Policy with María Loreto González and and starting a directory of local legal and clinical contacts. We coordinated the local review of the Grades 3–5 OVEP teacher resource and submitted it to OVEP experts for guidance; distribution awaits their feedback. Reviewed Staci Hill’s work plan as well as discussed NOA minutes, including governance documents, communications, OVEP and Youth Olympic Games resources, and museum planning. I supported the local sport methodlogist in proposed coaching course participant check-ins,  Cycling World Championships coordination, and preparation for the September 21 Volleyball meeting. Tania reported that website work is scheduled to begin October 1 and the DOC strategic planning recommendations document has been circulated; the government meeting remains pending for November. We requested the CANOC Strategic Plan through Tania. Key outstanding items that will carry into next week include final safeguarding policy and OVEP resource reviews, and ongoing tarteted technilca and institutional support as well as government coordination follow up. ",
+      "supportNeeded": "Please facilitate María Loreto González’s final safeguarding review and OVEP feedback as well as any feedback possible from technical expects in cycling regarding Dominica's athelte's performance at World Championships in Montreal.",
+      "nextWeekFocus": "Meet with Volleyball; follow up on safeguarding advice and local referrals; secure OVEP resource review; support Staci’s NOA, federation and coaching support work; track Cycling Worlds and seek a debrief; follow up on DOC strategic planning process, shared services & Ministry of Sport scheduling.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Complete the local review of the Grades 3–5 teacher resource, add approved athlete images, and submit it to Olympic Values Education Program experts for final review before distribution to teachers.",
+          "expectedResult": "Selected athlete images to be added to the resource by local sport methodogogist, reviewed and submitted to Roxane Arthigal, Silvia Dalotto and Xenia Kourgouzova for final review guidance on acknowledgements, credits, logo use, disclaimers  before distribution to teachers.",
+          "successIndicator": "Support Staci Hill in final revision of resource through coordination with Tania Burnett other DOC staff to add  approved images of athletes The resource submitted for final review by OVEP experts with request for feedback"
+        },
+        {
+          "priority": 2,
+          "objective": "Obtain technical advice on the draft DOC Safeguarding Policy and initiate long list of experts in Dominica with expertise to contribute to safeguarding policy implementation",
+          "expectedResult": "Continue the external review with Maria Loreto Gonzalez and establish a working directory for legal, clinical psychology and counselling contacts.",
+          "successIndicator": "Facilitate safeguarding consultation with María Loreto González and Tania Burnett   Receive feedback to inform modifications and further steps Prepare a directory document and assign Staci research on potential contacts.  Check in with local safeguarding expect Jemma Azille regarding professionals in her network that can be considered for a potential safe sport office in Dominica Create a working document to develop a referral directory of lawyers and clinical psychologists in Dominica Develop a plan for further steps together with Maria Loreto Gonzalez and Tania Burnett"
+        },
+        {
+          "priority": 3,
+          "objective": "Support Local Sport Methodologist Staci Hill’s National Olympic Academy (NOA), Panam Sports Coaching Course, OVEP teacher engagement and federation work, while following up on DOC institutional priorities.\n",
+          "expectedResult": "Establish clear next steps for NOA governance and activities; advance plans for Coaching Course and OVEP participant engagement, Cycling coordination and the September 21 Volleyball Association meeting; and support alignment between DOC planning and CANOC priorities.\n\n",
+          "successIndicator": "On September 14, reviewed with Staci the September 10 NOA Executive minutes, her September 7–11 work summary and her September 14–18 work plan. Identified NOA follow-up on governance-document approval requirements, social media planning, Executive group communication, involvement in OVEP and Youth Olympic Games resources, proposed athlete and Executive features, and the Olympic Museum and Studies Center walkthrough and phased budget. Reviewed Road Cycling qualification research, Cycling World Championships coordination, the proposed Coaching Course participant check-in and OVEP engagement. Confirmed NOA and OVEP follow-up, Cycling coordination and preparation for the September 21 Volleyball meeting as priorities for the week. Shared with Tania a proposal to align DOC planning with the CANOC MoUs and requested the CANOC Strategic Plan for the DOC Strategic Planning Team. Clarified the purpose and scope of the CANOC research, which Staci will support. Assigned Staci to facilitate CANOC survey responses and research lawyers and clinical psychologists for the safeguarding referral directory."
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI006",
+          "name": "Targeted Technical Expertise & Coach Multiplication",
+          "category": "Development",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "Reviewed  Cycling World Championships coordination with Staci Hill. Continued federation follow-up and prepared for the September 21 Volleyball meeting."
+        },
+        {
+          "id": "INI003",
+          "name": "High Performance & Institutional Capacity Acceleration",
+          "category": "High Performance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "Supported NOA governance follow-up and reviewed plans to check in with Panam Sports Coaching Course participants. Advanced the Grades 3–5 OVEP resource to final review, held a safeguarding policy consultation and started a directory of local professional contacts."
+        },
+        {
+          "id": "INI003",
+          "name": "High Performance & Institutional Capacity Acceleration",
+          "category": "High Performance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "On Hold",
+          "briefUpdate": "Proposed government meeting remained pending for November. Staci Hill will attempt to teenage with sports coordinator during calls concerning CANOC research. Further strategic discussion of engagement of minister of sport in this area to be added to agenda item for the next discussion around engagement with the ministry of sport. "
+        },
+        {
+          "id": "INI011",
+          "name": "Shared Services and Coordination",
+          "category": "Administrative",
+          "weeklyProgress": 3,
+          "previousWeeklyProgress": 3,
+          "status": "Delayed",
+          "briefUpdate": "Shared services remain pending. Tania reported that the website application was approved, the supplier was expected to start October 1, and approximately half the required information had been collected."
+        }
+      ],
+      "challenges": [],
+      "activities": [
+        {
+          "date": "2026-09-14",
+          "description": "Met with María Loreto González and Tania Burnett to review the draft DOC Safeguarding Policy and discuss implementation. \n",
+          "category": "Meeting",
+          "stakeholder": "NOC Leadership",
+          "resultProgress": "Facilitated the consultation and started a working directory of lawyers, clinical psychologists and counsellors in Dominica. Identified a follow-up actions which include further consultation with Maria Loreto once she reviews the document in more detail as well as identification of local expertise following Maria Loreto's suggestions and Jemma Azille recommendations aboutlocal  professionals who could support a future safe sport office.\n",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-09-15",
+          "description": "Met with Staci Hill to discuss updates about the  NOA including the handling of governance documents which were prepared by Judah Corriente, the plans to submit these for revision of the DOC, the creation of NOA  social media  and a content calendar and possible marketing request for branded materials; NOA member interest in participation in OVEP teacher engagement and Youth Olympic Games resource development  and plans for an Olympic Museum and Studies Center walkthrough including  quotations and phased budget. We also discussed Staci’s proposed check-in with Panam Sports Coaching Course participants to hear about their progress and support needs, along with Cycling World Championships coordination and the September 21 Volleyball meeting.\n",
+          "category": "Meeting",
+          "stakeholder": "Technical Staff",
+          "resultProgress": "Confirmed that Judah Corriente completed governance documents and that Luan Gabriel had set up the NOA social media pages. The documents still need to be uploaded, and Staci will follow up on approval. Staci’s next steps include adding NOA members to tOVEP participant group and following up with Coaching Course participants; Luan agreed to help develop Youth Olympic Games resources. The content calendar, proposed social media features, museum walkthrough and budget remain in development.",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-09-16",
+          "description": "Coordinate the local review of the Grades 3–5 teacher resource with Staci Hill, Tania Burnett and DOC staff, including the use of approved athlete images. Obtain final OVEP guidance on acknowledgements, image credits, logo use, disclaimers and any remaining approvals before distribution to teachers.",
+          "category": "Coordination",
+          "stakeholder": "External Partners",
+          "resultProgress": "Worked with the DOC team on the resource and athlete images. Submitted it to Roxanne Arthingal, Silvia Dalotto and Xenia Kourgouzova for final review and requested their feedback. Teacher distribution is pending that review.",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-09-18",
+          "description": "Checked in with Tania Burnett for updates on the DOC website, strategic planning process and proposed government meeting. Informed her about the CANOC MoUs and their possible relevance to DOC planning. Also clarified CANOC research and survey follow-up for local sport methodologist Staci Hill. ",
+          "category": "Strategic Planning",
+          "stakeholder": "NOC Leadership",
+          "resultProgress": "Tania reported that the website supplier was expected to start October 1, and approximately half the required information had been collected. The DOC strategic planning recommendationshad been shared with members, with an Executive meeting expected in September to schedule the first planning session.  Through Tania, we requested the CANOC Strategic Plan and once received, it will be shared with the DOC Strategic Planning Team for possible alignment.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Maria Loreto Gonzalez",
+          "role": "Lawyer, Safe Sport Specialist"
+        },
+        {
+          "type": "IOC",
+          "level": "Executive",
+          "name": "Roxanne Arthingal, Silvia Dalotto and Xenia Kourgouzova",
+          "role": "OVEP Specialists"
+        },
+        {
+          "type": "Other",
+          "level": "Other",
+          "name": "Jemma Azille",
+          "role": "Local Safesport Specialist"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Woody Lawrence",
+          "role": "President Aquatics Federation"
+        }
+      ]
+    },
+    {
       "id": "PS-GRN-2026-W06",
       "nocCode": "GRN",
       "year": 2026,
@@ -5752,6 +5892,111 @@
           "level": "Institutional",
           "name": "Shivon James",
           "role": "Administrative Assistant"
+        }
+      ]
+    },
+    {
+      "id": "PS-GRN-2026-W21",
+      "nocCode": "GRN",
+      "year": 2026,
+      "week": "W21",
+      "weekNumber": 21,
+      "weekStartDate": "2026-09-14",
+      "weekEndDate": "2026-09-20",
+      "methodologist": "Sofia Garcia",
+      "methodologistPrimarySpecialization": null,
+      "methodologistSecondarySpecialization": "Deportes de arte competitiva, tiro con arco",
+      "submissionDate": "2026-09-20",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-GRN-2026-W21.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "Gaps maybe improve the follow up of this topics, between Panam, Methodologist and NOC, cause the NOC said they had already made it and from Panam said it was rejected , so if we close the communication i can coordinate in both areas on time",
+      "supportNeeded": "Can Panam follow up this process, verifiying they submitted correctly if not Panam can contact me in advantage that i am on site",
+      "nextWeekFocus": "Cover the schedule but the approach is to start the implementation with a real exercise to clarify the projection for the sports system and the strategy for LA28 ",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Prepare everything for the next technical visit",
+          "expectedResult": "Have the last meeting with the NOC",
+          "successIndicator": "Define the shcedule and the reschedule of some meetings"
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI019",
+          "name": "Sport System GRN 2028-2032",
+          "category": "Strategic",
+          "weeklyProgress": 5,
+          "previousWeeklyProgress": 5,
+          "status": "On Hold",
+          "briefUpdate": "Starting on Monday the implementation and presentation"
+        },
+        {
+          "id": "INI022",
+          "name": "Strategy for LA28",
+          "category": "Strategic",
+          "weeklyProgress": 5,
+          "previousWeeklyProgress": 5,
+          "status": "On Hold",
+          "briefUpdate": "Starting on Monday"
+        },
+        {
+          "id": "INI020",
+          "name": "Leadership for Associations",
+          "category": "Strategic",
+          "weeklyProgress": 5,
+          "previousWeeklyProgress": 5,
+          "status": "On Hold",
+          "briefUpdate": "I’m hold until october"
+        }
+      ],
+      "challenges": [
+        {
+          "category": "Administrative",
+          "description": "The NOC don't finish the submission for the program so they wont be able to pay until december",
+          "status": "Pending Follow-up",
+          "actionNeeded": "I get in contact with Karla Lecona about this issue, she explain me the situation. I spoke with Veda to explain it , so on monday i will check this point",
+          "priority": "High"
+        }
+      ],
+      "activities": [
+        {
+          "date": "2026-09-15",
+          "description": "Meeting with the NOC discussing different aspects for this tehcnical visit, but Veda wants to share that she is a little worried about the payment fr the next months cause she doesn’t have more money. ",
+          "category": "Administrative",
+          "stakeholder": "NOC Leadership",
+          "resultProgress": "We close the main points for the technical visit, but there is one topic that the NOC should work on, and it’s about the submission of the program for 35,000 USD , I got in contact with Karla and she explained me the submission was rejected because it wasn’t correct, but Veda thought it was correctly so i explained to her, but i am not sure if she make the process again.",
+          "status": "Pending"
+        },
+        {
+          "date": "2026-09-18",
+          "description": "The days before leaving Mexico i just was checking all the contents and the main goal for this visit and get in contact with the associations to star working on a general data base ",
+          "category": "Monitoring",
+          "stakeholder": "Federation",
+          "resultProgress": "Waiting for received all the information",
+          "status": "Pending"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Veda Bruno",
+          "role": "General Secretary"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Conrad Francis",
+          "role": "Technical Assistant"
+        },
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Kayla Lecona",
+          "role": "Secretary General Advisor"
         }
       ]
     },
@@ -7481,6 +7726,104 @@
           "category": "Technical Assistance",
           "stakeholder": "Athletes",
           "resultProgress": "Structured the continued rollout of psychological evaluation plans and monitoring protocols specifically tailored for athletes preparing for the Youth Olympic Games.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": []
+    },
+    {
+      "id": "PS-LCA-2026-W21",
+      "nocCode": "LCA",
+      "year": 2026,
+      "week": "W21",
+      "weekNumber": 21,
+      "weekStartDate": "2026-09-14",
+      "weekEndDate": "2026-09-20",
+      "methodologist": "Richard Britton",
+      "methodologistPrimarySpecialization": "Educacion Fisica",
+      "methodologistSecondarySpecialization": "Atletismo",
+      "submissionDate": "2026-09-20",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-LCA-2026-W21.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "This week saw a strong technical push on the ground but significant administrative roadblocks. Locally, Roberto Antonio successfully engaged the Athletics Association, commencing baseline testing for athletes bound for the CARIFTA Games. He also formally requested the names of the two Youth Olympic Games prospects to immediately begin their testing and preparatory tracking, with a formal planning meeting scheduled for Monday at 4:30 PM. Administratively, efforts to advance the Sports Medicine Athlete Recovery Project failed, as I was unable to contact any SLOC executive members throughout the week.",
+      "supportNeeded": "Guidance on maintaining momentum and alternative strategies for critical medical support when communication with the local NOC executive board experiences a blackout period.",
+      "nextWeekFocus": "Execute the Monday meeting with the Athletics Association to formalize CARIFTA and YOG preparation tracking. Continue aggressive outreach to SLOC leadership to re-establish contact and unblock the Sports Medicine project.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Advance technical testing and athletic profiling for the upcoming CARIFTA Games and Youth Olympic Games (YOG).",
+          "expectedResult": "Initiation of testing protocols for CARIFTA-bound athletes and identification of the two YOG prospects.",
+          "successIndicator": "Initial testing commenced by the local methodologist and a formal planning meeting scheduled with the Athletics Association."
+        },
+        {
+          "priority": 2,
+          "objective": "Secure a commencement date and unblock the Sports Medicine Athlete Recovery Project.",
+          "expectedResult": "Direct communication established with SLOC executive members to confirm the project timeline.",
+          "successIndicator": "Formal agreement and launch date confirmed by the SLOC executive. (Failed this week)"
+        },
+        {
+          "priority": 3,
+          "objective": "Coordinate ongoing local field presence and federation monitoring via the remote-hybrid framework.",
+          "expectedResult": "Roberto Antonio successfully executes on-ground engagement with local federations, particularly Athletics.",
+          "successIndicator": "Local technical interventions and administrative meetings successfully set up by Roberto for this Monday at 4:30 pm."
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI004",
+          "name": "National Elite Athlete Database & Support Project",
+          "category": "High Performance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "The database is preparing to ingest a new wave of physical and psychological metrics, specifically targeting the Track & Field athletes preparing for the CARIFTA Games, as well as the two identified Youth Olympic Games prospects."
+        },
+        {
+          "id": "INI018",
+          "name": "Methodologist Program Remote Transition",
+          "category": "Strategic",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 9,
+          "status": "In Progress",
+          "briefUpdate": "Roberto Antonio continues to drive the local ground game effectively. He successfully engaged the Athletics Association this week, commenced initial testing protocols for the CARIFTA group, and scheduled a dedicated strategic meeting for Monday afternoon."
+        },
+        {
+          "id": "INI023",
+          "name": "Sports Medicine & Rehabilitation Phase 1",
+          "category": "High Performance",
+          "weeklyProgress": 4,
+          "previousWeeklyProgress": 4,
+          "status": "On Hold",
+          "briefUpdate": "Despite sustained outreach efforts this week, I was unable to contact any SLOC executive members. The project remains stalled indefinitely until communication is re-established and a formal launch date is approved."
+        }
+      ],
+      "challenges": [
+        {
+          "category": "Communication",
+          "description": "I was entirely unable to reach or receive information from any executive members of the SLOC regarding the Sports Medicine Athlete Recovery Project. This lack of communication prevents any forward movement on the medical framework.",
+          "status": "Pending Follow-up",
+          "actionNeeded": "Urgent engagement from the SLOC President to restore communication channels, clarify executive sentiment, and finalize the project launch date.",
+          "priority": "High"
+        }
+      ],
+      "activities": [
+        {
+          "date": "2026-09-14",
+          "description": "Attempted executive outreach to follow up on the Sports Medicine Athlete Recovery Project.",
+          "category": "Strategic Planning",
+          "stakeholder": "NOC Leadership",
+          "resultProgress": "Made attempts to contact executive members of the SLOC regarding the Sports Medicine project, but was entirely unable to reach anyone to unblock the initiative.",
+          "status": "In Progress"
+        },
+        {
+          "date": "2026-09-18",
+          "description": "Local methodologist initiated testing protocols for CARIFTA-bound track and field athletes and identified YOG prospects.",
+          "category": "Technical Assistance",
+          "stakeholder": "Coaches",
+          "resultProgress": "Roberto Antonio engaged the Athletics Association, beginning testing for the CARIFTA squad. He requested the names of the two YOG prospects to immediately begin their evaluations and scheduled a formal meeting for Monday at 4:30 PM at the office.",
           "status": "Completed"
         }
       ],
@@ -10415,6 +10758,128 @@
       ]
     },
     {
+      "id": "PS-SUR-2026-W21",
+      "nocCode": "SUR",
+      "year": 2026,
+      "week": "W21",
+      "weekNumber": 21,
+      "weekStartDate": "2026-09-14",
+      "weekEndDate": "2026-09-20",
+      "methodologist": "Karla Aleman",
+      "methodologistPrimarySpecialization": null,
+      "methodologistSecondarySpecialization": "Football",
+      "submissionDate": "2026-09-20",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-SUR-2026-W21.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "This week I settled back into life in Suriname, with everything that entails—an apartment, a car, and the errands that go along with them. I attended meetings at the SOC offices, as well as a meeting with Panam Sports and an awards ceremony for the various volleyball categories.",
+      "supportNeeded": "I requested an additional ticket for the November and December dates so that I could be present for the implementation of the pilot program for the sports talent initiative. I need a prompt response so I can arrange accommodations, as there is high demand during those days in Suriname.",
+      "nextWeekFocus": "1. Monitoring the federations' annual action plans.\n2. Federation rankings.\n3. Talent identification pilot program.\n4. ODESUR Sports Results",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Review the plan with Mike Nahar from the sports talent identification and development pilot program.",
+          "expectedResult": "Allocate responsibilities, set deadlines, and decide on an implementation date",
+          "successIndicator": "2 coordination meetings with Mike, a draft document outlining the tests to be administered"
+        },
+        {
+          "priority": 2,
+          "objective": "Organize course topics with coaches who attended the workshops on August 1 and 5",
+          "expectedResult": "Establish priority topics and content for a second workshop that addresses the topics they requested",
+          "successIndicator": "An email sent to the coaches asking them to suggest topics and content for the second workshop."
+        },
+        {
+          "priority": 3,
+          "objective": "Federation Analysis Document (Federation Rankings)",
+          "expectedResult": "Establish categories that will enable the creation of a tool to support and monitor sports federations and associations—not as a punitive measure, but as a document that identifies areas for improvement in order to strengthen the management of these federations and associations and, consequently, national sports.",
+          "successIndicator": "A draft document for implementation based on the information I have from the assessment and the meetings held with each of the federations. It will provide the SOC with an objective document to help the sports federations and associations."
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI001",
+          "name": "Governance & Strategic Planning",
+          "category": "Governance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 9,
+          "status": "In Progress",
+          "briefUpdate": "I am following up on the Annual Action Plan"
+        },
+        {
+          "id": "INI005",
+          "name": "Coaches Education Program",
+          "category": "Educational",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "We are planning a second workshop with the people who attended the first workshop."
+        },
+        {
+          "id": "INI008",
+          "name": "Competition Preparation Support",
+          "category": "High Performance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "For this phase, in addition to the scholarship athletes who were training for ODESUR, we have included three athletes from the 2026 Dakar Youth Olympic Games."
+        },
+        {
+          "id": "INI010",
+          "name": "Talent Identification & Development Program",
+          "category": "Development",
+          "weeklyProgress": 7,
+          "previousWeeklyProgress": 6,
+          "status": "In Progress",
+          "briefUpdate": "We have the date, the target population, the responsibilities, and a timeline that we will follow for implementation on November 30 and December 1 and 2, respectively."
+        }
+      ],
+      "challenges": [],
+      "activities": [
+        {
+          "date": "2026-09-14",
+          "description": "Reunión de coordinación.",
+          "category": "Meeting",
+          "stakeholder": "Technical Staff",
+          "resultProgress": "We are coordinating priorities for the project's extension through December 16",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-09-14",
+          "description": "Tracking the Rankings of National Federations ",
+          "category": "Review",
+          "stakeholder": "Other",
+          "resultProgress": "El documento pretende convertirse en una herramienta muy útil para que el SOC de seguimiento y apoyo a las federaciones y asociaciones deportivas",
+          "status": "In Progress"
+        },
+        {
+          "date": "2026-09-14",
+          "description": "Reunión con grupo metodologos y el segundo grupo de metodologos",
+          "category": "Meeting",
+          "stakeholder": "External Partners",
+          "resultProgress": "Meeting to Share Experiences with the Methodologists from Group 2",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-09-17",
+          "description": "Ceremonia de premiación de las diferentes categorías del Voleibol",
+          "category": "Field Visit",
+          "stakeholder": "Federation",
+          "resultProgress": "Esta federación es nueva en la gestión, logró cerrar  ciclo de competencias con una premiación muy concurrida.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Emilio Posadas, Ariana Becemberg, fellow methodologists, and the new methodologists for the Caribbean projects.",
+          "role": "Coordinators of the Caribbean Sports Development Project at Panam Sports"
+        }
+      ]
+    },
+    {
       "id": "PS-TTO-2026-W06",
       "nocCode": "TTO",
       "year": 2026,
@@ -11134,6 +11599,73 @@
           "level": "Institutional",
           "name": "Sonja Johnson, TTOC VP",
           "role": "Vice President, TTOC"
+        }
+      ]
+    },
+    {
+      "id": "PS-TTO-2026-W21",
+      "nocCode": "TTO",
+      "year": 2026,
+      "week": "W21",
+      "weekNumber": 21,
+      "weekStartDate": "2026-09-14",
+      "weekEndDate": "2026-09-20",
+      "methodologist": "Scott Novack",
+      "methodologistPrimarySpecialization": "Direccion del Alto Renidmiento",
+      "methodologistSecondarySpecialization": "Deportes de Combate, Rugby",
+      "submissionDate": "2026-09-21",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-TTO-2026-W21.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "The three NGB on-on-one meetings went well. Each had a different outcome for next steps. TTCF submitted content and a Final draft was created for their review. ASATT is having their coach provide details. NAAATA has requested a Google survey to athletes and a townhall to discuss their LA28 plan.",
+      "supportNeeded": "Any LA28 support; resources, funding, education that could be shared to help TTOC & TTNGB's is appreciated. And the funding status of the TTOC local methodologist.",
+      "nextWeekFocus": "Continue to work with TTOC, NAAATA and ASATT.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Meet with Swimming (ASATT), Cycling (TTCF) & Athletics (NAAATA) to discuss the LA28 planning process and planning submission to the Ministry of Sport & Youth Affairs.",
+          "expectedResult": "Conclude each one-on-one meeting and have a LA28 Plan and budget to submit to the Ministry of Sport & Youth Affairs by the end of the month.",
+          "successIndicator": "TTCF (Cycling) has submitted their LA28 Plan. Working with NAAATA and ASATT to develop their LA28 plans."
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI014",
+          "name": "LA28 Plan",
+          "category": "High Performance",
+          "weeklyProgress": 9,
+          "previousWeeklyProgress": 10,
+          "status": "In Progress",
+          "briefUpdate": "Both NAAATA and ASATT are disconnected with their respective athletes. So it is proving more difficult to get data and content for a planning perspective."
+        }
+      ],
+      "challenges": [
+        {
+          "category": "Administrative",
+          "description": "NAAATA and ASATT are disconnected with their respective athletes, so it is difficult for them to get information and data.",
+          "status": "In Progress",
+          "actionNeeded": "Send NAAATA and ASATT a LA28 Planning template document to fill out to be submitted to the Ministry of Sport & Youth Affairs. ",
+          "priority": "High"
+        }
+      ],
+      "activities": [
+        {
+          "date": "2026-09-18",
+          "description": "1. Meet with ASATT on Monday, Sept 14, meet with TTCF on Tuesday, Sept 15 & meet with NAAATA on Wed Sept 16. \nThe following is the LA28 Plan Outline.\n1\tExecutive Summary\n2\tStrategic Context & 2026 Performance Baseline\n3\tLA28 Qualification Strategy\n4\tTarget Events & Athlete Pools\n5\tTraining, Competition & Technical Programme\n6\tPerformance Services - Team Behind the Team\n7\tGovernance, Selection & Accountability\n8\tKPIs, Reviews & Milestones\n9\tInvestment Framework & Budget\n10\tRisk Management\n11\tInternational Competitive Analysis\n12\tAthlete-Center Performance Planning Framework\nAppendix A\tLA28 Targeted Athletes: Cycling",
+          "category": "Meeting",
+          "stakeholder": "Federation",
+          "resultProgress": "TTCF submitted their plan. NAAATA wants to have a townhall with athletes to discuss their LA28 Plan. ASATT is working with their coaching staff on their LA28 Plan.",
+          "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Sonja Johnson, TTOC VP; Rowena Williams, TTCF President; Shawn Pouchet, ASATT President, Jehue Gordon, NAAATA Secretary General ",
+          "role": "See above"
         }
       ]
     }
