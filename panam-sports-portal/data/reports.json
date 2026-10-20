@@ -2512,6 +2512,175 @@
       ]
     },
     {
+      "id": "PS-BIZ-2026-W25",
+      "nocCode": "BIZ",
+      "year": 2026,
+      "week": "W25",
+      "weekNumber": 25,
+      "weekStartDate": "2026-10-12",
+      "weekEndDate": "2026-10-18",
+      "methodologist": "Andres Duque",
+      "methodologistPrimarySpecialization": "Metodologia del entrenamiento y Gestion del Alto Rendimiento",
+      "methodologistSecondarySpecialization": "Despores de Tiempo y Marca",
+      "submissionDate": "2026-10-19",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-BIZ-2026-W25.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "The week focused on strengthening institutional coordination, engagement with National Federations and long-term sport planning in Belize. Panam Sports representative Karla Licona conducted two days of training with BOCGA staff on programme management and implementation procedures. On October 17, BOCGA met with National Federations, including a methodological presentation introducing the next stage of work to better understand each sport's activities, athletes, training conditions and future objectives. Technical meetings advanced the Belize Sports Prioritization Model and preparation for individual federation meetings. Dakar 2026 activities continued through athlete training and recovery follow-up and delivery of the fourth Youth Olympic Games preparation session. Coach development follow-up included contacting 30 CC1 participants with outstanding assessments.",
+      "supportNeeded": "Continued methodological guidance for long-term sport planning, technical coordination with National Federations and support from Panam Sports Academy to encourage completion of outstanding CC1 assessments.",
+      "nextWeekFocus": "Begin individual meetings with National Federations, gather information on athletes, training and future objectives, continue development of the Belize Sports Prioritization Model, and maintain Dakar 2026 athlete preparation and CC1 follow-up.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Strengthen coordination between BOCGA, Panam Sports and National Federations, promoting a shared understanding of available programmes and opportunities for long-term sport development.",
+          "expectedResult": "Improved institutional knowledge and stronger communication with National Federations to support future technical planning and cooperation.",
+          "successIndicator": "Participation in two days of Panam Sports training and the October 17 meeting with National Federations, including the methodological presentation."
+        },
+        {
+          "priority": 2,
+          "objective": "Advance the Belize Sports Prioritization Model by preparing the next stage of work with National Federations, focusing on their current activities, athlete development, training conditions and future international competitions.",
+          "expectedResult": "A clearer work plan for engaging federations and gathering the information needed to develop long-term sport preparation pathways.",
+          "successIndicator": "Technical coordination meetings completed, international competition references reviewed and the next federation meeting schedule prepared."
+        },
+        {
+          "priority": 3,
+          "objective": "Continue supporting Melody Gabourel and Jaaden Williams in their preparation for Dakar 2026 while maintaining follow-up on coaches participating in the Panam Sports Academy CC1 programme.",
+          "expectedResult": "Continued coordination of athlete training and recovery, delivery of the fourth Youth Olympic Games preparation session and improved communication with CC1 participants.",
+          "successIndicator": "Session 4 delivered, athlete preparation reviewed and 30 CC1 participants contacted regarding outstanding assessments."
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI016",
+          "name": "Federation Performance Planning and Technical Coordination",
+          "category": "Strategic",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "Strengthened coordination with National Federations through technical meetings and the October 17 institutional meeting. Presented the methodological approach for long-term sport planning and prepared the next stage of direct engagement with federations."
+        },
+        {
+          "id": "INI017",
+          "name": "Strategic Competition Planning and Preparation Support",
+          "category": "High Performance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "Continued preparation for Dakar 2026 through athlete training and recovery follow-up, technical coordination and delivery of the fourth Youth Olympic Games educational session. Reviewed future international competition calendars to support long-term preparation planning."
+        },
+        {
+          "id": "INI025",
+          "name": "Belize Sports Prioritization Model",
+          "category": "Strategic",
+          "weeklyProgress": 5,
+          "previousWeeklyProgress": 5,
+          "status": "In Progress",
+          "briefUpdate": "Advanced the methodological framework and prepared its next implementation stage. Technical discussions and the presentation to National Federations reinforced the importance of understanding each sport's current activities, development conditions and long-term competitive objectives."
+        },
+        {
+          "id": "INI026",
+          "name": "Sports Training Planning, Organization and Monitoring",
+          "category": "Development",
+          "weeklyProgress": 4,
+          "previousWeeklyProgress": 4,
+          "status": "In Progress",
+          "briefUpdate": "Continued coordination of athlete training and recovery, communication with coaches and preparation of meetings with National Federations to better understand their training programmes, available conditions and technical support needs."
+        }
+      ],
+      "challenges": [
+        {
+          "category": "Coordination",
+          "description": "Continued direct communication with National Federations is needed to better understand their current activities, athletes, training programmes and long-term development objectives.",
+          "status": "In Progress",
+          "actionNeeded": "Conduct individual meetings with National Federations, gather relevant technical information and establish a regular coordination process to support long-term sport planning.",
+          "priority": "High"
+        },
+        {
+          "category": "Technical",
+          "description": "National Federations have different training conditions, athlete development pathways and levels of international competition experience. Long-term planning requires a clearer understanding of these differences and each federation's future objectives.",
+          "status": "In Progress",
+          "actionNeeded": "Continue technical dialogue with federations and use international competition calendars to support realistic preparation pathways and progressive sport development.",
+          "priority": "High"
+        },
+        {
+          "category": "Technical",
+          "description": "The final preparation period for Dakar 2026 requires continued coordination of athlete recovery, training continuity and technical support. The alternative international preparation proposal was reviewed but not approved.",
+          "status": "In Progress",
+          "actionNeeded": "Maintain communication with coaches and medical support providers, follow up on athlete recovery and adjust preparation activities according to each athlete's current condition.",
+          "priority": "High"
+        },
+        {
+          "category": "Communication",
+          "description": "A significant number of coaches registered in the CC1 programme have not yet completed their Module 1 assessment, affecting their progress toward certification.",
+          "status": "Pending Follow-up",
+          "actionNeeded": "Continue direct communication with participants, confirm their intention to remain in the programme and coordinate assessment status updates with Panam Sports Academy.",
+          "priority": "Medium"
+        }
+      ],
+      "activities": [
+        {
+          "date": "2026-10-13",
+          "description": "Continued technical coordination with BOCGA management and the local methodologist to advance the Belize Sports Prioritization Model. Reviewed previous international competition results and future Games calendars as references for long-term planning, and prepared the next stage of meetings with National Federations.",
+          "category": "Strategic Planning",
+          "stakeholder": "Technical Staff",
+          "resultProgress": "Defined the next steps for engaging federations and gathering information on athletes, training activities, competitive experience and future objectives. Prepared the meeting agenda for the following two weeks to support the development of long-term sport plans.",
+          "status": "In Progress"
+        },
+        {
+          "date": "2026-10-15",
+          "description": "Participated in two days of training conducted by Panam Sports representative Karla Licona with BOCGA staff on Pan American Solidarity programmes, application procedures, programme implementation, financial documentation and reporting requirements.",
+          "category": "Training",
+          "stakeholder": "External Partners",
+          "resultProgress": "Strengthened understanding of Panam Sports programmes and procedures, providing practical knowledge to improve institutional planning, coordination and the preparation of future activities with National Federations.",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-10-15",
+          "description": "Continued technical coordination for Melody Gabourel and Jaaden Williams, including training and recovery follow-up, review of preparation alternatives and delivery of Youth Olympic Games Preparation Session 4, focused on competition readiness. Also followed up with CC1 participants regarding outstanding Module 1 assessments.",
+          "category": "Technical Assistance",
+          "stakeholder": "Athletes",
+          "resultProgress": "Delivered Session 4 on competition schedules, venues, personal goals and preparation for competition day. Continued athlete recovery and training coordination. Developed and submitted an alternative preparation proposal that was not approved. Contacted 30 of 49 CC1 participants regarding pending assessments.",
+          "status": "In Progress"
+        },
+        {
+          "date": "2026-10-17",
+          "description": "Participated in BOCGA's meeting with National Federations. The first session addressed Panam Sports programmes and institutional procedures. In the second session, presented the methodological approach for working with federations to better understand their current activities, athletes, training conditions and long-term preparation objectives.",
+          "category": "Meeting",
+          "stakeholder": "Federation",
+          "resultProgress": "Introduced the methodological work to National Federations and established a basis for direct technical coordination. Emphasized the importance of understanding each federation's current situation and developing preparation plans connected to future international competition cycles.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Panam Sports",
+          "level": "Executive",
+          "name": "Karla Licona",
+          "role": "Director of Pan American Olympic Solidarity"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Eduardo Villanueva",
+          "role": "General Manager, BOCGA"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Emerson Baptist",
+          "role": "Local Sports Methodologist"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Belize National Federations",
+          "role": "National Sports Federations affiliated with BOCGA"
+        }
+      ]
+    },
+    {
       "id": "PS-DMA-2026-W06",
       "nocCode": "DMA",
       "year": 2026,
@@ -5492,6 +5661,154 @@
       ]
     },
     {
+      "id": "PS-DMA-2026-W25",
+      "nocCode": "DMA",
+      "year": 2026,
+      "week": "W25",
+      "weekNumber": 25,
+      "weekStartDate": "2026-10-12",
+      "weekEndDate": "2026-10-18",
+      "methodologist": "Valentyna Zolotarova",
+      "methodologistPrimarySpecialization": null,
+      "methodologistSecondarySpecialization": "Deportes de Combate (Karate)",
+      "submissionDate": "2026-10-17",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-DMA-2026-W25.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "Targeted technical expertise focused on coach education and federation planning: updated Module 1 records guided individual assessment follow-up, while Cricket received guidance on requesting DOC support for Panam Games qualification. Institutional capacity work supported Staci’s growing independence, Netball’s CANOC clarifications and Table Tennis’s survey review and introduction to DOC’s shared folders. NOA shirts arrived, headshots were proposed, and Athletes’ Commission liaison explored networking opportunities around the Panam Sports Forum. Government–DOC cooperation progressed through sharing the approved OVEP resource and seeking Ministry support for wider distribution. November meeting arrangements and Sports Division figures remain pending. Shared Services coordination focused on provider mapping and identifying federation needs; further provider details and quotations are required. Next steps include clarifying support needs in Athletics, Basketball and Aquatics and following up on outstanding coaching assessments. Follow-up remains necessary on the revised safeguarding policy, facility access and the government–DOC MoU signing.",
+      "supportNeeded": "Follow up on the revised DOC Safeguarding Policy submitted for review last week.. Feedback from María Loreto González and guidance on the proposed Safe Sport structure, legal review and implementation steps would be helpful when appropriate. ",
+      "nextWeekFocus": "Support Staci with CANOC data, coaching assessments, a Module 2 review, NOA headshots and Athletes’ Commission follow-up. Review 2027 calendars and open Panam Games qualification pathways with Cricket, other sports; progress Ministry coordinations, shared services  and provider quotations.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Support distribution and practical educational use of the approved OVEP learning pack. Begin to gather stakeholder feedback, encourage wider sharing with teachers and Sports Officers, and strengthen Ministry of Education and Sports Division collaboration, including November meeting arrangements.",
+          "expectedResult": "Resource distribution: Workshop participants and NOA members receive the learning pack through WhatsApp and email, with encouragement to use the activities and share feedback.\nMinistry engagement: Ministry representatives review the resource’s educational relevance and consider wider distribution through teacher networks.\nSports Division collaboration: Follow-up explores distribution to additional Sports Officers and possible use in school and community sport programmes. Further collaboration will be discussed in person with Mr. Shillingford after his return.\nNovember coordination: Proposed meeting dates are followed up with Ministry contacts to progress confirmation.",
+          "successIndicator": "Resource submitted to Permanent Secretary of Ministry of Education  Mr. Guiste for educational feedback, with wider distribution referred for Ministry consideration through Ms. Walsh. November meeting agreed with the Ministry of Education; Sports Division distribution discussion carried forward until Mr. Shillingford’s return and in-person meeting in November Delivery guidance clarified for teachers and Sports Officers, with initial feedback recorded on classroom use of workshop activities."
+        },
+        {
+          "priority": 2,
+          "objective": "Support the local sport methodology officer’s coordination of coaching-course assistance, national federation support through technical follow-up for Athletics, Swimming, Cycling, Boxing and Cricket through practical guidance and collaborative problem-solving.",
+          "expectedResult": "Assessment progression: Coaches with outstanding Module 1 assessments are identified through updated completion records and receive individual reminders and practical assistance with completing and submitting their work.\nFlexible course support: A feasible alternative to the delayed working group is explored, including a review after Module 2. Support arrangements take account of participant availability and possible attendance difficulties during Independence Season.\nCycling post-event learning: Follow-up progresses towards a discussion with the coach and athletes about their Caribbean Road Championships experience, lessons learned and further support needed from DOC.\nBoxing competition planning: The qualification tournament is accessible through the Association’s shared calendar to support event tracking and preparation.\nCricket qualification planning: The official manual provides a basis for developing an accessible pathway document that organises qualification requirements and planning steps for the Association.",
+          "successIndicator": "Ariana’s updated assignment completion list is shared with Staci and Tania and used to direct follow-up towards coaches with outstanding assessments. Individual assistance and reminders are provided, participant responses are followed up, and subsequent completion is checked when updated records become available. A support poll is issued and a possible post-Module 2 review is identified following the delay to the group session. Arrangements remain subject to confirmation. Cycling follow-up attempts are recorded, with direct contact through Levi identified as the next step. The purpose of the proposed coach-and-athlete discussion is clear; the discussion remains to be arranged. The Boxing qualification event is entered in the shared calendar. Cricket’s qualification manual is shared with local sport methodology officer and federtion, with preparation of the pathway document identified as the next task."
+        },
+        {
+          "priority": 3,
+          "objective": "Support the local sport methodologist’s coordination of CANOC data collection, Shared Services planning, NOA visibility and Athletes’ Commission engagement through federation communication and practical institutional support.\n",
+          "expectedResult": "CANOC information: Netball’s submission receives clarification follow-up, and Table Tennis’s revised information is pursued to improve the completeness and accuracy of federation data.\nFederation support: Table Tennis’s new executive is introduced to DOC’s support process and shared resources. Its qualification manual provides a reference for future resource planning.\nSports Division coordination: Requests for participation figures and a meeting with Mr. Shillingford progress through continued communication, with outstanding information tracked.\nShared Services planning: Federation submission follow up regarding CANOC survey serves to help identify support needs and guide further provider mapping and quotation gathering.\nNOA visibility: Branded shirts support a consistent public identity, while flexible headshot arrangements and a proposed publication sequence prepare members for introduction through NOA social media.\nAthletes’ Commission engagement: Liaison around the Panam Sports Forum explores networking opportunities that could support both the Commission and NOA.",
+          "successIndicator": "Netball receives written clarification questions and an offer of telephone follow-up that accommodates National Team travel commitments. Table Tennis’s survey is received and discussed with the secretary, who agrees to provide corrections. Receipt of the revised information remains under follow-up. The new Table Tennis executive is offered assistance with DOC processes and shared resources, and its qualification manual is available for future planning. Sports Division follow-up addresses the requested figures and possible meeting; information and meeting confirmation remain pending. Shared Services provider mapping and quotation gathering remain identified workplan priorities, informed by federation support needs. NOA shirts are received. Individual headshots are proposed for the following week, with members able to attend on different days.  Staci liaises with Luan Gabriel and Brendan Williams prior and plans for further engagement to follow up to build the Panam sport athlete’s forum and explore coordination between Athletes’ Commission and NOA."
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI006",
+          "name": "Targeted Technical Expertise & Coach Multiplication",
+          "category": "Development",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "Completed",
+          "briefUpdate": "I supported Staci’s coaching course reminders and individual assessment assistance, using the Panam Sports updated completion list to target follow-up. Cricket received initial guidance in response to their request for support in seeking NOC support in the qualification pathway towards Pan American Game. Boxing’s qualifier was added to the shared calendar and post-performance review planning. Cycling’s post-event review as well as Athletics and Swimming post-Dakar review  and further qualification pathway and performance planning support remain follow-up priorities.r pathway and high performance planning assistance was identified for follow-up."
+        },
+        {
+          "id": "INI003",
+          "name": "High Performance & Institutional Capacity Acceleration",
+          "category": "High Performance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "Completed",
+          "briefUpdate": "Regular coordination with Staci supported federation engagement, NOA implementation and Athletes’ Commission liaison. NOA shirts were received; headshots, member introductions and website content remain in preparation. Athletics and Basketball support needs await clarification, while Swimming follow-up is planned for next week. Forum liaison with Luan Gabriel and Brendan Williams explored networking opportunities for the Commission and NOA."
+        },
+        {
+          "id": "INI009",
+          "name": "Formal Government and Dominica NOC Cooperation",
+          "category": "Strategic",
+          "weeklyProgress": 7,
+          "previousWeeklyProgress": 6,
+          "status": "In Progress",
+          "briefUpdate": "I shared the approved OVEP pack with Mr. Guiste for educational feedback, while Staci followed up with Shaminey Walsh Dupuis on wider Ministry distribution. A revised November meeting date was proposed and awaits confirmation. Sports Division participation figures remain outstanding, with resource distribution to be discussed in person after Mr. Shillingford’s return. Government–DOC MoU signing remains pending."
+        },
+        {
+          "id": "INI011",
+          "name": "Shared Services and Coordination",
+          "category": "Administrative",
+          "weeklyProgress": 6,
+          "previousWeeklyProgress": 6,
+          "status": "In Progress",
+          "briefUpdate": "I supported Staci’s CANOC survey follow-up and provider mapping.  Shared Services database work included a doctors’ worksheet and identification of further provider information to obtain. Additional provider details, quotations and federation input are needed to clarify support needs across sports, particularly Athletics, Basketball and Aquatics. A coordinated strategy for securing facility access also needs review, including follow-up with Elijah Leblanc and a meeting with the Ministry of Sport and DOC leadership."
+        }
+      ],
+      "challenges": [
+        {
+          "category": "Operational",
+          "description": "Some participants require further assistance or encouragement to complete assessments and remain engaged. Delayed assignment submission has required individual follow-up.\n",
+          "status": "In Progress",
+          "actionNeeded": "Class reminders and follow-up on outstanding quizzes were completed. Individual assistance and engagement monitoring continued.  Continue  follow up with participants whose assessments remain outstanding to offer individualized support. \n ",
+          "priority": "Medium"
+        }
+      ],
+      "activities": [
+        {
+          "date": "2026-10-12",
+          "description": "I sent the approved learning pack and teacher’s guide to Mr. Guiste for feedback. Staci shared it with workshop participants and NOA members by WhatsApp and email, and contacted Lily Walsh and the Sports Division about wider distribution. I clarified that teachers and Sports Officers can deliver activities independently or together.",
+          "category": "Coordination",
+          "stakeholder": "External Partners",
+          "resultProgress": "Ms. Walsh passed the pack to her supervisor for consideration. The Ministry agreed to a November meeting. Mr. Shillingford’s office reserved wider Sports Officer distribution for an in-person discussion after his November return. Staci distributed the approved pack to all  workshop participants. Wider national distribution pending further coordination.\n",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-10-14",
+          "description": "I supported Staci Hill/ the local sport methodology officer ’s coordination of coaching-course participation, assessment assistance and federation technical follow-up. Work focused on helping coaches address practical difficulties, pursuing post-event analysis and organising performance goals and future qualification event planning. We reviewed Ariana’s updated assignment completion list and explored support options around Independence Season commitments. Staci also pursued Cycling follow-up, entered Boxing’s qualifier in the shared calendar and obtained Cricket’s manual.",
+          "category": "Technical Assistance",
+          "stakeholder": "Federation",
+          "resultProgress": "A participant proposed an office visit for help; Staci received a commitment from coaches to submit outstanding work; Staci also planned further post-performance review meetings with Cycling as well as follow up with  Cricket in response to federation’s request for assistance with Panam Games qualification",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-10-14",
+          "description": "I supported Staci’s CANOC follow-up with Netball and Table Tennis and communication with Sports Division. She also requested Tania’s support in seeking further clarification from Athletics and Basketball where sport methodology support is needed. Communication with the Swimming Federation was postponed to next week.  Staci sent clarification questions, discussed survey revisions and offered the new Table Tennis executive help with DOC processes and shared resources. Tania supplied Table Tennis’s qualification manual for future resource planning which was placed into the Table Tennis shared folder and the new executive advised. ",
+          "category": "Coordination",
+          "stakeholder": "",
+          "resultProgress": "Netball’s travel preparations prevented an in-person meeting, however Staci emailed the clarification questions to allow data collection to continue. Table Tennis’s survey was received and discussed with its secretary, who agreed to provide corrections as well as a meeting with the new executive.  Further follow up is needed with athletics regarding previously communicated internal data collection process and swimming and basketball regarding current needs and upcoming objectives. ",
+          "status": "In Progress"
+        },
+        {
+          "date": "2026-10-16",
+          "description": "I supported Staci’s NOA visibility planning and Athletes’ Commission coordination. Before Luan Gabriel’s travel to the Panam Sports Forum, she liaised with herto explore networking opportunities for both bodies and also spoke to Brendan Williams. . She also began coordinating individual member headshots and planning the NOA’s social media introductions. NOA members were informed about the website feature. Collection of background information, descriptions and photographs remains ongoing.",
+          "category": "Monitoring",
+          "stakeholder": "NOC Leadership",
+          "resultProgress": "Following funding approval, Staci received the NOA shirts. She proposed headshots next week, allowing members to attend on different days, and social media introductions in approximately two weeks, before Youth Olympic Games content. Photography and publication arrangements remain under coordination. Luan Gabriel attended the Forum alongside Brendan Williams as Dominica Athletes’ Commission representatives.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Staci Hill; Tania Burnett",
+          "role": "Local Sport Methodology Officer Capacity Officer"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Mr. Guiste; Shaminey (Lily) Walsh Dupuis; Mr. Shillingford",
+          "role": "Permanentst Secretary of Ministry of Education, Educational Leaders,"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": " Clément Marcellin",
+          "role": "Cricket Federation President"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Mr. Shillingford",
+          "role": " Head of Sports Division, Ministry of Sport"
+        }
+      ]
+    },
+    {
       "id": "PS-GRN-2026-W06",
       "nocCode": "GRN",
       "year": 2026,
@@ -7421,6 +7738,110 @@
         }
       ],
       "stakeholderEngagements": []
+    },
+    {
+      "id": "PS-GRN-2026-W25",
+      "nocCode": "GRN",
+      "year": 2026,
+      "week": "W25",
+      "weekNumber": 25,
+      "weekStartDate": "2026-10-12",
+      "weekEndDate": "2026-10-18",
+      "methodologist": "Sofia Garcia",
+      "methodologistPrimarySpecialization": null,
+      "methodologistSecondarySpecialization": "Deportes de arte competitiva, tiro con arco",
+      "submissionDate": "2026-10-18",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-GRN-2026-W25.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "Achievements the first training session was conclude with 18 coaches , the main goal is help them improve their own knowledge, and remain the importance of planing, they should know that for any coach planing is the foundation of effective coaching.\nChallenge we realized in this training session that Grenada don't have enough female coaches most of the coaches are male so they have some disadvantage in Mantain females athletes in all the sports.\nAnother challenge is the communication line between the associations and the coaches , iam not sure if the presidents really know that is part of their responsibilities or maybe the don't identify the correct way or person to communicate all the goals of this project that we are developing.\nCoordination efforts the constantly communication with Veda and Conrad help a lot in make big steps",
+      "supportNeeded": "",
+      "nextWeekFocus": "The training session for the Presidents and Coaches",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "This week the most important is the training session with the coaches, reach audience is the main goal, for that Veda and I make a different strategy in communicate to the coaches, so we invite another member of the executive of the Olympic Committee integrate with us.",
+          "expectedResult": "This action help a lot in the communication we had 18 sports coaches on the meeting , two of them are the olympic coaches so it was a pretty well answer of the coaches",
+          "successIndicator": "The coaches were receptive, and i realized the interest in this topic. Also i think its important to promote a special program for the coaches to motivate them,  some times they feel that nobody recognize their work"
+        },
+        {
+          "priority": 2,
+          "objective": "Continue with this strategy in the communication with the Presidents for their training session next week, as we are programing the training session for coaches and Presidents, i need to awaken the desire to improve their knowledge and to apply it in their respective roles",
+          "expectedResult": "Coaches and Presidents  attend the training session next week",
+          "successIndicator": "Get 25 coaches at least and 15 presidents for the training session"
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI024",
+          "name": "Training session for coaches",
+          "category": "Strategic",
+          "weeklyProgress": 6,
+          "previousWeeklyProgress": 1,
+          "status": "In Progress",
+          "briefUpdate": "The most relevant progress was the response of the coaches on the training session the challenge is push the Presidents to work on their communication skills , and their leadership. Another aspect is if we identify the correct person that has the open line with the coaches the response is easy to share all the information so we need to continue working on the implementation to define the actions lines and the way that the should communicate"
+        },
+        {
+          "id": "INI020",
+          "name": "Leadership for Associations",
+          "category": "Strategic",
+          "weeklyProgress": 5,
+          "previousWeeklyProgress": 5,
+          "status": "In Progress",
+          "briefUpdate": "Gonna be active next week"
+        },
+        {
+          "id": "INI019",
+          "name": "Sport System GRN 2028-2032",
+          "category": "Strategic",
+          "weeklyProgress": 6,
+          "previousWeeklyProgress": 6,
+          "status": "In Progress",
+          "briefUpdate": "Continue working on"
+        },
+        {
+          "id": "INI022",
+          "name": "Strategy for LA28",
+          "category": "Strategic",
+          "weeklyProgress": 6,
+          "previousWeeklyProgress": 6,
+          "status": "In Progress",
+          "briefUpdate": "Working on the master plan for the sports program, and the implementation phase"
+        }
+      ],
+      "challenges": [],
+      "activities": [
+        {
+          "date": "2026-10-14",
+          "description": "For this week Veda and I suggest integrate another member of the executive to help us get in contact with the coaches, for this days Conrad, Veda and Denisse called directly the coaches to attend this training session, the response was pretty well, they were receptive in the topic, the content was “The importance of the Planing”, developing the aspects that coaches should integrate for built the periodization plan, make conscious in planing, register and control the process of the preparation for get results.",
+          "category": "Training",
+          "stakeholder": "Coaches",
+          "resultProgress": "On the training session were 18 coaches, of 6 sports, had 2 Olympic coaches was exited for me, in Grenada they have 17 Olympic sports and 6 sports attended means almost the average of the totally sports in this training, for the beginning was ok the results",
+          "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Timothy Stephen, Stephen Benjamin, Niade Simon, Anthony Benjamin, Lyle Bullen, Thorina Mitchell, Rondell Johnson , Sebastian Stiell, Carol Evans, Kurt Felix, Kesha , Javin Noel, Noah Bullen, Jason, Kester Elcock, Paul Phillip, Veda Bruno, Denisse",
+          "role": "Coaches and General Secretary of the Olympic Committee"
+        },
+        {
+          "type": "NOC Staff",
+          "level": "Institutional",
+          "name": "Conrad Francis",
+          "role": "Technical Assitant"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Veda Bruno",
+          "role": "General Secretary"
+        }
+      ]
     },
     {
       "id": "PS-LCA-2026-W06",
@@ -9553,6 +9974,131 @@
       "stakeholderEngagements": []
     },
     {
+      "id": "PS-LCA-2026-W25",
+      "nocCode": "LCA",
+      "year": 2026,
+      "week": "W25",
+      "weekNumber": 25,
+      "weekStartDate": "2026-10-12",
+      "weekEndDate": "2026-10-18",
+      "methodologist": "Richard Britton",
+      "methodologistPrimarySpecialization": "Educacion Fisica",
+      "methodologistSecondarySpecialization": "Atletismo",
+      "submissionDate": "2026-10-18",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-LCA-2026-W25.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "Operations this week highlighted the multi-sport efficacy of our local methodology presence. In Boxing, we identified a critical lack of adequate sparring weights on the island for Olympic prospect Jhon Didier; to resolve this, Roberto held meetings with federation leadership to initiate an overseas training camp in Venezuela, with embassy meetings scheduled for October 19th. In Basketball 3x3, we conducted personality testing to align the squad's psychological profiles with tactical planning. Finally, technical monitoring at the Swimming National Meeting confirmed that our YOG athletes are precisely on schedule, while isolating freestyle stroke difficulties in the broader group for Coach Charles to address.",
+      "supportNeeded": "We request potential logistical or financial assistance mechanisms to support overseas training blocks when local island environments lack the sparring depth necessary for Olympic-level preparation.",
+      "nextWeekFocus": "Track the outcomes of the October 19th Venezuelan Embassy meeting regarding the Boxing camp. Continue utilizing the reporting form to track active federations and monitor for any sudden executive communications from the SLOC.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Facilitate international training logistics for Olympic boxing qualification prospects.",
+          "expectedResult": "Coordination of a specialized overseas training camp to bypass limitations on local sparring.",
+          "successIndicator": "Successful meetings held with Boxing federation leadership and initial steps taken to secure an embassy meeting for camp arrangements in Venezuela."
+        },
+        {
+          "priority": 2,
+          "objective": "Implement psychological and tactical profiling for the Basketball 3x3 national team.",
+          "expectedResult": "Completion of personality testing to align psychological profiles with appropriate tactical preparation for upcoming international events.",
+          "successIndicator": "Tests successfully administered by the local methodologist and tactical recommendations provided to the coaching staff."
+        },
+        {
+          "priority": 3,
+          "objective": "Execute live technical monitoring at the Swimming National Meeting.",
+          "expectedResult": "Live observation of Youth Olympic Games (YOG) prospects and general squad technical execution.",
+          "successIndicator": "Completion of the on-site visit, confirming YOG preparation times and identifying specific technical stroke deficiencies."
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI004",
+          "name": "National Elite Athlete Database & Support Project",
+          "category": "High Performance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "The database successfully ingested a diverse range of metrics this week. We logged tactical/personality mapping for Basketball 3x3 and technical stroke corrections for Swimming. Furthermore, we are establishing the logistical tracking framework for Boxing prospect Jhon Didier's upcoming training block in Venezuela."
+        },
+        {
+          "id": "INI018",
+          "name": "Methodologist Program Remote Transition",
+          "category": "Strategic",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 9,
+          "status": "In Progress",
+          "briefUpdate": "The new standardized reporting template is working flawlessly. This week, Roberto Antonio provided precise, actionable field data across three separate federations (Swimming, Basketball, and Boxing), allowing us to maintain high-level technical oversight remotely."
+        },
+        {
+          "id": "INI023",
+          "name": "Sports Medicine & Rehabilitation Phase 1",
+          "category": "High Performance",
+          "weeklyProgress": 2,
+          "previousWeeklyProgress": 4,
+          "status": "On Hold",
+          "briefUpdate": "The SLOC remains completely silent regarding this project and other pending institutional initiatives. Phase 1 remains indefinitely stalled. After talk with the president last week. he is having some health issue and must put work aside to take care of himself"
+        }
+      ],
+      "challenges": [
+        {
+          "category": "Technical",
+          "description": "Jhon Didier's Olympic qualification preparation is currently hindered because there are no athletes on the island with the adequate weight and technical level to provide necessary sparring resistance.",
+          "status": "In Progress",
+          "actionNeeded": "We must secure the overseas training camp in Venezuela. Roberto Antonio and boxing leadership will attend a meeting at the Venezuelan Embassy on October 19th with Leiff Escalona to evaluate and process the camp logistics.",
+          "priority": "High"
+        }
+      ],
+      "activities": [
+        {
+          "date": "2026-10-12",
+          "description": "Strategic planning for Boxing Olympic qualifier Jhon Didier's overseas training camp.",
+          "category": "Strategic Planning",
+          "stakeholder": "Federation",
+          "resultProgress": "Meetings were held with the Boxing President and Vice President, as well as Yunior Quintero Perez. They established plans for an overseas training camp in Venezuela for Jhon Didier to support his Olympic qualification run. A follow-up meeting is scheduled at the Venezuelan Embassy for October 19th.",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-10-13",
+          "description": "Administered psychological baseline tests for Basketball 3x3 athletes.",
+          "category": "Technical Assistance",
+          "stakeholder": "Coaches",
+          "resultProgress": "Conducted personality tests for the 3x3 athletes preparing for international competition. We provided Coach Andy with detailed personality characteristics to properly align their tactical and psychological preparation.",
+          "status": "Completed"
+        },
+        {
+          "date": "2026-10-14",
+          "description": "Field Monitoring / Technical Assistance",
+          "category": "Training",
+          "stakeholder": "Coaches",
+          "resultProgress": "Roberto Antonio attended the National Meeting. He confirmed that the athletes qualified for the Youth Olympic Games are tracking perfectly according to plan, while identifying specific technical difficulties with the freestyle stroke among the broader developmental group.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "David Christopher",
+          "role": "President of the boxing Association"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Bryan Charles ",
+          "role": "Swimming coach. "
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "Andy",
+          "role": "Basketball Coach"
+        }
+      ]
+    },
+    {
       "id": "PS-SKN-2026-W06",
       "nocCode": "SKN",
       "year": 2026,
@@ -10405,6 +10951,217 @@
           "level": "Institutional",
           "name": "Mr. Glenn Quinlan and mr. Delwayne Delaney",
           "role": "President of Volleyball federation and president of athletics federation"
+        }
+      ]
+    },
+    {
+      "id": "PS-SKN-2026-W22",
+      "nocCode": "SKN",
+      "year": 2026,
+      "week": "W22",
+      "weekNumber": 22,
+      "weekStartDate": "2026-09-21",
+      "weekEndDate": "2026-09-27",
+      "methodologist": "Leo Cursino",
+      "methodologistPrimarySpecialization": "Fisiologo, Preparacion Fisica",
+      "methodologistSecondarySpecialization": "Basketball",
+      "submissionDate": "2026-10-13",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-SKN-2026-W22.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "Standard report successfully modified to obtain relevant information for accountability and the development of action plans by the SKNOC regarding sports federations.",
+      "supportNeeded": "does not apply at this time",
+      "nextWeekFocus": "If the response is positive, distribute the information to stakeholders and formalize it.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "We developed a document to send to the federations, outlining strategies for gathering information that is important for SKNOC's oversight of the 2027 plans.",
+          "expectedResult": "...that the SKNOC accounting committee approves the changes to the report so that we can send it to the federations and ensure the data is correct when the report is submitted.",
+          "successIndicator": "confirmation from the SKNOC accounting committee"
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI013",
+          "name": null,
+          "category": "Administrative",
+          "weeklyProgress": 10,
+          "previousWeeklyProgress": 5,
+          "status": "Completed",
+          "briefUpdate": "Report discussed, prepared, and submitted; awaiting approval by the SKNOC accounting committee."
+        }
+      ],
+      "challenges": [],
+      "activities": [
+        {
+          "date": "2026-09-21",
+          "description": "We have prioritized having each federation list the number of athletes currently active in grassroots programs in the country.",
+          "category": "Technical Assistance",
+          "stakeholder": "NOC Leadership",
+          "resultProgress": "In conjunction with the SKNOC Sports Director, we developed significant changes to the reporting standard required by the SKNOC from sports federations.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Mr Lonzo wilkinson",
+          "role": "Director of sports"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "mr Dennis Knight",
+          "role": "president of SKNOC"
+        },
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Glenn Quinlan",
+          "role": "Accouting SKNOC director"
+        }
+      ]
+    },
+    {
+      "id": "PS-SKN-2026-W23",
+      "nocCode": "SKN",
+      "year": 2026,
+      "week": "W23",
+      "weekNumber": 23,
+      "weekStartDate": "2026-09-28",
+      "weekEndDate": "2026-10-04",
+      "methodologist": "Leo Cursino",
+      "methodologistPrimarySpecialization": "Fisiologo, Preparacion Fisica",
+      "methodologistSecondarySpecialization": "Basketball",
+      "submissionDate": "2026-10-13",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-SKN-2026-W23.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "Distribution of documentation for the sports federations' annual report to the SKNOC\n",
+      "supportNeeded": "no",
+      "nextWeekFocus": "Focus on the meeting with the Deputy Prime Minister and start the workshop with the sports technical staff.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Following confirmation of the changes to the standard report, we received approval from the SKNOC and officially distributed the new report—including specific production and submission dates—to the federations.",
+          "expectedResult": "We hope that, with these new standards, the federations will present their actual figures, allowing us to determine more precise paths for each sport in the country as the evaluations progress.",
+          "successIndicator": "With the correct number of participants per discipline—across its various levels—we will be able to gain a true picture of the discipline's needs, whether regarding mass participation, talent scouting, or investment in already discovered talent."
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI013",
+          "name": null,
+          "category": "Administrative",
+          "weeklyProgress": 10,
+          "previousWeeklyProgress": 10,
+          "status": "Completed",
+          "briefUpdate": "Email received and confirmed by the federations."
+        }
+      ],
+      "challenges": [],
+      "activities": [
+        {
+          "date": "2026-10-26",
+          "description": "We distributed the reports to the official representatives of the sports federations, establishing a unified agenda for the report presentation, financial reporting to the SKNOC, and the plan for 2027.",
+          "category": "Administrative",
+          "stakeholder": "Federation",
+          "resultProgress": "Official email sent to all sports federations affiliated with the SKNOC.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": []
+    },
+    {
+      "id": "PS-SKN-2026-W24",
+      "nocCode": "SKN",
+      "year": 2026,
+      "week": "W24",
+      "weekNumber": 24,
+      "weekStartDate": "2026-10-05",
+      "weekEndDate": "2026-10-11",
+      "methodologist": "Leo Cursino",
+      "methodologistPrimarySpecialization": "Fisiologo, Preparacion Fisica",
+      "methodologistSecondarySpecialization": "Basketball",
+      "submissionDate": "2026-10-13",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-SKN-2026-W24.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "We kicked off the workshop with the sports coaches and held a follow-up meeting with the Deputy Prime Minister of St. Kitts and Nevis.",
+      "supportNeeded": "no",
+      "nextWeekFocus": "proceed with the practical parts of the workshop and await feedback from the meeting with the government",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "start the workshop with the 24 registered coaches",
+          "expectedResult": "reach a significant audience among the volunteer professionals registered in the program",
+          "successIndicator": "if we manage to achieve 20% attendance on all four days of activity"
+        },
+        {
+          "priority": 2,
+          "objective": "hold the scheduled meeting with the Deputy Prime Minister",
+          "expectedResult": "Moving forward with the contract that has been stalled at the Office of the Attorney General since May, awaiting a date for its signing and the launch of the school physical education program.",
+          "successIndicator": "receive a definition of the process"
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI012",
+          "name": "Physical Education Implementation and Teacher Certification Program",
+          "category": "Educational",
+          "weeklyProgress": 4,
+          "previousWeeklyProgress": 2,
+          "status": "Delayed",
+          "briefUpdate": "After the meeting, we sent new documents with the revised agenda, and the government agreed to get back to us regarding the pending issues."
+        },
+        {
+          "id": "INI013",
+          "name": null,
+          "category": "Administrative",
+          "weeklyProgress": 10,
+          "previousWeeklyProgress": 10,
+          "status": "On Hold",
+          "briefUpdate": "We began the four-day workshop with the first two days this week."
+        }
+      ],
+      "challenges": [],
+      "activities": [
+        {
+          "date": "2026-10-05",
+          "description": "Meeting with the Deputy Prime Minister of St. Kitts and Nevis",
+          "category": "Meeting",
+          "stakeholder": "Government",
+          "resultProgress": "Meeting with the Deputy Prime Minister to press for a decision on the contract approved by the Prime Minister in May, which still lacks a signing date.",
+          "status": "Pending"
+        },
+        {
+          "date": "2026-10-06",
+          "description": "Start of the workshop with the coaches.",
+          "category": "Technical Assistance",
+          "stakeholder": "Coaches",
+          "resultProgress": "We begin with the first module, covering motor learning, motor development, and the prescription and routine of activities for grassroots programs.",
+          "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Mr Geoffrey Hanley",
+          "role": "Deput Prime Minister of SKN"
+        },
+        {
+          "type": "Coach",
+          "level": "Field",
+          "name": "6 coachs",
+          "role": "wich federation"
         }
       ]
     },
@@ -13087,6 +13844,134 @@
       ]
     },
     {
+      "id": "PS-SUR-2026-W25",
+      "nocCode": "SUR",
+      "year": 2026,
+      "week": "W25",
+      "weekNumber": 25,
+      "weekStartDate": "2026-10-12",
+      "weekEndDate": "2026-10-18",
+      "methodologist": "Karla Aleman",
+      "methodologistPrimarySpecialization": null,
+      "methodologistSecondarySpecialization": "Football",
+      "submissionDate": "2026-10-18",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-SUR-2026-W25.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "This week, while working remotely, I have made progress on incorporating the recommendations into the planning templates for the federations of the 2027 Pan American Games in Lima. I have prepared the requested report for the Executive Committee and the meeting on Wednesday, October 21. We continue to make progress on implementing the pilot program for identifying and developing athletic talent in Suriname. Finally, I am following up on the coaches' participation in the Panam Sports course.",
+      "supportNeeded": "",
+      "nextWeekFocus": "1- Pilot Project.\n2- Relay document DNS\n3- Legacy Document.\n",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "1) Pilot project: On 12 October, a meeting was held with Mike Nahar and the Gender Commission to finalise preparations for the 27 November activity.\n",
+          "expectedResult": "Arrange the schedule and activities so that the pilot can be implemented on 27 November.",
+          "successIndicator": "Agreement to ensure the participation of 500 girls and boys in the pilot program."
+        },
+        {
+          "priority": 2,
+          "objective": "2- Prepare documents and share them with Mr. Dennis Mac Donald to continue making progress on creating processes within the SOC. ",
+          "expectedResult": "Receive feedback from the SOC on the five forms for the federations preparing for the 2027 Pan American Games in Lima.",
+          "successIndicator": "Five improved forms for implementation with national federations by sport category: Time and Scoring, Racket Sports, Combat Sports, Team Sports, and Precision Sports."
+        },
+        {
+          "priority": 3,
+          "objective": "Legacy Document; this document is intended to provide recommendations for the continued implementation of each of the proposed initiatives.",
+          "expectedResult": "Actions for each of the initiatives to be further developed in 2027.",
+          "successIndicator": "A draft document; 50% complete"
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI001",
+          "name": "Governance & Strategic Planning",
+          "category": "Governance",
+          "weeklyProgress": 9,
+          "previousWeeklyProgress": 9,
+          "status": "In Progress",
+          "briefUpdate": "As part of this initiative, a workshop has been held with the federations; we are still awaiting the submission of the shared planning forms."
+        },
+        {
+          "id": "INI005",
+          "name": "Coaches Education Program",
+          "category": "Educational",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "We held the workshop for coaches, and some of them are enrolled in Panama Sports' Level 1 certification program."
+        },
+        {
+          "id": "INI008",
+          "name": "Competition Preparation Support",
+          "category": "High Performance",
+          "weeklyProgress": 8,
+          "previousWeeklyProgress": 8,
+          "status": "In Progress",
+          "briefUpdate": "We have prepared some templates for the federations to help them plan for the 2027 Pan American Games in Lima."
+        },
+        {
+          "id": "INI010",
+          "name": "Talent Identification & Development Program",
+          "category": "Development",
+          "weeklyProgress": 7,
+          "previousWeeklyProgress": 7,
+          "status": "In Progress",
+          "briefUpdate": "Although we adjusted the number of girls and boys, we reached an agreement with the SOC's gender commission, which means we will have a larger number of students."
+        }
+      ],
+      "challenges": [],
+      "activities": [
+        {
+          "date": "2026-10-12",
+          "description": "Progress meeting on the pilot project with Mike Nahar, as well as coordinating visits to Mike's training sessions in Paramaribo. ",
+          "category": "Meeting",
+          "stakeholder": "Technical Staff",
+          "resultProgress": "Coordinate Pilot Activities: Mike attended a meeting at the SOC offices with Jenny Refos-Cheuk A Lam.",
+          "status": "In Progress"
+        },
+        {
+          "date": "2026-10-12",
+          "description": "At the beginning of the week, I sent the planning forms to Mr. Dennis for feedback. Once I received his comments, I began making the proposed adjustments and changes. Additionally, at Mr. Dennis’s request, a meeting was scheduled for October 21 to provide further details about the project, so I set about preparing the requested information.",
+          "category": "Administrative",
+          "stakeholder": "NOC Leadership",
+          "resultProgress": "I prepared the presentation for the meeting with the Executive Committee on Wednesday, October 21.",
+          "status": "In Progress"
+        },
+        {
+          "date": "2026-10-14",
+          "description": "Virtual meeting with Leyhor Tolud, president of the Athletics Federation.",
+          "category": "Meeting",
+          "stakeholder": "Federation",
+          "resultProgress": "The goal was to learn about the tests that will be administered on November 27 as part of the ID pilot talent program involving 500 schoolchildren.",
+          "status": "In Progress"
+        },
+        {
+          "date": "2026-10-14",
+          "description": "I met with Dr. Kirtie Algoe; she was in Costa Rica for the Athletes' Commission meeting, and we had the opportunity to discuss the shared goals of the event.",
+          "category": "Meeting",
+          "stakeholder": "NOC Leadership",
+          "resultProgress": "Various initiatives being promoted by the athletes' committee.",
+          "status": "Completed"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "Leyhor Tolud",
+          "role": "President  Suriname Athletics Federation"
+        },
+        {
+          "type": "Government",
+          "level": "Executive",
+          "name": "Jenny Refos-Cheuk A Lam - Meeting with Mike Nahar",
+          "role": "Director of the Department of Physical Education and School Sports"
+        }
+      ]
+    },
+    {
       "id": "PS-TTO-2026-W06",
       "nocCode": "TTO",
       "year": 2026,
@@ -13873,6 +14758,79 @@
           "level": "Institutional",
           "name": "Sonja Johnson, TTOC VP; Rowena Williams, TTCF President; Shawn Pouchet, ASATT President, Jehue Gordon, NAAATA Secretary General ",
           "role": "See above"
+        }
+      ]
+    },
+    {
+      "id": "PS-TTO-2026-W25",
+      "nocCode": "TTO",
+      "year": 2026,
+      "week": "W25",
+      "weekNumber": 25,
+      "weekStartDate": "2026-10-12",
+      "weekEndDate": "2026-10-18",
+      "methodologist": "Scott Novack",
+      "methodologistPrimarySpecialization": "Direccion del Alto Renidmiento",
+      "methodologistSecondarySpecialization": "Deportes de Combate, Rugby",
+      "submissionDate": "2026-10-19",
+      "status": "Approved",
+      "dashboardPdf": "/dashboards/PS-TTO-2026-W25.pdf",
+      "phaseName": "Phase 02",
+      "phaseStartDate": "2026-08-10",
+      "phaseEndDate": "2026-12-27",
+      "executiveSummary": "In June, TTOC met with the Ministry of Sport & Youth Affairs to set the groundwork for submission of TTOC LA28 Plans. In July & August, TTOC monitored the TT results from the various Games and World Championships and incorporated those results into the TTOC Targeted Athlete List for Cycling, Athletics, Swimming & Parasport. In September and October, each of the respective sports (minus swimming) submitted their LA28 Plan. With ASATT (swimming) LA28 Plan submission, the final package to the Ministry of Sport & Youth Affairs will be complete. Once the Executive Summary is submitted, TTOC needs to plan out the next steps for LA28 planning and ultimately the TTOC Strategic Planning process. Right now, that is not defined and my compensation was reduced from $6,000 to $2500 to make arrangements for a local methodologist and a strategic planning facilitator.   ",
+      "supportNeeded": " Clear direction and understanding of the IOC Solidarity funding project to the NOC's.",
+      "nextWeekFocus": "Submit the TTOC Executive Summary and NGB LA28 Plans to the Ministry of Sport & Youth Affairs.",
+      "objectives": [
+        {
+          "priority": 1,
+          "objective": "Finalize the LA28 Plan for ASATT (Swimming) and include it into the overall Executive Summary for the Ministry of Sport & Youth Affairs.",
+          "expectedResult": "ASATT LA28 Plan submitted, so the plan can be included with Athletics, Cycling and Parasport for final submission to Ministry of Sport & Youth Affairs.",
+          "successIndicator": "ASATT LA28 Plan submission to TTOC"
+        }
+      ],
+      "initiatives": [
+        {
+          "id": "INI014",
+          "name": "LA28 Plan",
+          "category": "High Performance",
+          "weeklyProgress": 6,
+          "previousWeeklyProgress": 9,
+          "status": "In Progress",
+          "briefUpdate": "The entire Executive Summary to the Ministry of Sport & Youth Affairs has been put on hold due to waiting for the ASATT LA28 Plan. Hopefully, it will be submitted this week, so we can move forward with the submission to the Ministry."
+        }
+      ],
+      "challenges": [
+        {
+          "category": "Political",
+          "description": "The Ministry of Sport & Youth Affairs issued a press release concerning ministry funding support for TT athletes. The question has been raised in how this impacts the TTOC/PAN AM Sports methodology project.  ",
+          "status": "In Progress",
+          "actionNeeded": "We need a strategy to address the Executive Summary of LA28 Plans and submission to the Ministry of Sport & Youth Affairs. ",
+          "priority": "High"
+        }
+      ],
+      "activities": [
+        {
+          "date": "2026-10-14",
+          "description": "Work with TTOC and ASATT to get the LA28 plan finalized. On October 14, ASATT submitted their LA28 Plan, but failed to list the targeted athletes. So, I asked for a revised draft plan with the list of athletes. Once this is received, I will incorporate into the Executive Summary for the Ministry of Sport & Youth Affairs.",
+          "category": "Administrative",
+          "stakeholder": "Federation",
+          "resultProgress": "The ASATT LA28 Plan was submitted, though without a list of targeted athletes. ",
+          "status": "In Progress"
+        }
+      ],
+      "stakeholderEngagements": [
+        {
+          "type": "NOC Leadership",
+          "level": "Institutional",
+          "name": "Sonja Johnson",
+          "role": "VP TTOC"
+        },
+        {
+          "type": "National Federation",
+          "level": "Institutional",
+          "name": "",
+          "role": ""
         }
       ]
     }
