@@ -29,7 +29,8 @@ npm start
 
 ```
 app/
-  page.tsx                 Home page — grid of NOC cards
+  page.tsx                 Home page — one card per Methodologist Program group
+  [group]/page.tsx         /group-1, /group-2 — grid of that group's NOC cards
   report/[id]/page.tsx     Report dossier page (id = "PS-<NOC>-<YEAR>-W<WEEK>")
   layout.tsx, globals.css  Root layout, fonts, Tailwind entry point
   not-found.tsx            Friendly 404 for missing/invalid report ids
@@ -49,6 +50,7 @@ public/dashboards/          Per-report PDFs, generated with
                              scripts/generate-pdfs.mjs (see below)
 
 scripts/
+  ingest_portal_data.py     Rebuilds data/reports.json from PS_Portal_Data.xlsx
   generate-pdfs.mjs         Renders each report page headlessly and prints
                              it to public/dashboards/<id>.pdf
 ```
@@ -58,7 +60,7 @@ scripts/
 ```jsonc
 {
   "nocs": [
-    { "code": "DMA", "name": "Dominica", "region": "Caribbean", "flag": "🇩🇲" }
+    { "code": "DMA", "name": "Dominica", "nocGroup": "Group2", "programGroup": "G1", "flagCode": "dm" }
   ],
   "reports": [
     {
@@ -79,6 +81,9 @@ scripts/
 }
 ```
 
+- `nocGroup` is Panam Sports' regional division (dimNOCGroup); `programGroup`
+  (`"G1"` or `"G2"`, required) is the Methodologist Program cohort and decides
+  which group page a NOC appears on. The build fails if it is missing or invalid.
 - `id` is the canonical key and matches the dashboard file names exactly:
   `PS-<NOC code>-<year>-W<week, zero-padded>`.
 - The home page shows, per NOC, the report with the highest `(year, weekNumber)`.
@@ -91,8 +96,16 @@ data at any time — no code changes required.
 
 ## Adding a new week of reports
 
-1. Add a matching entry to the `reports` array in `data/reports.json` (and to
-   `nocs` too, if it's a new NOC — code, name, NOC group, and a flag).
+1. Load the new reports into `PS_Portal_Data.xlsx`, then rebuild the JSON:
+   ```bash
+   python scripts/ingest_portal_data.py
+   ```
+   (Pass a copy of the workbook as the first argument if Excel has it open.)
+   It regenerates every report from the workbook, keeps the existing `nocs`
+   records, and stops if a NOC with reports is missing from `nocs` — add it
+   there first (code, name, `nocGroup`, `programGroup`, `flagCode`). Read the
+   `NOTE`/`WARNING` lines it prints; they flag duplicate rows and duplicate
+   initiatives in the source data.
 2. Generate that report's PDF:
    ```bash
    npm run generate:pdfs -- PS-<NOC>-<YEAR>-W<WEEK>
