@@ -7,6 +7,7 @@ import {
   getInitiativeHistory,
   getInitiativeTrend,
   getNoc,
+  getProgramGroup,
   getReport,
 } from "@/lib/reports";
 import DossierHeader from "@/components/DossierHeader";
@@ -48,6 +49,7 @@ export default async function ReportPage({
 
   if (!report || !noc) notFound();
 
+  const group = getProgramGroup(noc.programGroup);
   const { previous, next } = getAdjacentReports(report.id);
   const trend = getInitiativeTrend(report.nocCode, report.id);
   const initiativeHistories = Object.fromEntries(
@@ -60,10 +62,10 @@ export default async function ReportPage({
   return (
     <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-10 print:pb-4 print:pt-0 sm:px-10 sm:pt-14">
       <Link
-        href="/"
+        href={`/${group.slug}`}
         className="eyebrow inline-flex items-center gap-1.5 text-navy-faint transition-colors hover:text-blue-dim print:hidden"
       >
-        <span aria-hidden>&larr;</span> All Committees
+        <span aria-hidden>&larr;</span> {group.label} Committees
       </Link>
 
       <div className="mt-8">

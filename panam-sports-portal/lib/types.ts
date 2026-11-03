@@ -1,12 +1,17 @@
 export type ReportStatus = "Draft" | "Submitted" | "Reviewed" | "Approved" | "Returned";
 
+/** Cohort of the Methodologist Program a NOC belongs to. */
+export type ProgramGroup = "G1" | "G2";
+
 export interface Noc {
   /** IOC/Panam Sports 3-letter country code, e.g. "DMA" */
   code: string;
   /** Official country name, e.g. "Dominica" */
   name: string;
-  /** NOC group from the source workbook's dimNOCGroup, e.g. "Group1" */
+  /** Panam Sports regional division from the source workbook's dimNOCGroup, e.g. "Group1" */
   nocGroup: string;
+  /** Methodologist Program cohort (dimNOC.ProgramGroup). Unrelated to `nocGroup`. */
+  programGroup: ProgramGroup;
   /** ISO 3166-1 alpha-2 code (lowercase), used as the flag-icons class suffix, e.g. "bz" */
   flagCode: string;
 }

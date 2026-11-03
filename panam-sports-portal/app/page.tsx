@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { getNocSummaries } from "@/lib/reports";
-import CountryCard from "@/components/CountryCard";
+import { PROGRAM_GROUPS, getNocSummaries } from "@/lib/reports";
+import GroupCard from "@/components/GroupCard";
 
 export default function HomePage() {
-  const summaries = getNocSummaries();
-
   return (
     <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-16 sm:px-10 sm:pt-24">
       <header className="mb-14 max-w-2xl animate-fadeUp sm:mb-20">
@@ -28,16 +26,20 @@ export default function HomePage() {
       </header>
 
       <section
-        aria-label="National Olympic Committees"
+        aria-label="Methodologist Program groups"
         className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {summaries.map(({ noc, latestReport }, i) => (
+        {PROGRAM_GROUPS.map((group, i) => (
           <div
-            key={noc.code}
+            key={group.id}
             className="animate-fadeUp"
             style={{ animationDelay: `${Math.min(i * 40, 320)}ms` }}
           >
-            <CountryCard noc={noc} latestReport={latestReport} />
+            <GroupCard
+              label={group.label}
+              slug={group.slug}
+              summaries={getNocSummaries(group.id)}
+            />
           </div>
         ))}
       </section>

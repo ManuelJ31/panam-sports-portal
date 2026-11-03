@@ -1,8 +1,35 @@
 import reportsData from "@/data/reports.json";
-import type { MethodologistReport, Noc, ReportsData } from "@/lib/types";
+import type {
+  MethodologistReport,
+  Noc,
+  ProgramGroup,
+  ReportsData,
+} from "@/lib/types";
 import { formatWeekPeriod } from "@/lib/format";
 
 const data = reportsData as ReportsData;
+
+export const PROGRAM_GROUPS: { id: ProgramGroup; slug: string; label: string }[] = [
+  { id: "G1", slug: "group-1", label: "Group 1" },
+  { id: "G2", slug: "group-2", label: "Group 2" },
+];
+
+// Fail the build rather than silently filing a NOC under the wrong group.
+for (const noc of data.nocs) {
+  if (!PROGRAM_GROUPS.some((g) => g.id === noc.programGroup)) {
+    throw new Error(
+      `NOC ${noc.code} has an invalid programGroup (${String(noc.programGroup)}); expected one of ${PROGRAM_GROUPS.map((g) => g.id).join(", ")}`
+    );
+  }
+}
+
+export function getProgramGroup(id: ProgramGroup) {
+  return PROGRAM_GROUPS.find((g) => g.id === id)!;
+}
+
+export function getProgramGroupBySlug(slug: string) {
+  return PROGRAM_GROUPS.find((g) => g.slug === slug);
+}
 
 /**
  * All data access for the portal flows through this module.
@@ -45,15 +72,18 @@ export function getLatestReportForNoc(
  * One card per NOC, paired with its latest report (if any).
  * NOCs without a submitted report yet are still returned, so the
  * home page can render an empty state instead of silently omitting them.
+ * Pass a program group to limit the result to that cohort.
  */
-export function getNocSummaries(): {
+export function getNocSummaries(group?: ProgramGroup): {
   noc: Noc;
   latestReport: MethodologistReport | undefined;
 }[] {
-  return getAllNocs().map((noc) => ({
-    noc,
-    latestReport: getLatestReportForNoc(noc.code),
-  }));
+  return getAllNocs()
+    .filter((noc) => !group || noc.programGroup === group)
+    .map((noc) => ({
+      noc,
+      latestReport: getLatestReportForNoc(noc.code),
+    }));
 }
 
 /** Chronological neighbors of a report, for Previous/Next Week navigation. */

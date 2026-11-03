@@ -4,43 +4,71 @@
       "code": "BIZ",
       "name": "Belize",
       "nocGroup": "Group1",
+      "programGroup": "G1",
       "flagCode": "bz"
     },
     {
       "code": "DMA",
       "name": "Dominica",
       "nocGroup": "Group2",
+      "programGroup": "G1",
       "flagCode": "dm"
     },
     {
       "code": "GRN",
       "name": "Grenada",
       "nocGroup": "Group2",
+      "programGroup": "G1",
       "flagCode": "gd"
     },
     {
       "code": "LCA",
       "name": "St. Lucia",
       "nocGroup": "Group2",
+      "programGroup": "G1",
       "flagCode": "lc"
     },
     {
       "code": "SKN",
       "name": "St. Kitts & Nevis",
       "nocGroup": "Group2",
+      "programGroup": "G1",
       "flagCode": "kn"
     },
     {
       "code": "SUR",
       "name": "Suriname",
       "nocGroup": "Group3",
+      "programGroup": "G1",
       "flagCode": "sr"
     },
     {
       "code": "TTO",
       "name": "Trinidad & Tobago",
       "nocGroup": "Group3",
+      "programGroup": "G1",
       "flagCode": "tt"
+    },
+    {
+      "code": "ANT",
+      "name": "Antigua & Barbuda",
+      "nocGroup": "Group2",
+      "programGroup": "G2",
+      "flagCode": "ag"
+    },
+    {
+      "code": "CAY",
+      "name": "Cayman Islands",
+      "nocGroup": "Group2",
+      "programGroup": "G2",
+      "flagCode": "ky"
+    },
+    {
+      "code": "HON",
+      "name": "Honduras",
+      "nocGroup": "Group1",
+      "programGroup": "G2",
+      "flagCode": "hn"
     }
   ],
   "reports": [
