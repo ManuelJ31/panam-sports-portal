@@ -151,9 +151,10 @@ python scripts/methodologist_workbooks.py   # one Excel per methodologist
   `settings`). Pass `--xlsx` / `--out-xlsx` if Excel has it open.
 - Sport and discipline: `dimSports` has one row per sport, `dimDisciplines` one row
   per discipline (Aquatics -> Swimming, Diving...). Methodologists pick one option
-  from a single dropdown ("Aquatics - Swimming", "Archery"); the generated sheet
-  `lstSportOptions` is that list, to paste into the Forms question and the template
-  validation. A sport with disciplines needs one of them. Facts store `SportID` and
+  from a single dropdown ("Aquatics - Swimming", "Archery"); the sheet `lstSportOptions`
+  is that list, to paste into the Forms question and the template validation. Its
+  `Option` text can be edited (keep the IDs); the script keeps those labels, adds rows
+  for new disciplines and always accepts the canonical "Sport - Discipline" too. A sport with disciplines needs one of them. Facts store `SportID` and
   `DisciplineID`; the portal counts by sport and shows the discipline in the roster.
   "Event" (100 m, -57 kg) is a separate free-text field.
 - A row that fails validation is not loaded and is listed in `loadIssues`; it is

@@ -28,7 +28,8 @@ Rules:
     validation is NOT logged: it is reported in loadIssues and retried on the
     next run, so fixing the athlete list is enough to let a result load.
   * Sport and discipline come from one dropdown ("Aquatics - Swimming", "Archery";
-    list: sheet lstSportOptions, built from dimSports + dimDisciplines). A sport with
+    list: sheet lstSportOptions, built from dimSports + dimDisciplines; its Option text is
+    editable and the canonical "Sport - Discipline" spelling is always accepted too). A sport with
     disciplines needs one of them; a plain sport name is accepted only if it is
     unambiguous. Facts store SportID and DisciplineID (blank if the sport has none).
   * Athlete IDs are ATH-<NOC>-<nnn>, assigned in order and never reused.
@@ -470,7 +471,7 @@ def init_workbook(path):
         ("loadIssues", "Filas que no se cargaron y por que. Corrige la fila (o el registro del atleta) y vuelve a ejecutar."),
         ("loadLog", "Filas crudas ya procesadas. Si se borra una fila de aqui, se vuelve a procesar."),
         ("dim* y settings", "Listas de referencia (deportes, disciplinas, niveles de evento, metodologos, CON) y parametros. Se pueden editar."),
-        ("lstSportOptions", "Lista generada (no se edita): una opcion por deporte o por deporte - disciplina. Es la lista desplegable de los formularios y las plantillas. Se regenera en cada carga."),
+        ("lstSportOptions", "Lista desplegable de los formularios y las plantillas: una opcion por deporte o disciplina. Puedes cambiar el texto de la columna Option (no los IDs). El script agrega las filas que falten y respeta tus textos."),
         ("Ejecutar", "python scripts/load_athletes.py   (desde panam-sports-portal/). Genera data/athletes.json para el portal."),
     ]
     for i, (a, b) in enumerate(lines, 4):
@@ -611,17 +612,26 @@ class Ref:
             self.discipline_names[r["DisciplineID"]] = r["DisciplineName"]
             by_sport.setdefault(r["SportID"], []).append(r["DisciplineID"])
         self.sport_disciplines = by_sport
+        # lstSportOptions.Option is editable: the text shown in the Forms dropdown for each
+        # (SportID, DisciplineID). The canonical "Sport - Discipline" stays accepted too.
+        custom = {}
+        if "lstSportOptions" in wb.sheetnames:
+            for r in sheet_dicts(wb["lstSportOptions"]):
+                if not blank(r.get("Option")):
+                    custom[(r.get("SportID"), r.get("DisciplineID") or None)] = text(r["Option"])
         # Accepted spellings -> (SportID, DisciplineID).
         self._labels, self._disc_alone, self._sport_only = {}, {}, {}
         self.options = []
         for r in self.sport_rows:
             sid, name = r["SportID"], r["SportName"]
             self._sport_only[norm(name)] = sid
-            if sid not in by_sport:
-                self._add_label(norm(name), (sid, None), name)
-            for did in by_sport.get(sid, []):
-                label = f"{name} - {self.discipline_names[did]}"
-                self._add_label(norm(label), (sid, did), label)
+            pairs = [(None, name)] if sid not in by_sport else [
+                (did, f"{name} - {self.discipline_names[did]}") for did in by_sport[sid]]
+            for did, canonical in pairs:
+                shown = custom.get((sid, did), canonical)
+                self._add_label(norm(shown), (sid, did), shown, listed=True)
+                if norm(canonical) != norm(shown):
+                    self._add_label(norm(canonical), (sid, did), canonical, listed=False)
         count = {}
         for did, dname in self.discipline_names.items():
             count.setdefault(norm(dname), []).append(did)
@@ -630,11 +640,12 @@ class Ref:
                 sid = next(r["SportID"] for r in self.discipline_rows if r["DisciplineID"] == dids[0])
                 self._disc_alone[key] = (sid, dids[0])
 
-    def _add_label(self, key, ids, label):
-        if key in self._labels:
-            sys.exit(f"dimSports/dimDisciplines: the option {label!r} appears twice.")
+    def _add_label(self, key, ids, label, listed):
+        if key in self._labels and self._labels[key] != ids:
+            sys.exit(f"lstSportOptions/dimDisciplines: the option {label!r} is used for two different sports/disciplines.")
         self._labels[key] = ids
-        self.options.append((ids[0], ids[1], label))
+        if listed:
+            self.options.append((ids[0], ids[1], label))
 
     def sport_label(self, sport_id, discipline_id=None):
         name = self.sport_names.get(sport_id, sport_id)
