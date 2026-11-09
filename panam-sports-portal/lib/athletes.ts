@@ -13,6 +13,7 @@ const data = athletesData as unknown as AthletesData;
 export const SHOW_ATHLETE_NAMES = process.env.ATHLETE_NAMES !== "hidden";
 
 const sportName = new Map(data.sports.map((s) => [s.id, s.name]));
+const disciplineName = new Map(data.disciplines.map((d) => [d.id, d.name]));
 const levelName = new Map(data.eventLevels.map((l) => [l.id, l.name]));
 
 export const SMALL_FIELD_THRESHOLD = data.smallFieldThreshold;
@@ -28,6 +29,10 @@ export function getAthletesAsOf(): string | null {
 
 export function getSportName(sportId: string): string {
   return sportName.get(sportId) ?? sportId;
+}
+
+export function getDisciplineName(disciplineId: string | null): string | null {
+  return disciplineId ? (disciplineName.get(disciplineId) ?? disciplineId) : null;
 }
 
 export function getEventLevelName(levelId: string): string {
@@ -167,6 +172,7 @@ export interface AthleteRow {
   gender: "Female" | "Male";
   sport: string;
   discipline: string | null;
+  event: string | null;
   isPara: boolean;
   targetGames: string;
   stopped: boolean;
@@ -212,7 +218,8 @@ export function getNocAthleteView(nocCode: string) {
         age: a.age,
         gender: a.gender,
         sport: getSportName(a.sportId),
-        discipline: a.eventDiscipline,
+        discipline: getDisciplineName(a.disciplineId),
+        event: a.event,
         isPara: a.isPara,
         targetGames: a.targetGames,
         stopped: a.status === "Stopped",

@@ -130,7 +130,10 @@ export interface Athlete {
   /** Age in whole years on `AthletesData.asOf`. */
   age: number;
   sportId: string;
-  eventDiscipline: string | null;
+  /** Discipline within the sport (e.g. Swimming within Aquatics); null if the sport has none. */
+  disciplineId: string | null;
+  /** Free text: the specific event or weight class, e.g. "100 m", "-57 kg". */
+  event: string | null;
   isPara: boolean;
   /** "Lima 2027" | "LA28" | "Both" | "Other" */
   targetGames: string;
@@ -149,6 +152,7 @@ export interface AthleteResult {
   eventDate: string;
   eventLevelId: string;
   sportId: string;
+  disciplineId: string | null;
   category: string | null;
   status: ResultStatus;
   position: number | null;
@@ -165,6 +169,7 @@ export interface AthletesData {
   asOf: string | null;
   smallFieldThreshold: number;
   sports: { id: string; name: string }[];
+  disciplines: { id: string; sportId: string; name: string }[];
   eventLevels: { id: string; name: string; order: number }[];
   athletes: Athlete[];
   results: AthleteResult[];

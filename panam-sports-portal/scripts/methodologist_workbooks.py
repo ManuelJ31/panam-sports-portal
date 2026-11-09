@@ -59,7 +59,7 @@ def fmt_date(d):
     return d.strftime("%d/%m/%Y") if d else ""
 
 
-def build_one(meth, noc, athletes, results, sports, levels, today, pending_days, out_path):
+def build_one(meth, noc, athletes, results, sports, disciplines, levels, today, pending_days, out_path):
     wb = openpyxl.Workbook()
 
     # ---- Leer primero
@@ -99,18 +99,24 @@ def build_one(meth, noc, athletes, results, sports, levels, today, pending_days,
     def full(a):
         return f"{a['FirstName']} {a['FamilyName']}"
 
+    def sport_of(a):
+        sport = sports.get(a["SportID"], a["SportID"])
+        disc = disciplines.get(a["DisciplineID"])
+        return f"{sport} - {disc}" if disc else sport
+
     # ---- Mis atletas
     ws = wb.create_sheet("Mis atletas")
-    cols = ["Athlete ID", "First name", "Family name", "Gender", "Date of birth", "Age", "Sport", "Event or discipline",
+    cols = ["Athlete ID", "First name", "Family name", "Gender", "Date of birth", "Age", "Sport", "Discipline", "Event",
             "Para", "Target games", "Date added", "Status", "Results", "Last event", "Days since last event"]
-    header(ws, 1, cols, [14, 16, 20, 9, 13, 6, 28, 22, 6, 12, 12, 10, 9, 12, 12])
+    header(ws, 1, cols, [14, 16, 20, 9, 13, 6, 22, 22, 22, 6, 12, 12, 10, 9, 12, 12])
     for r, a in enumerate(athletes, 2):
         res = by_ath.get(a["AthleteID"], [])
         last = res[-1]["EventDate"] if res else None
         body(ws, r, [a["AthleteID"], a["FirstName"], a["FamilyName"], a["Gender"], a["DateOfBirth"],
-                     age_on(a["DateOfBirth"], today), sports.get(a["SportID"], a["SportID"]), a["EventDiscipline"],
+                     age_on(a["DateOfBirth"], today), sports.get(a["SportID"], a["SportID"]),
+                     disciplines.get(a["DisciplineID"]), a["Event"],
                      a["IsPara"], a["TargetGames"], a["DateAdded"], a["Status"], len(res), last,
-                     (today - last).days if last else None], date_cols=(5, 11, 14))
+                     (today - last).days if last else None], date_cols=(5, 12, 15))
     ws.freeze_panes = "B2"
     ws.auto_filter.ref = f"A1:{get_column_letter(len(cols))}{len(athletes) + 1}"
 
@@ -135,12 +141,12 @@ def build_one(meth, noc, athletes, results, sports, levels, today, pending_days,
     ws = wb.create_sheet("Evolución")
     cols = ["Athlete ID", "Athlete", "Sport", "Results", "With position", "First (0-100)", "Latest (0-100)",
             "Change", "Best (0-100)", "Small-field results"]
-    header(ws, 1, cols, [14, 24, 28, 9, 12, 12, 12, 10, 12, 12])
+    header(ws, 1, cols, [14, 24, 34, 9, 12, 12, 12, 10, 12, 12])
     for i, a in enumerate(athletes, 2):
         res = by_ath.get(a["AthleteID"], [])
         pts = [r["StandingPct"] for r in res if r["StandingPct"] is not None]
         change = round(pts[-1] - pts[0], 1) if len(pts) >= 2 else None
-        body(ws, i, [a["AthleteID"], full(a), sports.get(a["SportID"], a["SportID"]), len(res), len(pts),
+        body(ws, i, [a["AthleteID"], full(a), sport_of(a), len(res), len(pts),
                      pts[0] if pts else None, pts[-1] if pts else None, change, max(pts) if pts else None,
                      sum(1 for r in res if r["SmallField"] == "Yes")])
         for c in (6, 7, 8, 9):
@@ -191,7 +197,7 @@ def build_one(meth, noc, athletes, results, sports, levels, today, pending_days,
     # ---- Pendientes
     ws = wb.create_sheet("Pendientes")
     cols = ["Athlete ID", "Athlete", "Sport", "Date added", "Last event", "Days since last event", "Reason"]
-    header(ws, 1, cols, [14, 24, 28, 12, 12, 14, 40])
+    header(ws, 1, cols, [14, 24, 34, 12, 12, 14, 40])
     r = 2
     for a in athletes:
         if a["Status"] != "Active":
@@ -209,7 +215,7 @@ def build_one(meth, noc, athletes, results, sports, levels, today, pending_days,
             if days < pending_days:
                 continue
             reason = f"No result in the last {pending_days} days"
-        body(ws, r, [a["AthleteID"], full(a), sports.get(a["SportID"], a["SportID"]), a["DateAdded"], last, days, reason],
+        body(ws, r, [a["AthleteID"], full(a), sport_of(a), a["DateAdded"], last, days, reason],
              date_cols=(4, 5))
         r += 1
     if r == 2:
@@ -252,6 +258,7 @@ def main():
     athletes = facts("factAthletes", ("DateOfBirth", "DateAdded", "CampDate", "StoppedDate"))
     results = facts("factResults", ("EventDate", "LoadedOn"))
     sports = {r["SportID"]: r["SportName"] for r in sheet_dicts(wb["dimSports"])}
+    disciplines = {r["DisciplineID"]: r["DisciplineName"] for r in sheet_dicts(wb["dimDisciplines"])}
     levels = {r["EventLevelID"]: r["EventLevelName"] for r in sheet_dicts(wb["dimEventLevel"])}
     settings = {r["Key"]: r["Value"] for r in sheet_dicts(wb["settings"])}
     pending_days = int(settings.get("PendingDays", 90))
@@ -269,7 +276,7 @@ def main():
         ids = {a["AthleteID"] for a in mine}
         mine_res = [r for r in results if r["AthleteID"] in ids]
         path = out_dir / f"Seguimiento_{m['NOCCode']}_{m['FullName'].replace(' ', '_')}.xlsx"
-        n_ath, n_res, n_ch = build_one(m, m["NOCCode"], mine, mine_res, sports, levels, today, pending_days, path)
+        n_ath, n_res, n_ch = build_one(m, m["NOCCode"], mine, mine_res, sports, disciplines, levels, today, pending_days, path)
         print(f"{path.name}: {n_ath} athletes, {n_res} results, {n_ch} charts")
         made += 1
     print(f"{made} workbook(s) in {out_dir}")

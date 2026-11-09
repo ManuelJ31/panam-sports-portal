@@ -108,9 +108,9 @@ export default function AthleteRoster({
                         <Tag label="Stopped" tone="gray" />
                       </span>
                     )}
-                    {(showId || a.discipline || a.isPara) && (
+                    {(showId || a.discipline || a.event || a.isPara) && (
                       <p className="ml-4 mt-0.5 font-meta text-xs text-navy-faint">
-                        {[showId ? a.id : null, a.discipline, a.isPara ? "Para" : null]
+                        {[showId ? a.id : null, a.discipline, a.event, a.isPara ? "Para" : null]
                           .filter(Boolean)
                           .join(" · ")}
                       </p>

@@ -27,6 +27,10 @@ Rules:
   * Each raw row is processed once (its hash goes to loadLog). A row that fails
     validation is NOT logged: it is reported in loadIssues and retried on the
     next run, so fixing the athlete list is enough to let a result load.
+  * Sport and discipline come from one dropdown ("Aquatics - Swimming", "Archery";
+    list: sheet lstSportOptions, built from dimSports + dimDisciplines). A sport with
+    disciplines needs one of them; a plain sport name is accepted only if it is
+    unambiguous. Facts store SportID and DisciplineID (blank if the sport has none).
   * Athlete IDs are ATH-<NOC>-<nnn>, assigned in order and never reused.
   * A "New athlete" row that matches an existing athlete (same NOC, first name,
     family name, date of birth) is reported as already registered, not duplicated.
@@ -71,19 +75,92 @@ NOCS = [
     ("ANT", "Antigua & Barbuda", "G2"), ("CAY", "Cayman Islands", "G2"),
     ("HON", "Honduras", "G2"),
 ]
-SPORTS = [
-    "3x3 Basketball", "Aquatics - Artistic Swimming", "Aquatics - Diving",
-    "Aquatics - Marathon Swimming", "Aquatics - Swimming", "Aquatics - Water Polo",
-    "Archery", "Athletics", "Badminton", "Baseball / Softball", "Basketball",
-    "Beach Volleyball", "Boxing", "Canoe / Kayak", "Cricket", "Cycling - BMX",
-    "Cycling - Mountain Bike", "Cycling - Road", "Cycling - Track", "Equestrian",
-    "Fencing", "Flag Football", "Football", "Golf", "Gymnastics - Artistic",
-    "Gymnastics - Rhythmic", "Gymnastics - Trampoline", "Handball", "Hockey", "Judo",
-    "Karate", "Lacrosse", "Modern Pentathlon", "Netball", "Rowing", "Rugby Sevens",
-    "Sailing", "Shooting", "Skateboarding", "Sport Climbing", "Squash", "Surfing",
-    "Table Tennis", "Taekwondo", "Tennis", "Triathlon", "Volleyball", "Weightlifting",
-    "Wrestling", "Other (specify in notes)",
+SPORTS = [  # (SportName, SportCode, [(DisciplineName, DisciplineCode), ...])
+    ('Aquatics', 'AQU', [
+        ('Artistic Swimming', 'SWA'),
+        ('Diving', 'DIV'),
+        ('Open Water Swimming', 'OWS'),
+        ('Swimming', 'SWM'),
+        ('Water Polo', 'WPO'),
+    ]),
+    ('Archery', 'ARC', []),
+    ('Athletics', 'ATH', []),
+    ('Badminton', 'BDM', []),
+    ('Baseball', 'BBL', []),
+    ('Basketball', 'BKB', [
+        ('Basketball 5x5', 'BKB'),
+        ('3x3 Basketball', 'BK3'),
+    ]),
+    ('Bowling', 'BWL', []),
+    ('Boxing', 'BOX', []),
+    ('Canoe / Kayak', 'CAS', [
+        ('Canoe Sprint', 'CSP'),
+        ('Canoe Slalom', 'CSL'),
+    ]),
+    ('Chess', 'CHS', []),
+    ('Cricket', 'CKT', []),
+    ('Cycling', 'CYC', [
+        ('BMX Freestyle', 'BMF'),
+        ('BMX Racing', 'BMX'),
+        ('Mountain Bike', 'MTB'),
+        ('Cycling Road', 'CRD'),
+        ('Cycling Track', 'CRT'),
+    ]),
+    ('E-Sports', 'ELS', []),
+    ('Equestrian', 'EQU', [
+        ('Equestrian Dressage', 'EDR'),
+        ('Equestrian Jumping', 'EJP'),
+        ('Equestrian Eventing', 'EVE'),
+    ]),
+    ('Fencing', 'FEN', []),
+    ('Flag Football', 'FFB', []),
+    ('Football', 'FBL', []),
+    ('Golf', 'GLF', []),
+    ('Gymnastics', 'GYM', [
+        ('Gymnastics Artistic', 'GAR'),
+        ('Gymnastics Rhythmic', 'GRY'),
+        ('Gymnastics Trampoline', 'GTR'),
+    ]),
+    ('Handball', 'HBL', []),
+    ('Hockey', 'HOC', []),
+    ('Judo', 'JUD', []),
+    ('Karate', 'KTE', []),
+    ('Lacrosse', 'LAC', []),
+    ('Modern Pentathlon', 'MPN', []),
+    ('Netball', 'NBL', []),
+    ('Racquetball', 'RQL', []),
+    ('Roller Sports', 'RSP', [
+        ('Speed Skating', 'SSK'),
+        ('Artistic Skating', 'ASK'),
+        ('Skateboarding', 'SKB'),
+    ]),
+    ('Rowing', 'ROW', [
+        ('Coastal', 'RCB'),
+        ('Rowing', 'ROW'),
+    ]),
+    ('Rugby', 'RUG', [
+        ('Rugby 7', 'RU7'),
+    ]),
+    ('Sailing', 'SAL', []),
+    ('Shooting', 'SHO', []),
+    ('Softball', 'SBL', []),
+    ('Sport Climbing', 'CLB', []),
+    ('Squash', 'SQU', []),
+    ('Surfing', 'SRF', []),
+    ('Table Tennis', 'TTE', []),
+    ('Taekwondo', 'TKW', []),
+    ('Tennis', 'TEN', []),
+    ('Triathlon', 'TRI', []),
+    ('Volleyball', 'VOL', [
+        ('Indoor Volleyball', 'VVO'),
+        ('Beach Volleyball', 'VBV'),
+    ]),
+    ('Water Ski', 'WSK', []),
+    ('Weightlifting', 'WLF', []),
+    ('Wrestling', 'WRE', []),
+    ('Other (specify in notes)', None, []),
 ]
+# 'Other' has no code and no disciplines. A sport with disciplines must be registered with one of them.
 EVENT_LEVELS = [
     ("EL1", "National", 1, "National championships, national trials, national league"),
     ("EL2", "Regional / multi-nation", 2, "e.g. CARIFTA, Central American and Caribbean Games, Commonwealth Games"),
@@ -102,11 +179,11 @@ SETTINGS = [
 
 ATHLETE_COLS = [
     "AthleteID", "NOCCode", "MethodologistID", "FirstName", "FamilyName", "FullName", "Gender",
-    "DateOfBirth", "SportID", "EventDiscipline", "IsPara", "TargetGames", "DateAdded",
+    "DateOfBirth", "SportID", "DisciplineID", "Event", "IsPara", "TargetGames", "DateAdded",
     "CampName", "CampDate", "Status", "StoppedDate", "Notes",
 ]
 RESULT_COLS = [
-    "ResultID", "AthleteID", "EventName", "EventDate", "EventLevelID", "SportID", "Category",
+    "ResultID", "AthleteID", "EventName", "EventDate", "EventLevelID", "SportID", "DisciplineID", "Category",
     "ResultStatus", "Position", "Participants", "Mark", "StandingPct", "SmallField", "Notes",
     "LoadedOn",
 ]
@@ -141,8 +218,8 @@ ATHLETE_ALIASES = _aliases({
     "family_name": ["Family name"],
     "gender": ["Gender"],
     "dob": ["Date of birth"],
-    "sport": ["Sport"],
-    "event_discipline": ["Event or discipline"],
+    "sport": ["Sport and discipline", "Sport"],
+    "event": ["Event", "Event or discipline"],
     "para": ["Para athlete?", "Para athlete"],
     "target_games": ["Target games"],
     "date_added": ["Date added to follow-up"],
@@ -159,10 +236,10 @@ RESULT_ALIASES = _aliases({
     "event_name": ["Event name"],
     "event_date": ["Event date"],
     "event_level": ["Event level"],
-    "sport": ["Sport"],
+    "sport": ["Sport and discipline", "Sport"],
     "athlete_id": ["Athlete ID"],
     "family_check": ["Family name (for checking)", "Family name"],
-    "category": ["Category or discipline"],
+    "category": ["Category", "Category or discipline"],
     "status": ["Result status"],
     "position": ["Final position"],
     "participants": ["Number of competitors in the category", "Competitors in category"],
@@ -320,6 +397,60 @@ def replace_sheet(wb, name, index=None):
     return wb.create_sheet(name, index)
 
 
+FORM1_HEADERS = [
+    "Completion time", "Request type", "Methodologist", "Assigned NOC", "Athlete ID", "First name",
+    "Family name", "Gender", "Date of birth", "Sport and discipline", "Event", "Para athlete?",
+    "Target games", "Date added to follow-up", "Has the athlete attended a Panam Sports camp?",
+    "Camp name", "Camp date", "Notes"]
+FORM2_HEADERS = ["Completion time", "Methodologist", "Assigned NOC", "Event name", "Event date", "Event level",
+                 "Sport and discipline"] + [
+    h for _ in range(5) for h in ("Athlete ID", "Category", "Result status", "Final position",
+                                  "Number of competitors in the category", "Mark or time", "Notes",
+                                  "Add another athlete from this event?")]
+
+
+def sport_table_rows():
+    """dimSports and dimDisciplines rows built from SPORTS (IDs are SP### and DI###)."""
+    sports, discs = [], []
+    for i, (name, code, ds) in enumerate(SPORTS, 1):
+        sid = f"SP{i:03d}"
+        sports.append((sid, name, code))
+        for dname, dcode in ds:
+            discs.append((f"DI{len(discs) + 1:03d}", sid, dname, dcode))
+    return sports, discs
+
+
+def option_rows(sports, discs):
+    """(SportID, DisciplineID, Option) for the sport/discipline dropdown."""
+    by_sport = {}
+    for did, sid, dname, _c in discs:
+        by_sport.setdefault(sid, []).append((did, dname))
+    out = []
+    for sid, name, _code in sports:
+        if sid in by_sport:
+            out += [(sid, did, f"{name} - {dname}") for did, dname in by_sport[sid]]
+        else:
+            out.append((sid, None, name))
+    return out
+
+
+def write_option_sheet(wb, rows):
+    ws = replace_sheet(wb, "lstSportOptions",
+                       index=wb.sheetnames.index("dimDisciplines") + 1 if "dimDisciplines" in wb.sheetnames else None)
+    write_table(ws, ["SportID", "DisciplineID", "Option"], rows, widths={"Option": 44})
+
+
+def write_sport_tables(wb):
+    """(Re)write dimSports, dimDisciplines and lstSportOptions from SPORTS."""
+    sports, discs = sport_table_rows()
+    write_table(replace_sheet(wb, "dimSports"), ["SportID", "SportName", "SportCode"], sports,
+                widths={"SportName": 30})
+    write_table(replace_sheet(wb, "dimDisciplines", index=wb.sheetnames.index("dimSports") + 1),
+                ["DisciplineID", "SportID", "DisciplineName", "DisciplineCode"], discs,
+                widths={"DisciplineName": 30})
+    write_option_sheet(wb, option_rows(sports, discs))
+
+
 def init_workbook(path):
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -338,7 +469,8 @@ def init_workbook(path):
         ("factAthletes / factResults", "Tablas normalizadas. Las escribe el script; no se editan a mano."),
         ("loadIssues", "Filas que no se cargaron y por que. Corrige la fila (o el registro del atleta) y vuelve a ejecutar."),
         ("loadLog", "Filas crudas ya procesadas. Si se borra una fila de aqui, se vuelve a procesar."),
-        ("dim* y settings", "Listas de referencia (deportes, niveles de evento, metodologos, CON) y parametros. Se pueden editar."),
+        ("dim* y settings", "Listas de referencia (deportes, disciplinas, niveles de evento, metodologos, CON) y parametros. Se pueden editar."),
+        ("lstSportOptions", "Lista generada (no se edita): una opcion por deporte o por deporte - disciplina. Es la lista desplegable de los formularios y las plantillas. Se regenera en cada carga."),
         ("Ejecutar", "python scripts/load_athletes.py   (desde panam-sports-portal/). Genera data/athletes.json para el portal."),
     ]
     for i, (a, b) in enumerate(lines, 4):
@@ -346,17 +478,8 @@ def init_workbook(path):
         ws.cell(i, 3, b).font = BODY_FONT
 
     # Raw sheets, with the headers Microsoft Forms would export.
-    f1 = ["Completion time", "Request type", "Methodologist", "Assigned NOC", "Athlete ID", "First name",
-          "Family name", "Gender", "Date of birth", "Sport", "Event or discipline", "Para athlete?",
-          "Target games", "Date added to follow-up", "Has the athlete attended a Panam Sports camp?",
-          "Camp name", "Camp date", "Notes"]
-    write_table(wb.create_sheet("dbRaw_Athletes"), f1, [])
-    f2 = ["Completion time", "Methodologist", "Assigned NOC", "Event name", "Event date", "Event level", "Sport"]
-    for _ in range(5):
-        f2 += ["Athlete ID", "Category or discipline", "Result status", "Final position",
-               "Number of competitors in the category", "Mark or time", "Notes",
-               "Add another athlete from this event?"]
-    write_table(wb.create_sheet("dbRaw_Results"), f2, [])
+    write_table(wb.create_sheet("dbRaw_Athletes"), FORM1_HEADERS, [])
+    write_table(wb.create_sheet("dbRaw_Results"), FORM2_HEADERS, [])
     for name in ("dbRaw_RosterTemplate", "dbRaw_ResultsTemplate"):
         w = wb.create_sheet(name)
         w["A1"] = "Pega aqui la hoja de la plantilla completa, encabezado incluido (esta nota se sobrescribe)."
@@ -367,8 +490,7 @@ def init_workbook(path):
     write_table(wb.create_sheet("loadLog"), ["RowHash", "Sheet", "Row", "ProcessedOn", "Note"], [])
     write_table(wb.create_sheet("loadIssues"), ["Level", "Sheet", "Row", "Message", "Raw values"], [])
 
-    write_table(wb.create_sheet("dimSports"), ["SportID", "SportName"],
-                [(f"SP{i:03d}", s) for i, s in enumerate(SPORTS, 1)], widths={"SportName": 36})
+    write_sport_tables(wb)
     write_table(wb.create_sheet("dimEventLevel"), ["EventLevelID", "EventLevelName", "SortOrder", "Description"],
                 EVENT_LEVELS, widths={"EventLevelName": 26, "Description": 70})
     write_table(wb.create_sheet("dimResultStatus"), ["ResultStatus", "Description"], RESULT_STATUS,
@@ -379,6 +501,23 @@ def init_workbook(path):
                 widths={"NOCName": 24})
     write_table(wb.create_sheet("settings"), ["Key", "Value", "Description"], SETTINGS,
                 widths={"Key": 24, "Description": 90})
+    wb.save(path)
+
+
+def migrate_sport_tables(path):
+    """One-off: move a workbook from the flat dimSports layout to dimSports + dimDisciplines.
+
+    Only allowed while the workbook holds no athletes, results or raw rows, because the
+    sport IDs are renumbered. Rewrites the raw/fact headers and the three sport sheets.
+    """
+    wb = openpyxl.load_workbook(path)
+    for name in ("dbRaw_Athletes", "dbRaw_Results", "factAthletes", "factResults"):
+        if len(sheet_dicts(wb[name])) > 0:
+            sys.exit(f"{name} already has rows: IDs would change. Migrate by hand (nothing was modified).")
+    for name, headers, cols in (("dbRaw_Athletes", FORM1_HEADERS, ()), ("dbRaw_Results", FORM2_HEADERS, ()),
+                                ("factAthletes", ATHLETE_COLS, DATE_COLS), ("factResults", RESULT_COLS, DATE_COLS)):
+        write_table(replace_sheet(wb, name), headers, [], date_cols=cols)
+    write_sport_tables(wb)
     wb.save(path)
 
 
@@ -439,8 +578,7 @@ class Ref:
     """Reference lists read from the workbook."""
 
     def __init__(self, wb):
-        self.sports = {norm(r["SportName"]): r["SportID"] for r in sheet_dicts(wb["dimSports"])}
-        self.sport_names = {r["SportID"]: r["SportName"] for r in sheet_dicts(wb["dimSports"])}
+        self._read_sports(wb)
         self.levels = {}
         self.level_rows = sheet_dicts(wb["dimEventLevel"])
         for r in self.level_rows:
@@ -458,6 +596,65 @@ class Ref:
         self.threshold = int(self.settings.get("SmallFieldThreshold", 8))
         self.target_games = {norm(g): g for g in TARGET_GAMES}
         self.target_games.update({"la 2028": "LA28", "lima2027": "Lima 2027", "lima 27": "Lima 2027"})
+
+    def _read_sports(self, wb):
+        if "dimDisciplines" not in wb.sheetnames:
+            sys.exit("The workbook has no dimDisciplines sheet (older layout). Run: python scripts/load_athletes.py --migrate-sport-tables")
+        self.sport_rows = sheet_dicts(wb["dimSports"])
+        self.discipline_rows = sheet_dicts(wb["dimDisciplines"])
+        self.sport_names = {r["SportID"]: r["SportName"] for r in self.sport_rows}
+        self.discipline_names = {}
+        by_sport = {}
+        for r in self.discipline_rows:
+            if r["SportID"] not in self.sport_names:
+                sys.exit(f"dimDisciplines: {r['DisciplineID']} points to unknown sport {r['SportID']}.")
+            self.discipline_names[r["DisciplineID"]] = r["DisciplineName"]
+            by_sport.setdefault(r["SportID"], []).append(r["DisciplineID"])
+        self.sport_disciplines = by_sport
+        # Accepted spellings -> (SportID, DisciplineID).
+        self._labels, self._disc_alone, self._sport_only = {}, {}, {}
+        self.options = []
+        for r in self.sport_rows:
+            sid, name = r["SportID"], r["SportName"]
+            self._sport_only[norm(name)] = sid
+            if sid not in by_sport:
+                self._add_label(norm(name), (sid, None), name)
+            for did in by_sport.get(sid, []):
+                label = f"{name} - {self.discipline_names[did]}"
+                self._add_label(norm(label), (sid, did), label)
+        count = {}
+        for did, dname in self.discipline_names.items():
+            count.setdefault(norm(dname), []).append(did)
+        for key, dids in count.items():
+            if len(dids) == 1:  # "Beach Volleyball" alone is fine; a name used twice is not
+                sid = next(r["SportID"] for r in self.discipline_rows if r["DisciplineID"] == dids[0])
+                self._disc_alone[key] = (sid, dids[0])
+
+    def _add_label(self, key, ids, label):
+        if key in self._labels:
+            sys.exit(f"dimSports/dimDisciplines: the option {label!r} appears twice.")
+        self._labels[key] = ids
+        self.options.append((ids[0], ids[1], label))
+
+    def sport_label(self, sport_id, discipline_id=None):
+        name = self.sport_names.get(sport_id, sport_id)
+        return f"{name} - {self.discipline_names[discipline_id]}" if discipline_id else name
+
+    def resolve_sport(self, value):
+        """Text from the form -> (SportID, DisciplineID, error). Sport alone is accepted when unambiguous."""
+        key = norm(value)
+        if key in self._labels:
+            return (*self._labels[key], None)
+        if key in self._disc_alone:
+            return (*self._disc_alone[key], None)
+        sid = self._sport_only.get(key)
+        if sid:
+            discs = self.sport_disciplines.get(sid, [])
+            if len(discs) == 1:
+                return sid, discs[0], None
+            options = ", ".join(self.discipline_names[d] for d in discs)
+            return None, None, f"sport {text(value)!r} needs a discipline: use 'Sport - Discipline' ({options})"
+        return None, None, f"unknown sport {text(value)!r} (see lstSportOptions)"
 
     @staticmethod
     def _lvl(name):
@@ -543,14 +740,15 @@ def parse_athlete_fields(rec, ref, today):
         except ValueError as e:
             errs.append(f"Date of birth: {e}")
 
-    v = need("sport", "Sport")
+    v = need("sport", "Sport and discipline")
+    f["SportID"] = f["DisciplineID"] = None
     if v is not None:
-        sid = ref.sports.get(norm(v))
-        if not sid:
-            errs.append(f"unknown sport {v!r} (see dimSports)")
-        f["SportID"] = sid
+        sid, did, err = ref.resolve_sport(v)
+        if err:
+            errs.append(err)
+        f["SportID"], f["DisciplineID"] = sid, did
 
-    f["EventDiscipline"] = text(get(rec, "event_discipline"))
+    f["Event"] = text(get(rec, "event"))
 
     v = need("para", "Para athlete?")
     if v is not None:
@@ -675,7 +873,7 @@ def process_athletes(wb, ref, athletes, log, log_rows, issues, today):
                     fail(f"Update request: another athlete already has {full} with that date of birth")
                     continue
                 for col in ("MethodologistID", "FirstName", "FamilyName", "Gender", "DateOfBirth", "SportID",
-                            "EventDiscipline", "IsPara", "TargetGames", "DateAdded", "CampName", "CampDate", "Notes"):
+                            "DisciplineID", "Event", "IsPara", "TargetGames", "DateAdded", "CampName", "CampDate", "Notes"):
                     a[col] = f[col]
                 a["FullName"] = full
                 updated += 1
@@ -706,7 +904,7 @@ def process_athletes(wb, ref, athletes, log, log_rows, issues, today):
                 "AthleteID": new_id, "NOCCode": f["NOCCode"], "MethodologistID": f["MethodologistID"],
                 "FirstName": f["FirstName"], "FamilyName": f["FamilyName"], "FullName": full,
                 "Gender": f["Gender"], "DateOfBirth": f["DateOfBirth"], "SportID": f["SportID"],
-                "EventDiscipline": f["EventDiscipline"], "IsPara": f["IsPara"], "TargetGames": f["TargetGames"],
+                "DisciplineID": f["DisciplineID"], "Event": f["Event"], "IsPara": f["IsPara"], "TargetGames": f["TargetGames"],
                 "DateAdded": f["DateAdded"], "CampName": f["CampName"], "CampDate": f["CampDate"],
                 "Status": "Active", "StoppedDate": None, "Notes": f["Notes"],
             }
@@ -755,9 +953,13 @@ def process_results(wb, ref, athletes, results, log, log_rows, issues, today):
             if level_id is None:
                 part_a_errs.append(f"Event level {level!r} is not one of the levels in dimEventLevel" if not blank(level) else "Event level is missing")
             sport = get(rec, "sport")
-            sport_id = ref.sports.get(norm(sport)) if not blank(sport) else None
-            if sport_id is None:
-                part_a_errs.append(f"Sport {sport!r} is not in dimSports" if not blank(sport) else "Sport is missing")
+            sport_id = discipline_id = None
+            if blank(sport):
+                part_a_errs.append("Sport is missing")
+            else:
+                sport_id, discipline_id, sport_err = ref.resolve_sport(sport)
+                if sport_err:
+                    part_a_errs.append(sport_err)
             m = ref.methodologists.get(norm(meth)) if not blank(meth) else None
             if not blank(meth) and not m:
                 part_a_errs.append(f"unknown methodologist {meth!r}")
@@ -808,9 +1010,9 @@ def process_results(wb, ref, athletes, results, log, log_rows, issues, today):
                 if status != "Placed" and (position is not None or participants is not None):
                     row_warnings.append(f"{aid}: position/competitors ignored because status is {status}")
                     position = participants = None
-                if a["SportID"] != sport_id:
+                if (a["SportID"], a["DisciplineID"] or None) != (sport_id, discipline_id):
                     row_warnings.append(
-                        f"{aid}: result sport ({ref.sport_names.get(sport_id)}) differs from the athlete's registered sport ({ref.sport_names.get(a['SportID'])})")
+                        f"{aid}: result sport ({ref.sport_label(sport_id, discipline_id)}) differs from the athlete's registered sport ({ref.sport_label(a['SportID'], a['DisciplineID'])})")
                 entries.append((aid, status, position, participants, k))
 
             if not row_ok:
@@ -824,7 +1026,8 @@ def process_results(wb, ref, athletes, results, log, log_rows, issues, today):
                         if (r["AthleteID"], norm(r["EventName"]), r["EventDate"], norm(r["Category"])) == key]
                 fields = {
                     "AthleteID": aid, "EventName": event_name, "EventDate": event_date,
-                    "EventLevelID": level_id, "SportID": sport_id, "Category": category,
+                    "EventLevelID": level_id, "SportID": sport_id, "DisciplineID": discipline_id,
+                    "Category": category,
                     "ResultStatus": status, "Position": position, "Participants": participants,
                     "Mark": text(get(rec, "mark", k)),
                     "StandingPct": standing_pct(status, position, participants),
@@ -856,7 +1059,7 @@ def build_json(ref, athletes, results, today):
             "id": a["AthleteID"], "nocCode": a["NOCCode"], "firstName": a["FirstName"],
             "familyName": a["FamilyName"], "gender": a["Gender"],
             "age": age_on(a["DateOfBirth"], today),
-            "sportId": a["SportID"], "eventDiscipline": a["EventDiscipline"] or None,
+            "sportId": a["SportID"], "disciplineId": a["DisciplineID"] or None, "event": a["Event"] or None,
             "isPara": a["IsPara"] == "Yes", "targetGames": a["TargetGames"],
             "dateAdded": iso(a["DateAdded"]), "campName": a["CampName"] or None,
             "campDate": iso(a["CampDate"]), "status": a["Status"], "stoppedDate": iso(a["StoppedDate"]),
@@ -866,7 +1069,7 @@ def build_json(ref, athletes, results, today):
         res.append({
             "id": r["ResultID"], "athleteId": r["AthleteID"], "eventName": r["EventName"],
             "eventDate": iso(r["EventDate"]), "eventLevelId": r["EventLevelID"], "sportId": r["SportID"],
-            "category": r["Category"] or None, "status": r["ResultStatus"],
+            "disciplineId": r["DisciplineID"] or None, "category": r["Category"] or None, "status": r["ResultStatus"],
             "position": r["Position"], "participants": r["Participants"], "mark": r["Mark"] or None,
             "standingPct": r["StandingPct"], "smallField": r["SmallField"] == "Yes",
         })
@@ -874,6 +1077,8 @@ def build_json(ref, athletes, results, today):
         "asOf": iso(today) if ath else None,
         "smallFieldThreshold": ref.threshold,
         "sports": [{"id": i, "name": n} for i, n in ref.sport_names.items()],
+        "disciplines": [{"id": r["DisciplineID"], "sportId": r["SportID"], "name": r["DisciplineName"]}
+                        for r in ref.discipline_rows],
         "eventLevels": [{"id": r["EventLevelID"], "name": r["EventLevelName"], "order": r["SortOrder"]}
                         for r in sorted(ref.level_rows, key=lambda x: x["SortOrder"])],
         "athletes": ath,
@@ -881,18 +1086,19 @@ def build_json(ref, athletes, results, today):
     }
 
 
-def save_workbook(wb, path, athletes, results, log_rows, issues):
+def save_workbook(wb, path, ref, athletes, results, log_rows, issues):
     def sort_ath(a):
         m = re.fullmatch(r"ATH-(\w+)-(\d+)", a["AthleteID"])
         return (m.group(1), int(m.group(2)))
 
     ws = replace_sheet(wb, "factAthletes")
     write_table(ws, ATHLETE_COLS, [[a.get(c) for c in ATHLETE_COLS] for a in sorted(athletes.values(), key=sort_ath)],
-                widths={"FullName": 26, "EventDiscipline": 24, "Notes": 40, "CampName": 24}, date_cols=DATE_COLS)
+                widths={"FullName": 26, "Event": 24, "Notes": 40, "CampName": 24}, date_cols=DATE_COLS)
     ws = replace_sheet(wb, "factResults")
     write_table(ws, RESULT_COLS, [[r.get(c) for c in RESULT_COLS] for r in
                                   sorted(results.values(), key=lambda x: (x["AthleteID"], x["EventDate"], x["ResultID"]))],
                 widths={"EventName": 30, "Category": 22, "Notes": 40}, date_cols=DATE_COLS)
+    write_option_sheet(wb, ref.options)
     ws = replace_sheet(wb, "loadLog")
     write_table(ws, ["RowHash", "Sheet", "Row", "ProcessedOn", "Note"], log_rows)
     for r in range(2, len(log_rows) + 2):
@@ -914,6 +1120,8 @@ def main():
     ap.add_argument("--out-json", default=str(DEFAULT_JSON))
     ap.add_argument("--as-of")
     ap.add_argument("--init", action="store_true", help="create an empty PS_Athletes_Data workbook")
+    ap.add_argument("--migrate-sport-tables", action="store_true",
+                    help="one-off: convert an empty workbook with the flat dimSports to dimSports + dimDisciplines")
     ap.add_argument("--dry-run", action="store_true", help="validate and report, write nothing")
     args = ap.parse_args()
 
@@ -926,6 +1134,10 @@ def main():
         return
     if not xlsx.exists():
         sys.exit(f"{xlsx} not found. Run with --init to create it, or pass --xlsx.")
+    if args.migrate_sport_tables:
+        migrate_sport_tables(xlsx)
+        print(f"Rewrote dimSports, dimDisciplines and lstSportOptions in {xlsx}")
+        return
 
     today = date.fromisoformat(args.as_of) if args.as_of else date.today()
     wb = openpyxl.load_workbook(xlsx, data_only=True)
@@ -948,7 +1160,7 @@ def main():
         return
     out_xlsx = Path(args.out_xlsx) if args.out_xlsx else xlsx
     wb_w = openpyxl.load_workbook(xlsx)  # keep formatting of the sheets we do not rewrite
-    save_workbook(wb_w, out_xlsx, athletes, results, log_rows, issues)
+    save_workbook(wb_w, out_xlsx, ref, athletes, results, log_rows, issues)
     out_json = Path(args.out_json)
     data = build_json(ref, athletes, results, today)
     with open(out_json, "w", encoding="utf-8", newline="\r\n") as fh:

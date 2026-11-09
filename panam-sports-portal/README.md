@@ -147,8 +147,15 @@ python scripts/methodologist_workbooks.py   # one Excel per methodologist
 
 - `PS_Athletes_Data.xlsx` (default: `OneDrive\SPORTINXL\Projects\`) holds the raw
   sheets, `factAthletes` / `factResults`, `loadLog`, `loadIssues` and the lists
-  (`dimSports`, `dimEventLevel`, `dimMethodologists`, `dimNOC`, `settings`).
-  Pass `--xlsx` / `--out-xlsx` if Excel has it open.
+  (`dimSports`, `dimDisciplines`, `dimEventLevel`, `dimMethodologists`, `dimNOC`,
+  `settings`). Pass `--xlsx` / `--out-xlsx` if Excel has it open.
+- Sport and discipline: `dimSports` has one row per sport, `dimDisciplines` one row
+  per discipline (Aquatics -> Swimming, Diving...). Methodologists pick one option
+  from a single dropdown ("Aquatics - Swimming", "Archery"); the generated sheet
+  `lstSportOptions` is that list, to paste into the Forms question and the template
+  validation. A sport with disciplines needs one of them. Facts store `SportID` and
+  `DisciplineID`; the portal counts by sport and shows the discipline in the roster.
+  "Event" (100 m, -57 kg) is a separate free-text field.
 - A row that fails validation is not loaded and is listed in `loadIssues`; it is
   retried on the next run. Athlete IDs (`ATH-<NOC>-<nnn>`) are never reused.
 - Relative position = (competitors − position) / (competitors − 1) × 100, only for

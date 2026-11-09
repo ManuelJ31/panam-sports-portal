@@ -4,203 +4,325 @@
   "sports": [
     {
       "id": "SP001",
-      "name": "3x3 Basketball"
+      "name": "Aquatics"
     },
     {
       "id": "SP002",
-      "name": "Aquatics - Artistic Swimming"
-    },
-    {
-      "id": "SP003",
-      "name": "Aquatics - Diving"
-    },
-    {
-      "id": "SP004",
-      "name": "Aquatics - Marathon Swimming"
-    },
-    {
-      "id": "SP005",
-      "name": "Aquatics - Swimming"
-    },
-    {
-      "id": "SP006",
-      "name": "Aquatics - Water Polo"
-    },
-    {
-      "id": "SP007",
       "name": "Archery"
     },
     {
-      "id": "SP008",
+      "id": "SP003",
       "name": "Athletics"
     },
     {
-      "id": "SP009",
+      "id": "SP004",
       "name": "Badminton"
     },
     {
-      "id": "SP010",
-      "name": "Baseball / Softball"
+      "id": "SP005",
+      "name": "Baseball"
     },
     {
-      "id": "SP011",
+      "id": "SP006",
       "name": "Basketball"
     },
     {
-      "id": "SP012",
-      "name": "Beach Volleyball"
+      "id": "SP007",
+      "name": "Bowling"
     },
     {
-      "id": "SP013",
+      "id": "SP008",
       "name": "Boxing"
     },
     {
-      "id": "SP014",
+      "id": "SP009",
       "name": "Canoe / Kayak"
     },
     {
-      "id": "SP015",
+      "id": "SP010",
+      "name": "Chess"
+    },
+    {
+      "id": "SP011",
       "name": "Cricket"
     },
     {
-      "id": "SP016",
-      "name": "Cycling - BMX"
+      "id": "SP012",
+      "name": "Cycling"
     },
     {
-      "id": "SP017",
-      "name": "Cycling - Mountain Bike"
+      "id": "SP013",
+      "name": "E-Sports"
     },
     {
-      "id": "SP018",
-      "name": "Cycling - Road"
-    },
-    {
-      "id": "SP019",
-      "name": "Cycling - Track"
-    },
-    {
-      "id": "SP020",
+      "id": "SP014",
       "name": "Equestrian"
     },
     {
-      "id": "SP021",
+      "id": "SP015",
       "name": "Fencing"
     },
     {
-      "id": "SP022",
+      "id": "SP016",
       "name": "Flag Football"
     },
     {
-      "id": "SP023",
+      "id": "SP017",
       "name": "Football"
     },
     {
-      "id": "SP024",
+      "id": "SP018",
       "name": "Golf"
     },
     {
-      "id": "SP025",
-      "name": "Gymnastics - Artistic"
+      "id": "SP019",
+      "name": "Gymnastics"
     },
     {
-      "id": "SP026",
-      "name": "Gymnastics - Rhythmic"
-    },
-    {
-      "id": "SP027",
-      "name": "Gymnastics - Trampoline"
-    },
-    {
-      "id": "SP028",
+      "id": "SP020",
       "name": "Handball"
     },
     {
-      "id": "SP029",
+      "id": "SP021",
       "name": "Hockey"
     },
     {
-      "id": "SP030",
+      "id": "SP022",
       "name": "Judo"
     },
     {
-      "id": "SP031",
+      "id": "SP023",
       "name": "Karate"
     },
     {
-      "id": "SP032",
+      "id": "SP024",
       "name": "Lacrosse"
     },
     {
-      "id": "SP033",
+      "id": "SP025",
       "name": "Modern Pentathlon"
     },
     {
-      "id": "SP034",
+      "id": "SP026",
       "name": "Netball"
     },
     {
-      "id": "SP035",
+      "id": "SP027",
+      "name": "Racquetball"
+    },
+    {
+      "id": "SP028",
+      "name": "Roller Sports"
+    },
+    {
+      "id": "SP029",
       "name": "Rowing"
     },
     {
-      "id": "SP036",
-      "name": "Rugby Sevens"
+      "id": "SP030",
+      "name": "Rugby"
     },
     {
-      "id": "SP037",
+      "id": "SP031",
       "name": "Sailing"
     },
     {
-      "id": "SP038",
+      "id": "SP032",
       "name": "Shooting"
     },
     {
-      "id": "SP039",
-      "name": "Skateboarding"
+      "id": "SP033",
+      "name": "Softball"
     },
     {
-      "id": "SP040",
+      "id": "SP034",
       "name": "Sport Climbing"
     },
     {
-      "id": "SP041",
+      "id": "SP035",
       "name": "Squash"
     },
     {
-      "id": "SP042",
+      "id": "SP036",
       "name": "Surfing"
     },
     {
-      "id": "SP043",
+      "id": "SP037",
       "name": "Table Tennis"
     },
     {
-      "id": "SP044",
+      "id": "SP038",
       "name": "Taekwondo"
     },
     {
-      "id": "SP045",
+      "id": "SP039",
       "name": "Tennis"
     },
     {
-      "id": "SP046",
+      "id": "SP040",
       "name": "Triathlon"
     },
     {
-      "id": "SP047",
+      "id": "SP041",
       "name": "Volleyball"
     },
     {
-      "id": "SP048",
+      "id": "SP042",
+      "name": "Water Ski"
+    },
+    {
+      "id": "SP043",
       "name": "Weightlifting"
     },
     {
-      "id": "SP049",
+      "id": "SP044",
       "name": "Wrestling"
     },
     {
-      "id": "SP050",
+      "id": "SP045",
       "name": "Other (specify in notes)"
+    }
+  ],
+  "disciplines": [
+    {
+      "id": "DI001",
+      "sportId": "SP001",
+      "name": "Artistic Swimming"
+    },
+    {
+      "id": "DI002",
+      "sportId": "SP001",
+      "name": "Diving"
+    },
+    {
+      "id": "DI003",
+      "sportId": "SP001",
+      "name": "Open Water Swimming"
+    },
+    {
+      "id": "DI004",
+      "sportId": "SP001",
+      "name": "Swimming"
+    },
+    {
+      "id": "DI005",
+      "sportId": "SP001",
+      "name": "Water Polo"
+    },
+    {
+      "id": "DI006",
+      "sportId": "SP006",
+      "name": "Basketball 5x5"
+    },
+    {
+      "id": "DI007",
+      "sportId": "SP006",
+      "name": "3x3 Basketball"
+    },
+    {
+      "id": "DI008",
+      "sportId": "SP009",
+      "name": "Canoe Sprint"
+    },
+    {
+      "id": "DI009",
+      "sportId": "SP009",
+      "name": "Canoe Slalom"
+    },
+    {
+      "id": "DI010",
+      "sportId": "SP012",
+      "name": "BMX Freestyle"
+    },
+    {
+      "id": "DI011",
+      "sportId": "SP012",
+      "name": "BMX Racing"
+    },
+    {
+      "id": "DI012",
+      "sportId": "SP012",
+      "name": "Mountain Bike"
+    },
+    {
+      "id": "DI013",
+      "sportId": "SP012",
+      "name": "Cycling Road"
+    },
+    {
+      "id": "DI014",
+      "sportId": "SP012",
+      "name": "Cycling Track"
+    },
+    {
+      "id": "DI015",
+      "sportId": "SP014",
+      "name": "Equestrian Dressage"
+    },
+    {
+      "id": "DI016",
+      "sportId": "SP014",
+      "name": "Equestrian Jumping"
+    },
+    {
+      "id": "DI017",
+      "sportId": "SP014",
+      "name": "Equestrian Eventing"
+    },
+    {
+      "id": "DI018",
+      "sportId": "SP019",
+      "name": "Gymnastics Artistic"
+    },
+    {
+      "id": "DI019",
+      "sportId": "SP019",
+      "name": "Gymnastics Rhythmic"
+    },
+    {
+      "id": "DI020",
+      "sportId": "SP019",
+      "name": "Gymnastics Trampoline"
+    },
+    {
+      "id": "DI021",
+      "sportId": "SP028",
+      "name": "Speed Skating"
+    },
+    {
+      "id": "DI022",
+      "sportId": "SP028",
+      "name": "Artistic Skating"
+    },
+    {
+      "id": "DI023",
+      "sportId": "SP028",
+      "name": "Skateboarding"
+    },
+    {
+      "id": "DI024",
+      "sportId": "SP029",
+      "name": "Coastal"
+    },
+    {
+      "id": "DI025",
+      "sportId": "SP029",
+      "name": "Rowing"
+    },
+    {
+      "id": "DI026",
+      "sportId": "SP030",
+      "name": "Rugby 7"
+    },
+    {
+      "id": "DI027",
+      "sportId": "SP041",
+      "name": "Indoor Volleyball"
+    },
+    {
+      "id": "DI028",
+      "sportId": "SP041",
+      "name": "Beach Volleyball"
     }
   ],
   "eventLevels": [
