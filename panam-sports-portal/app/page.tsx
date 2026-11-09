@@ -1,8 +1,13 @@
 import Image from "next/image";
 import { PROGRAM_GROUPS, getNocSummaries } from "@/lib/reports";
 import GroupCard from "@/components/GroupCard";
+import AthleteTrackingCard from "@/components/AthleteTrackingCard";
+import { getOverview, hasAthleteData } from "@/lib/athletes";
 
 export default function HomePage() {
+  // The athlete section only appears once athletes have been loaded.
+  const overview = hasAthleteData() ? getOverview() : null;
+
   return (
     <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-16 sm:px-10 sm:pt-24">
       <header className="mb-14 max-w-2xl animate-fadeUp sm:mb-20">
@@ -42,6 +47,18 @@ export default function HomePage() {
             />
           </div>
         ))}
+        {overview && (
+          <div
+            className="animate-fadeUp"
+            style={{ animationDelay: `${Math.min(PROGRAM_GROUPS.length * 40, 320)}ms` }}
+          >
+            <AthleteTrackingCard
+              athletes={overview.counts.total}
+              sports={overview.sports}
+              committees={overview.committees}
+            />
+          </div>
+        )}
       </section>
     </main>
   );

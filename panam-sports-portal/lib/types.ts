@@ -107,3 +107,65 @@ export interface ReportsData {
   nocs: Noc[];
   reports: MethodologistReport[];
 }
+
+// ---------------------------------------------------------------------------
+// Athlete tracking (data/athletes.json, produced by scripts/load_athletes.py)
+// ---------------------------------------------------------------------------
+
+export type AthleteStatus = "Active" | "Stopped";
+export type ResultStatus = "Placed" | "DNF" | "DNS" | "DQ";
+
+/**
+ * One prioritized athlete. The date of birth is deliberately not part of the
+ * data shipped to the portal: only the age (as of `AthletesData.asOf`).
+ * Free-text notes are not shipped either.
+ */
+export interface Athlete {
+  /** ATH-<NOC>-<nnn>, assigned by the load process and never reused. */
+  id: string;
+  nocCode: string;
+  firstName: string;
+  familyName: string;
+  gender: "Female" | "Male";
+  /** Age in whole years on `AthletesData.asOf`. */
+  age: number;
+  sportId: string;
+  eventDiscipline: string | null;
+  isPara: boolean;
+  /** "Lima 2027" | "LA28" | "Both" | "Other" */
+  targetGames: string;
+  dateAdded: string | null;
+  campName: string | null;
+  campDate: string | null;
+  status: AthleteStatus;
+  stoppedDate: string | null;
+}
+
+/** One result of one athlete at one event. */
+export interface AthleteResult {
+  id: string;
+  athleteId: string;
+  eventName: string;
+  eventDate: string;
+  eventLevelId: string;
+  sportId: string;
+  category: string | null;
+  status: ResultStatus;
+  position: number | null;
+  participants: number | null;
+  mark: string | null;
+  /** (participants - position) / (participants - 1) * 100; null unless Placed with 2+ competitors. */
+  standingPct: number | null;
+  /** True when fewer competitors than `AthletesData.smallFieldThreshold`. */
+  smallField: boolean;
+}
+
+export interface AthletesData {
+  /** ISO date the ages were calculated on; null while there are no athletes. */
+  asOf: string | null;
+  smallFieldThreshold: number;
+  sports: { id: string; name: string }[];
+  eventLevels: { id: string; name: string; order: number }[];
+  athletes: Athlete[];
+  results: AthleteResult[];
+}

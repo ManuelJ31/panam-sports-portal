@@ -10,6 +10,7 @@ import {
   getProgramGroup,
   getReport,
 } from "@/lib/reports";
+import { countAthletesForNoc } from "@/lib/athletes";
 import DossierHeader from "@/components/DossierHeader";
 import ReportSection from "@/components/ReportSection";
 import ReportNav from "@/components/ReportNav";
@@ -50,6 +51,7 @@ export default async function ReportPage({
   if (!report || !noc) notFound();
 
   const group = getProgramGroup(noc.programGroup);
+  const athleteCount = countAthletesForNoc(noc.code);
   const { previous, next } = getAdjacentReports(report.id);
   const trend = getInitiativeTrend(report.nocCode, report.id);
   const initiativeHistories = Object.fromEntries(
@@ -61,12 +63,22 @@ export default async function ReportPage({
 
   return (
     <main className="mx-auto w-full max-w-canvas flex-1 px-6 pb-24 pt-10 print:pb-4 print:pt-0 sm:px-10 sm:pt-14">
-      <Link
-        href={`/${group.slug}`}
-        className="eyebrow inline-flex items-center gap-1.5 text-navy-faint transition-colors hover:text-blue-dim print:hidden"
-      >
-        <span aria-hidden>&larr;</span> {group.label} Committees
-      </Link>
+      <div className="flex items-center justify-between gap-4 print:hidden">
+        <Link
+          href={`/${group.slug}`}
+          className="eyebrow inline-flex items-center gap-1.5 text-navy-faint transition-colors hover:text-blue-dim"
+        >
+          <span aria-hidden>&larr;</span> {group.label} Committees
+        </Link>
+        {athleteCount > 0 && (
+          <Link
+            href={`/athletes/${noc.code}`}
+            className="eyebrow inline-flex items-center gap-1.5 text-blue transition-colors hover:text-blue-dim"
+          >
+            Athletes ({athleteCount}) <span aria-hidden>&rarr;</span>
+          </Link>
+        )}
+      </div>
 
       <div className="mt-8">
         <DossierHeader noc={noc} report={report} />
