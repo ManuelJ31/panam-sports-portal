@@ -24,7 +24,7 @@ from openpyxl.chart import LineChart, Reference
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
-from load_athletes import DEFAULT_XLSX, age_on, sheet_dicts, to_date
+from load_athletes import DEFAULT_XLSX, age_on, category_key, sheet_dicts, to_date
 
 NAVY = "1E3058"
 HEAD_FILL = PatternFill("solid", fgColor=NAVY)
@@ -55,6 +55,26 @@ def body(ws, row, values, date_cols=(), fill=None):
             cell.fill = fill
 
 
+def series_of(results):
+    """One athlete's results -> series by (type, event). Only results with a position count.
+
+    Returns [{"label", "type", "points": [...]}], longest first (then most recent).
+    """
+    groups = {}
+    for r in results:
+        if r["StandingPct"] is None:
+            continue
+        key = (r.get("ResultType") or "Individual", category_key(r["Category"]))
+        groups.setdefault(key, []).append(r)
+    out = []
+    for (rtype, _k), pts in groups.items():
+        pts.sort(key=lambda r: (r["EventDate"], r["ResultID"]))
+        label = pts[-1]["Category"] or "General"
+        out.append({"label": label, "type": rtype, "points": pts})
+    out.sort(key=lambda g: (-len(g["points"]), g["type"] == "Team", -g["points"][-1]["EventDate"].toordinal()))
+    return out
+
+
 def fmt_date(d):
     return d.strftime("%d/%m/%Y") if d else ""
 
@@ -76,8 +96,9 @@ def build_one(meth, noc, athletes, results, sports, disciplines, levels, today, 
     info = [
         ("Mis atletas", "Tus atletas con su ID. El ID (ATH-XXX-nnn) es lo que escribes en el Formulario 2 para registrar un resultado."),
         ("Resultados", f"Todos los resultados registrados. {FLAG} = campo pequeño (menos competidores que el umbral): la posición relativa de esos resultados dice menos."),
-        ("Evolución", "Por atleta: primera y última posición relativa, cambio y mejor resultado."),
-        ("Gráficos", "Línea de posición relativa por competencia, para atletas con al menos dos resultados con posición."),
+        ("Evolución", "Por atleta y por evento (Category): primera y última posición relativa, cambio y mejor resultado. "
+                      "Eventos distintos (100 m, 200 m) no se mezclan, y los resultados de equipo (relevos, deportes de conjunto) van aparte, con Type = Team."),
+        ("Gráficos", "Línea de posición relativa por competencia, un gráfico por evento, para series con al menos dos resultados con posición."),
         ("Pendientes", f"Atletas activos sin ningún resultado, o sin resultado en los últimos {pending_days} dias."),
         ("Posición relativa", "Va de 0 a 100: 100 = primer lugar, 0 = ultimo lugar. Formula: (competidores - posicion) / (competidores - 1) x 100. "
                               "Solo se calcula con estado Placed y al menos 2 competidores. Permite comparar un 5.º de 8 con un 5.º de 80."),
@@ -122,35 +143,45 @@ def build_one(meth, noc, athletes, results, sports, disciplines, levels, today, 
 
     # ---- Resultados
     ws = wb.create_sheet("Resultados")
-    cols = ["Athlete ID", "Athlete", "Event date", "Event", "Level", "Category", "Status", "Position", "Competitors",
-            "Relative position (0-100)", FLAG, "Mark or time", "Notes"]
-    header(ws, 1, cols, [14, 24, 12, 30, 22, 20, 9, 9, 11, 14, 5, 14, 36])
+    cols = ["Athlete ID", "Athlete", "Event date", "Event", "Level", "Category", "Type", "Status", "Position",
+            "Competitors", "Relative position (0-100)", FLAG, "Mark or time", "Notes"]
+    header(ws, 1, cols, [14, 24, 12, 30, 22, 20, 11, 9, 9, 11, 14, 5, 14, 36])
     names = {a["AthleteID"]: full(a) for a in athletes}
     rows = [r for a in athletes for r in by_ath.get(a["AthleteID"], [])]
     for i, r in enumerate(rows, 2):
         small = r["SmallField"] == "Yes"
         body(ws, i, [r["AthleteID"], names[r["AthleteID"]], r["EventDate"], r["EventName"],
-                     levels.get(r["EventLevelID"], r["EventLevelID"]), r["Category"], r["ResultStatus"],
-                     r["Position"], r["Participants"], r["StandingPct"], FLAG if small else None, r["Mark"], r["Notes"]],
+                     levels.get(r["EventLevelID"], r["EventLevelID"]), r["Category"], r.get("ResultType") or "Individual",
+                     r["ResultStatus"], r["Position"], r["Participants"], r["StandingPct"], FLAG if small else None,
+                     r["Mark"], r["Notes"]],
              date_cols=(3,), fill=SMALL_FILL if small else None)
-        ws.cell(i, 10).number_format = "0.0"
+        ws.cell(i, 11).number_format = "0.0"
     ws.freeze_panes = "C2"
     ws.auto_filter.ref = f"A1:{get_column_letter(len(cols))}{max(len(rows), 1) + 1}"
 
-    # ---- Evolución
+    # ---- Evolución (one row per athlete and event: results of different events are not mixed)
     ws = wb.create_sheet("Evolución")
-    cols = ["Athlete ID", "Athlete", "Sport", "Results", "With position", "First (0-100)", "Latest (0-100)",
-            "Change", "Best (0-100)", "Small-field results"]
-    header(ws, 1, cols, [14, 24, 34, 9, 12, 12, 12, 10, 12, 12])
-    for i, a in enumerate(athletes, 2):
+    cols = ["Athlete ID", "Athlete", "Sport", "Event (category)", "Type", "Results with position", "First (0-100)",
+            "Latest (0-100)", "Change", "Best (0-100)", "Small-field results"]
+    header(ws, 1, cols, [14, 24, 34, 24, 11, 12, 12, 12, 10, 12, 12])
+    i = 2
+    all_series = {}
+    for a in athletes:
         res = by_ath.get(a["AthleteID"], [])
-        pts = [r["StandingPct"] for r in res if r["StandingPct"] is not None]
-        change = round(pts[-1] - pts[0], 1) if len(pts) >= 2 else None
-        body(ws, i, [a["AthleteID"], full(a), sport_of(a), len(res), len(pts),
-                     pts[0] if pts else None, pts[-1] if pts else None, change, max(pts) if pts else None,
-                     sum(1 for r in res if r["SmallField"] == "Yes")])
-        for c in (6, 7, 8, 9):
-            ws.cell(i, c).number_format = "0.0"
+        groups = series_of(res)
+        all_series[a["AthleteID"]] = groups
+        if not groups:
+            body(ws, i, [a["AthleteID"], full(a), sport_of(a), None, None, 0])
+            i += 1
+            continue
+        for g in groups:
+            pts = [r["StandingPct"] for r in g["points"]]
+            change = round(pts[-1] - pts[0], 1) if len(pts) >= 2 else None
+            body(ws, i, [a["AthleteID"], full(a), sport_of(a), g["label"], g["type"], len(pts), pts[0], pts[-1],
+                         change, max(pts), sum(1 for r in g["points"] if r["SmallField"] == "Yes")])
+            for c in (7, 8, 9, 10):
+                ws.cell(i, c).number_format = "0.0"
+            i += 1
     ws.freeze_panes = "C2"
 
     # ---- Gráficos
@@ -158,40 +189,42 @@ def build_one(meth, noc, athletes, results, sports, disciplines, levels, today, 
     ws.column_dimensions["A"].width = 14
     ws.column_dimensions["B"].width = 34
     ws.column_dimensions["C"].width = 12
-    ws["A1"] = "Posición relativa por competencia (100 = primer lugar). Solo atletas con 2 o más resultados con posición."
+    ws["A1"] = "Posición relativa por competencia (100 = primer lugar), un gráfico por atleta y evento. Solo series con 2 o más resultados con posición."
     ws["A1"].font = BOLD
     row = 3
     charts = 0
     for a in athletes:
-        pts = [r for r in by_ath.get(a["AthleteID"], []) if r["StandingPct"] is not None]
-        if len(pts) < 2:
-            continue
-        ws.cell(row, 1, a["AthleteID"]).font = BOLD
-        ws.cell(row, 2, full(a)).font = BOLD
-        ws.cell(row + 1, 1, "Date").font = BODY
-        ws.cell(row + 1, 2, "Event").font = BODY
-        ws.cell(row + 1, 3, "0-100").font = BODY
-        for j, r in enumerate(pts, row + 2):
-            ws.cell(j, 1, r["EventDate"].strftime("%d/%m/%Y")).font = BODY
-            ws.cell(j, 2, r["EventName"] + (f" {FLAG}" if r["SmallField"] == "Yes" else "")).font = BODY
-            ws.cell(j, 3, r["StandingPct"]).font = BODY
-        first, last = row + 2, row + 1 + len(pts)
-        ch = LineChart()
-        ch.title = f"{full(a)} ({a['AthleteID']})"
-        ch.height, ch.width = 6.5, 15
-        ch.y_axis.scaling.min, ch.y_axis.scaling.max = 0, 100
-        ch.legend = None
-        ch.add_data(Reference(ws, min_col=3, min_row=row + 1, max_row=last), titles_from_data=True)
-        ch.set_categories(Reference(ws, min_col=1, min_row=first, max_row=last))
-        ch.series[0].marker.symbol = "circle"
-        ch.series[0].graphicalProperties.line.solidFill = NAVY
-        ch.x_axis.delete = False
-        ch.y_axis.delete = False
-        ws.add_chart(ch, f"E{row}")
-        row += max(len(pts) + 3, 15)
-        charts += 1
+        for g in all_series.get(a["AthleteID"], []):
+            pts = g["points"]
+            if len(pts) < 2:
+                continue
+            tag = " (team)" if g["type"] == "Team" else ""
+            ws.cell(row, 1, a["AthleteID"]).font = BOLD
+            ws.cell(row, 2, f"{full(a)} - {g['label']}{tag}").font = BOLD
+            ws.cell(row + 1, 1, "Date").font = BODY
+            ws.cell(row + 1, 2, "Event").font = BODY
+            ws.cell(row + 1, 3, "0-100").font = BODY
+            for j, r in enumerate(pts, row + 2):
+                ws.cell(j, 1, r["EventDate"].strftime("%d/%m/%Y")).font = BODY
+                ws.cell(j, 2, r["EventName"] + (f" {FLAG}" if r["SmallField"] == "Yes" else "")).font = BODY
+                ws.cell(j, 3, r["StandingPct"]).font = BODY
+            first, last = row + 2, row + 1 + len(pts)
+            ch = LineChart()
+            ch.title = f"{full(a)} ({a['AthleteID']}) - {g['label']}{tag}"
+            ch.height, ch.width = 6.5, 15
+            ch.y_axis.scaling.min, ch.y_axis.scaling.max = 0, 100
+            ch.legend = None
+            ch.add_data(Reference(ws, min_col=3, min_row=row + 1, max_row=last), titles_from_data=True)
+            ch.set_categories(Reference(ws, min_col=1, min_row=first, max_row=last))
+            ch.series[0].marker.symbol = "circle"
+            ch.series[0].graphicalProperties.line.solidFill = NAVY
+            ch.x_axis.delete = False
+            ch.y_axis.delete = False
+            ws.add_chart(ch, f"E{row}")
+            row += max(len(pts) + 3, 15)
+            charts += 1
     if charts == 0:
-        ws["A3"] = "Aún no hay atletas con dos o mas resultados con posicion."
+        ws["A3"] = "Aún no hay series con dos o mas resultados con posicion en el mismo evento."
         ws["A3"].font = BODY
 
     # ---- Pendientes

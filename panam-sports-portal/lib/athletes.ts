@@ -163,6 +163,18 @@ export interface ResultRow {
   mark: string | null;
   standingPct: number | null;
   smallField: boolean;
+  team: boolean;
+  eventKey: string;
+}
+
+/** Results of one athlete in one event (same category) and of one type, oldest first. */
+export interface SeriesRow {
+  key: string;
+  label: string;
+  team: boolean;
+  points: ResultRow[];
+  /** Latest minus first relative position; null with fewer than 2 points. */
+  change: number | null;
 }
 
 export interface AthleteRow {
@@ -179,8 +191,12 @@ export interface AthleteRow {
   campName: string | null;
   resultCount: number;
   latest: ResultRow | null;
-  /** Latest minus first relative position (needs 2+ results with a position). */
+  /** Change in the athlete's main series (the one with most results); null if it has fewer than 2. */
   change: number | null;
+  /** Names the series `change` refers to, e.g. "100 m" or "General (team)". */
+  changeLabel: string | null;
+  /** Evolution per event: events are never mixed, and team results stand apart. */
+  series: SeriesRow[];
   results: ResultRow[];
 }
 
@@ -197,7 +213,33 @@ function toResultRow(r: AthleteResult): ResultRow {
     mark: r.mark,
     standingPct: r.standingPct,
     smallField: r.smallField,
+    team: r.resultType === "Team",
+    eventKey: r.eventKey,
   };
+}
+
+function buildSeries(results: ResultRow[]): SeriesRow[] {
+  const groups = new Map<string, ResultRow[]>();
+  for (const r of results) {
+    if (r.standingPct === null) continue;
+    const key = `${r.team ? "team" : "individual"}|${r.eventKey}`;
+    groups.set(key, [...(groups.get(key) ?? []), r]);
+  }
+  return [...groups.entries()]
+    .map(([key, points]) => {
+      const last = points[points.length - 1];
+      const change =
+        points.length >= 2
+          ? Math.round((last.standingPct! - points[0].standingPct!) * 10) / 10
+          : null;
+      return { key, label: last.category ?? "General", team: last.team, points, change };
+    })
+    .sort(
+      (x, y) =>
+        y.points.length - x.points.length ||
+        Number(x.team) - Number(y.team) ||
+        y.points[y.points.length - 1].date.localeCompare(x.points[x.points.length - 1].date)
+    );
 }
 
 export function getNocAthleteView(nocCode: string) {
@@ -211,7 +253,8 @@ export function getNocAthleteView(nocCode: string) {
         .filter((r) => r.athleteId === a.id)
         .sort((x, y) => x.eventDate.localeCompare(y.eventDate) || x.id.localeCompare(y.id))
         .map(toResultRow);
-      const placed = results.filter((r) => r.standingPct !== null);
+      const series = buildSeries(results);
+      const main = series[0];
       const row: AthleteRow = {
         id: a.id,
         label: athleteLabel(a),
@@ -226,10 +269,9 @@ export function getNocAthleteView(nocCode: string) {
         campName: a.campName,
         resultCount: results.length,
         latest: results[results.length - 1] ?? null,
-        change:
-          placed.length >= 2
-            ? Math.round((placed[placed.length - 1].standingPct! - placed[0].standingPct!) * 10) / 10
-            : null,
+        change: main?.change ?? null,
+        changeLabel: main?.change != null ? `${main.label}${main.team ? " (team)" : ""}` : null,
+        series,
         results,
       };
       // Active athletes first; then by family name (or by ID when names are hidden).

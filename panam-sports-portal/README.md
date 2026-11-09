@@ -159,6 +159,15 @@ python scripts/methodologist_workbooks.py   # one Excel per methodologist
   "Event" (100 m, -57 kg) is a separate free-text field.
 - A row that fails validation is not loaded and is listed in `loadIssues`; it is
   retried on the next run. Athlete IDs (`ATH-<NOC>-<nnn>`) are never reused.
+- Several events and team results: an athlete is registered once. Each event is a
+  separate result, and `Category` names the event ("100 m", "200 m"). Evolution
+  (chart, "Change", the methodologist's Evolución sheet) is tracked per event: results
+  with the same Category (ignoring case, spaces and punctuation) form one series, so
+  100 m and 200 m are never mixed. `Result type` is Individual (default) or Team
+  (relays, team sports); Team results form their own series and carry a Team tag.
+  Team sports register their players, not the team: a Team result can list several
+  athletes in `Team result: athlete IDs` (separated by commas, spaces or line breaks)
+  and creates one result per athlete with the same position and number of teams.
 - Relative position = (competitors − position) / (competitors − 1) × 100, only for
   finished results with 2+ competitors. Results with fewer than
   `SmallFieldThreshold` (8) competitors are flagged as small field.

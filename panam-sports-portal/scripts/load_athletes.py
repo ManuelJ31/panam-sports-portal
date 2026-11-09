@@ -37,6 +37,13 @@ Rules:
     family name, date of birth) is reported as already registered, not duplicated.
   * Results are checked against the athlete list: ID must exist, belong to the
     methodologist's NOC and (if given) match the family name.
+  * Result type is Individual (default when blank) or Team (relays, team sports).
+    A Team result can list several athletes in "Team result: athlete IDs" (separated
+    by commas, spaces or line breaks): one result is created per athlete, all with
+    the same position and number of teams. Several IDs with Individual is an error.
+  * The evolution of an athlete is tracked per event: results with the same Category
+    (ignoring case, spaces and punctuation: "100 m" = "100m") and the same type form
+    one series. Fill Category for athletes who compete in several events.
   * StandingPct = (Participants - Position) / (Participants - 1) * 100, only for
     status Placed with at least 2 competitors. SmallField = Yes when Placed with
     fewer than SmallFieldThreshold competitors (sheet "settings", default 8).
@@ -185,7 +192,7 @@ ATHLETE_COLS = [
 ]
 RESULT_COLS = [
     "ResultID", "AthleteID", "EventName", "EventDate", "EventLevelID", "SportID", "DisciplineID", "Category",
-    "ResultStatus", "Position", "Participants", "Mark", "StandingPct", "SmallField", "Notes",
+    "ResultType", "ResultStatus", "Position", "Participants", "Mark", "StandingPct", "SmallField", "Notes",
     "LoadedOn",
 ]
 DATE_COLS = {"DateOfBirth", "DateAdded", "CampDate", "StoppedDate", "EventDate", "LoadedOn"}
@@ -241,6 +248,8 @@ RESULT_ALIASES = _aliases({
     "athlete_id": ["Athlete ID"],
     "family_check": ["Family name (for checking)", "Family name"],
     "category": ["Category", "Category or discipline"],
+    "result_type": ["Result type"],
+    "team_ids": ["Team result: athlete IDs", "Team athlete IDs"],
     "status": ["Result status"],
     "position": ["Final position"],
     "participants": ["Number of competitors in the category", "Competitors in category"],
@@ -250,7 +259,7 @@ RESULT_ALIASES = _aliases({
     "submitted": ["Completion time", "Submission date", "Submitted"],
 })
 # Fields repeated once per athlete block in Form 2 (the k-th occurrence = block k).
-RESULT_BLOCK_FIELDS = {"athlete_id", "family_check", "category", "status", "position",
+RESULT_BLOCK_FIELDS = {"athlete_id", "team_ids", "result_type", "family_check", "category", "status", "position",
                        "participants", "mark", "notes", "add_another"}
 
 
@@ -318,6 +327,30 @@ def gender_of(v):
 
 def text(v):
     return re.sub(r"\s+", " ", str(v)).strip() if not blank(v) else ""
+
+
+def split_ids(value):
+    """One or several athlete IDs separated by commas, semicolons, spaces or line breaks."""
+    if blank(value):
+        return []
+    return [t for t in re.split(r"[\s,;]+", str(value).strip().upper()) if t]
+
+
+def parse_result_type(value):
+    """Individual (default when blank) or Team; None if unrecognised."""
+    if blank(value):
+        return "Individual"
+    s = norm(value)
+    if s.startswith("team"):
+        return "Team"
+    if s.startswith("individual"):
+        return "Individual"
+    return None
+
+
+def category_key(category):
+    """Same event written differently ("100 m", "100m", "100 M") -> the same key."""
+    return re.sub(r"[^a-z0-9]+", "", norm(category)) if not blank(category) else ""
 
 
 def age_on(dob, ref):
@@ -405,7 +438,8 @@ FORM1_HEADERS = [
     "Camp name", "Camp date", "Notes"]
 FORM2_HEADERS = ["Completion time", "Methodologist", "Assigned NOC", "Event name", "Event date", "Event level",
                  "Sport and discipline"] + [
-    h for _ in range(5) for h in ("Athlete ID", "Category", "Result status", "Final position",
+    h for _ in range(5) for h in ("Result type", "Athlete ID", "Team result: athlete IDs", "Category",
+                                  "Result status", "Final position",
                                   "Number of competitors in the category", "Mark or time", "Notes",
                                   "Add another athlete from this event?")]
 
@@ -686,6 +720,7 @@ def load_state(wb):
     results = {}
     for r in sheet_dicts(wb["factResults"]):
         rec = {c: r.get(c) for c in RESULT_COLS}
+        rec["ResultType"] = rec.get("ResultType") or "Individual"
         for c in DATE_COLS & set(RESULT_COLS):
             rec[c] = to_date(rec[c]) if rec.get(c) is not None else None
         results[rec["ResultID"]] = rec
@@ -979,23 +1014,36 @@ def process_results(wb, ref, athletes, results, log, log_rows, issues, today):
                 continue
 
             for k in range(blocks):
-                aid = get(rec, "athlete_id", k)
-                if blank(aid) and all(blank(get(rec, f, k)) for f in RESULT_BLOCK_FIELDS if f != "add_another"):
+                id_cells = (get(rec, "athlete_id", k), get(rec, "team_ids", k))
+                if all(blank(c) for c in id_cells) and all(
+                        blank(get(rec, f, k)) for f in RESULT_BLOCK_FIELDS if f != "add_another"):
                     continue  # empty block
-                aid = str(aid).strip().upper() if not blank(aid) else None
+                single, team = split_ids(id_cells[0]), split_ids(id_cells[1])
+                ids = list(dict.fromkeys(single + team))
                 errs = []
-                a = athletes.get(aid) if aid else None
-                if not aid:
+                rt_raw = get(rec, "result_type", k)
+                rtype = parse_result_type(rt_raw)
+                if rtype is None:
+                    errs.append(f"Result type {text(rt_raw)!r} is not Individual or Team")
+                if not ids:
                     errs.append("Athlete ID is missing")
-                elif not a:
-                    errs.append(f"athlete {aid} is not registered (register the athlete first)")
-                else:
+                elif rtype == "Individual" and (len(ids) > 1 or team):
+                    errs.append("several athlete IDs (or 'Team result: athlete IDs') need Result type = Team")
+                missing = [i for i in ids if i not in athletes]
+                if len(missing) == 1:
+                    errs.append(f"athlete {missing[0]} is not registered (register the athlete first)")
+                elif missing:
+                    errs.append(f"athletes {', '.join(missing)} are not registered (register them first)")
+                for aid in ids:
+                    a = athletes.get(aid)
+                    if not a:
+                        continue
                     if noc and a["NOCCode"] != noc:
                         errs.append(f"{aid} belongs to {a['NOCCode']}, not {noc}")
                     if m and a["NOCCode"] != m[1]:
                         errs.append(f"{aid} belongs to {a['NOCCode']}, but {meth} is assigned to {m[1]}")
                     fam = get(rec, "family_check", k)
-                    if not blank(fam) and norm(fam) != norm(a["FamilyName"]):
+                    if len(ids) == 1 and not blank(fam) and norm(fam) != norm(a["FamilyName"]):
                         errs.append(f"family name {text(fam)!r} does not match {aid} ({a['FamilyName']})")
                 status_raw = get(rec, "status", k)
                 status = ref.statuses.get(norm(status_raw)) if not blank(status_raw) else None
@@ -1015,22 +1063,25 @@ def process_results(wb, ref, athletes, results, log, log_rows, issues, today):
                     elif participants < position:
                         errs.append(f"position {position} is higher than the number of competitors ({participants})")
                 if errs:
-                    fail("; ".join(errs), k)
+                    fail("; ".join(dict.fromkeys(errs)), k)
                     row_ok = False
                     continue
                 if status != "Placed" and (position is not None or participants is not None):
-                    row_warnings.append(f"{aid}: position/competitors ignored because status is {status}")
+                    who = ids[0] if len(ids) == 1 else f"athlete block {k + 1}"
+                    row_warnings.append(f"{who}: position/competitors ignored because status is {status}")
                     position = participants = None
-                if (a["SportID"], a["DisciplineID"] or None) != (sport_id, discipline_id):
-                    row_warnings.append(
-                        f"{aid}: result sport ({ref.sport_label(sport_id, discipline_id)}) differs from the athlete's registered sport ({ref.sport_label(a['SportID'], a['DisciplineID'])})")
-                entries.append((aid, status, position, participants, k))
+                for aid in ids:
+                    a = athletes[aid]
+                    if (a["SportID"], a["DisciplineID"] or None) != (sport_id, discipline_id):
+                        row_warnings.append(
+                            f"{aid}: result sport ({ref.sport_label(sport_id, discipline_id)}) differs from the athlete's registered sport ({ref.sport_label(a['SportID'], a['DisciplineID'])})")
+                    entries.append((aid, status, position, participants, k, rtype))
 
             if not row_ok:
                 continue  # all-or-nothing: the whole row is retried after the fix
             for w in row_warnings:
                 issues.add("WARNING", sheet, rownum, w, summary(raw))
-            for aid, status, position, participants, k in entries:
+            for aid, status, position, participants, k, rtype in entries:
                 category = text(get(rec, "category", k))
                 key = (aid, norm(event_name), event_date, norm(category))
                 same = [r for r in results.values()
@@ -1038,7 +1089,7 @@ def process_results(wb, ref, athletes, results, log, log_rows, issues, today):
                 fields = {
                     "AthleteID": aid, "EventName": event_name, "EventDate": event_date,
                     "EventLevelID": level_id, "SportID": sport_id, "DisciplineID": discipline_id,
-                    "Category": category,
+                    "Category": category, "ResultType": rtype,
                     "ResultStatus": status, "Position": position, "Participants": participants,
                     "Mark": text(get(rec, "mark", k)),
                     "StandingPct": standing_pct(status, position, participants),
@@ -1080,7 +1131,9 @@ def build_json(ref, athletes, results, today):
         res.append({
             "id": r["ResultID"], "athleteId": r["AthleteID"], "eventName": r["EventName"],
             "eventDate": iso(r["EventDate"]), "eventLevelId": r["EventLevelID"], "sportId": r["SportID"],
-            "disciplineId": r["DisciplineID"] or None, "category": r["Category"] or None, "status": r["ResultStatus"],
+            "disciplineId": r["DisciplineID"] or None, "category": r["Category"] or None,
+            "eventKey": category_key(r["Category"]), "resultType": r["ResultType"] or "Individual",
+            "status": r["ResultStatus"],
             "position": r["Position"], "participants": r["Participants"], "mark": r["Mark"] or None,
             "standingPct": r["StandingPct"], "smallField": r["SmallField"] == "Yes",
         })

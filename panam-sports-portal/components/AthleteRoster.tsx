@@ -6,6 +6,18 @@ import { formatDate } from "@/lib/format";
 import Tag from "@/components/Tag";
 import StandingChart, { type StandingPoint } from "@/components/StandingChart";
 
+function toPoint(r: AthleteRow["results"][number]): StandingPoint {
+  return {
+    date: r.date,
+    eventName: r.eventName,
+    level: r.level,
+    position: r.position!,
+    participants: r.participants!,
+    standingPct: r.standingPct!,
+    smallField: r.smallField,
+  };
+}
+
 const STATUS_TONE = { Placed: "blue", DNF: "gold", DNS: "gray", DQ: "red" } as const;
 
 function Standing({ pct, small }: { pct: number | null; small: boolean }) {
@@ -65,17 +77,7 @@ export default function AthleteRoster({
         <tbody>
           {roster.map((a) => {
             const isOpen = openId === a.id;
-            const points: StandingPoint[] = a.results
-              .filter((r) => r.standingPct !== null && r.position !== null && r.participants !== null)
-              .map((r) => ({
-                date: r.date,
-                eventName: r.eventName,
-                level: r.level,
-                position: r.position!,
-                participants: r.participants!,
-                standingPct: r.standingPct!,
-                smallField: r.smallField,
-              }));
+            const charted = a.series.filter((s) => s.points.length >= 2);
             const toggle = () => setOpenId(isOpen ? null : a.id);
 
             return (
@@ -128,7 +130,7 @@ export default function AthleteRoster({
                       <Standing pct={a.latest?.standingPct ?? null} small={a.latest?.smallField ?? false} />
                     )}
                   </td>
-                  <td className="py-2.5 pl-3">
+                  <td className="py-2.5 pl-3" title={a.changeLabel ? `Change in ${a.changeLabel}` : undefined}>
                     <Change value={a.change} />
                   </td>
                 </tr>
@@ -145,12 +147,16 @@ export default function AthleteRoster({
                         <p className="text-sm text-navy-soft">No results registered yet.</p>
                       ) : (
                         <>
-                          {points.length >= 2 && (
-                            <div className="mb-4">
-                              <p className="eyebrow">Relative position by event</p>
-                              <StandingChart points={points} />
+                          {charted.map((s) => (
+                            <div key={s.key} className="mb-4">
+                              <p className="eyebrow">
+                                Relative position
+                                {s.label !== "General" || s.team ? ` · ${s.label}` : ""}
+                                {s.team ? " (team)" : ""}
+                              </p>
+                              <StandingChart points={s.points.map(toPoint)} />
                             </div>
-                          )}
+                          ))}
                           <div className="overflow-x-auto">
                             <table className="w-full min-w-[560px] text-left text-xs">
                               <thead>
@@ -173,6 +179,11 @@ export default function AthleteRoster({
                                       {r.eventName}
                                       {r.category && (
                                         <span className="text-navy-faint"> &middot; {r.category}</span>
+                                      )}
+                                      {r.team && (
+                                        <span className="ml-2">
+                                          <Tag label="Team" tone="blue" />
+                                        </span>
                                       )}
                                     </td>
                                     <td className="py-1.5 pr-3 text-navy-soft">{r.level}</td>

@@ -154,6 +154,10 @@ export interface AthleteResult {
   sportId: string;
   disciplineId: string | null;
   category: string | null;
+  /** Same event written differently ("100 m", "100m") gives the same key; "" when there is no category. */
+  eventKey: string;
+  /** Relays and team sports are "Team"; they are tracked apart from individual results. */
+  resultType: "Individual" | "Team";
   status: ResultStatus;
   position: number | null;
   participants: number | null;
