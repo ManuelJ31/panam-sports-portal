@@ -268,7 +268,7 @@ for r in reports_rows:
         })
 
     activities = []
-    for a in sorted(act_by_report.get(rid, []), key=lambda x: (x["ActivityDate"] or "", x["ActivityNo"] or 0)):
+    for a in sorted(act_by_report.get(rid, []), key=lambda x: (x["ActivityDate"] is None, iso(x["ActivityDate"]) or "", x["ActivityNo"] or 0)):  # undated activities last
         activities.append({
             "date": iso(a["ActivityDate"]),
             "description": a["ActivityDescription"] or "",
