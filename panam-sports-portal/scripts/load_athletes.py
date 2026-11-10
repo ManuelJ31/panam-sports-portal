@@ -559,8 +559,23 @@ def migrate_sport_tables(path):
 # ----------------------------------------------------------------------------
 # Raw sheet reading
 # ----------------------------------------------------------------------------
-def read_raw(ws, aliases):
-    """Return [(row_number, {field: [values by column order]}, raw_row_tuple)]."""
+def read_raw(ws, aliases, repeating=()):
+    """Return [(row_number, {field: [values by column order]}, raw_row_tuple)].
+
+    `repeating` are the fields of a repeated block. Microsoft Forms exports the
+    repeated questions with a number appended ("Athlete ID", "Athlete ID1", ...), so
+    for those fields a trailing number on the header is ignored.
+    """
+
+    def field_of(header):
+        n = norm(header)
+        if n in aliases:
+            return aliases[n]
+        m = re.fullmatch(r"(.*?)\s*\d+", n)
+        if m and aliases.get(m.group(1)) in repeating:
+            return aliases[m.group(1)]
+        return None
+
     rows = list(ws.iter_rows(values_only=True))
     best_score, best_i = 0, None
     for i, row in enumerate(rows[:8]):
@@ -569,7 +584,7 @@ def read_raw(ws, aliases):
             best_score, best_i = score, i
     if best_i is None or best_score < 3:
         return []
-    fields = [aliases.get(norm(v)) if not blank(v) else None for v in rows[best_i]]
+    fields = [field_of(v) if not blank(v) else None for v in rows[best_i]]
     out = []
     for i in range(best_i + 1, len(rows)):
         row = rows[i]
@@ -963,7 +978,7 @@ def process_results(wb, ref, athletes, results, log, log_rows, issues, today):
     sheets = ("dbRaw_Results", "dbRaw_ResultsTemplate")
     loaded = replaced = 0
     for sheet in sheets:
-        for rownum, rec, raw in read_raw(wb[sheet], RESULT_ALIASES):
+        for rownum, rec, raw in read_raw(wb[sheet], RESULT_ALIASES, RESULT_BLOCK_FIELDS):
             h = row_hash(sheet, raw)
             if h in log:
                 continue
